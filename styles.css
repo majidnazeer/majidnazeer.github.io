@@ -1069,11 +1069,18 @@ a:hover { opacity: .75; }
   line-height: 1.45;
 }
 .fund-card__venue {
-  margin: 0 0 .55rem;
+  margin: 0 0 .2rem;
   font-size: .98rem;
   font-style: italic;
   color: var(--accent-deep);
   line-height: 1.45;
+}
+.fund-card__venue + .fund-card__expand,
+.fund-card__venue + .fund-card__role {
+  margin-top: .45rem;
+}
+.fund-card__role + .fund-card__venue {
+  margin-top: .15rem;
 }
 .fund-card__role {
   display: flex;

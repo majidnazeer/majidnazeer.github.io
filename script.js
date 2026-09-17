@@ -616,25 +616,52 @@
 
     function splitReviewVenue(note) {
       var text = String(note || "").trim();
-      if (!text) return { summary: "", venue: "" };
-      var known = text.match(/,\s*((?:MDPI\s+)?Remote Sensing|Climate|Frontiers in Marine Science|Journal of Marine Science and Engineering|Kuwait Journal of Science)\s*$/i);
-      if (known) {
-        return {
-          summary: text.slice(0, known.index).replace(/[,\s]+$/, ""),
-          venue: known[1]
-        };
-      }
-      var parts = text.split(/,\s*/);
-      if (parts.length >= 2) {
-        var last = parts[parts.length - 1];
-        if (last.length <= 70) {
-          return {
-            summary: parts.slice(0, -1).join(", "),
-            venue: last
-          };
+      if (!text) return { summary: "", venues: [] };
+
+      var journals = [
+        "Journal of Marine Science and Engineering",
+        "Frontiers in Marine Science",
+        "Kuwait Journal of Science",
+        "Remote Sensing",
+        "Climate"
+      ];
+
+      var venues = [];
+      var rest = text;
+      var peeled = true;
+      while (peeled) {
+        peeled = false;
+        for (var i = 0; i < journals.length; i++) {
+          var j = journals[i];
+          if (rest.length < j.length) continue;
+          var tail = rest.slice(rest.length - j.length);
+          if (tail.toLowerCase() !== j.toLowerCase()) continue;
+          var before = rest.slice(0, rest.length - j.length);
+          if (before && !/(?:,\s*|\s+and\s+|\s+in\s+)$/i.test(before) && before.length > 0) {
+            continue;
+          }
+          venues.unshift(j);
+          rest = before.replace(/(?:,\s*|\s+and\s+|\s+in\s+)$/i, "").trim();
+          peeled = true;
+          break;
         }
       }
-      return { summary: "", venue: text };
+
+      if (!venues.length) {
+        if (/reviewer|journals?\b/i.test(text)) {
+          return { summary: text, venues: [] };
+        }
+        var parts = text.split(/,\s*/);
+        if (parts.length >= 2) {
+          var last = parts[parts.length - 1];
+          if (last.length <= 70) {
+            return { summary: parts.slice(0, -1).join(", "), venues: [last] };
+          }
+        }
+        return { summary: "", venues: [text] };
+      }
+
+      return { summary: rest, venues: venues };
     }
 
     function allServiceItems() {
@@ -648,7 +675,7 @@
             tag: c.tag,
             title: s.title,
             years: s.years,
-            venue: s.note || "",
+            venues: s.note ? [s.note] : [],
             role: c.role,
             summary: "",
             startYear: parseServiceYear(s.years)
@@ -664,7 +691,7 @@
             tag: "Assessing and reviewing",
             title: s.title,
             years: s.years,
-            venue: split.venue,
+            venues: split.venues,
             role: "",
             summary: split.summary,
             startYear: parseServiceYear(s.years)
@@ -679,7 +706,7 @@
             tag: "External examination",
             title: x.name,
             years: x.years,
-            venue: x.place,
+            venues: x.place ? [x.place] : [],
             role: x.degree + " · External examiner",
             summary: x.topic || "",
             startYear: parseServiceYear(x.years)
@@ -694,7 +721,7 @@
             tag: "Engagement",
             title: e.title,
             years: e.years,
-            venue: e.note || "",
+            venues: e.note ? [e.note] : [],
             role: "",
             summary: "",
             startYear: parseServiceYear(e.years)
@@ -719,7 +746,7 @@
       var items = allServiceItems().filter(function (s) {
         if (serviceFilter !== "all" && s.key !== serviceFilter) return false;
         if (!q) return true;
-        var hay = (s.title + " " + s.venue + " " + s.tag + " " + s.role + " " + s.summary).toLowerCase();
+        var hay = (s.title + " " + (s.venues || []).join(" ") + " " + s.tag + " " + s.role + " " + s.summary).toLowerCase();
         return hay.indexOf(q) !== -1;
       });
 
@@ -741,7 +768,11 @@
 
       root.innerHTML = items.map(function (s, i) {
         var id = "svc-more-" + i;
-        var showSummary = !!(s.summary && s.summary !== s.venue);
+        var venues = s.venues || [];
+        var showSummary = !!(s.summary && venues.indexOf(s.summary) === -1);
+        var venueHtml = venues.map(function (v) {
+          return '<p class="fund-card__venue">' + esc(v) + "</p>";
+        }).join("");
         return '<li class="fund-card">' +
           '<div class="fund-card__top">' +
             '<p class="fund-card__tag">' + esc(s.tag) + "</p>" +
@@ -749,7 +780,7 @@
           "</div>" +
           '<h3 class="fund-card__title">' + esc(s.title) + "</h3>" +
           (s.role && s.role !== s.title ? '<p class="fund-card__role"><span>' + esc(s.role) + "</span></p>" : "") +
-          (s.venue ? '<p class="fund-card__venue">' + esc(s.venue) + "</p>" : "") +
+          venueHtml +
           (showSummary ? (
             '<div class="fund-card__expand">' +
               '<p class="fund-card__blurb" id="' + id + '">' + esc(s.summary) + "</p>" +

@@ -939,7 +939,11 @@ var PEOPLE = {
 var SERVICE_HIGHLIGHTS = [
   { years: "2025–present", title: "Section Editor", note: "Earth and Environmental Science, Kuwait Journal of Science" },
   { years: "2026–present", title: "Guest Editor", note: "Special issue on next-generation Earth observation for inland and coastal ecosystems, Remote Sensing" },
-  { years: "2025–present", title: "Guest Editor", note: "Urban heat island special issues in Remote Sensing and Climate" },
+  {
+    years: "2025–present",
+    title: "Guest Editor",
+    note: "Urban heat island special issues in Remote Sensing and Climate"
+  },
   { years: "2023–2024", title: "Guest Editor", note: "Coastal and estuarine hydrodynamic variability special topic, Frontiers in Marine Science" },
   { years: "2020–2021", title: "Guest Editor", note: "Remote sensing advancements in sustaining coastal zones, Journal of Marine Science and Engineering" },
   { years: "2015–present", title: "Peer reviewer", note: "Active reviewer for 50+ international journals (Web of Science verified record)" }
