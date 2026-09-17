@@ -391,7 +391,7 @@ a:hover { opacity: .75; }
   padding: 1.35rem 0;
   border-top: 1px solid var(--border);
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
 .stats--grants {
@@ -400,7 +400,6 @@ a:hover { opacity: .75; }
   border-top: 0;
   border-bottom: 1px solid var(--border);
   padding-bottom: 1.35rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .stats__n {
   display: block;
