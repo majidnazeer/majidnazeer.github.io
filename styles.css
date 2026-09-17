@@ -1625,16 +1625,9 @@ a:hover { opacity: .75; }
     transparent 70%
   );
 }
-.person__name {
-  margin: 0;
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: var(--text);
-  grid-column: 1;
-}
 .person__role {
-  display: inline-block;
-  margin-left: .45rem;
+  margin: .2rem 0 0;
+  grid-column: 1;
   font-size: .78rem;
   font-weight: 500;
   color: var(--muted);
@@ -1650,10 +1643,11 @@ a:hover { opacity: .75; }
   padding-top: .15rem;
 }
 .person__topic {
-  margin: .15rem 0 0;
+  margin: 0;
   grid-column: 1;
-  font-size: .92rem;
-  color: var(--muted);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text);
   line-height: 1.45;
   max-width: 38rem;
 }
@@ -1771,7 +1765,7 @@ a:hover { opacity: .75; }
     order: -1;
   }
   .record__title,
-  .person__name { order: 0; }
+  .person__topic { order: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

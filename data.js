@@ -899,40 +899,40 @@ var AWARDS = [
 
 var PEOPLE = {
   phd: [
-    { years: "2025–present", role: "Chief Supervisor", name: "Zohaib", topic: "Hyperspectral remote sensing of blue carbon stocks in the Greater Bay Area" },
-    { years: "2025–present", role: "Chief Supervisor", name: "Muhammad Umar", topic: "Carbon stock estimation and offset modelling of coastal wetlands in the Greater Bay Area" },
-    { years: "2025–present", role: "Chief Supervisor", name: "Muhammad Uzair Mahmood", topic: "Spatiotemporal analysis and stress modelling of blue carbon ecosystems using remote sensing and machine learning" },
-    { years: "2025–present", role: "Co-supervisor", name: "Wang Shu", topic: "PhD research (topic to be confirmed)" },
-    { years: "2025–present", role: "Co-supervisor", name: "Lou Yifan", topic: "PhD research (topic to be confirmed)" },
-    { years: "2023–present", role: "Co-supervisor", name: "Liu Xindi", topic: "Carbon sequestration in Hong Kong’s vegetation under climate change" }
+    { years: "2025–present", role: "Chief Supervisor", topic: "Hyperspectral remote sensing of blue carbon stocks in the Greater Bay Area" },
+    { years: "2025–present", role: "Chief Supervisor", topic: "Carbon stock estimation and offset modelling of coastal wetlands in the Greater Bay Area" },
+    { years: "2025–present", role: "Chief Supervisor", topic: "Spatiotemporal analysis and stress modelling of blue carbon ecosystems using remote sensing and machine learning" },
+    { years: "2025–present", role: "Co-supervisor", topic: "PhD research (topic to be confirmed)" },
+    { years: "2025–present", role: "Co-supervisor", topic: "PhD research (topic to be confirmed)" },
+    { years: "2023–present", role: "Co-supervisor", topic: "Carbon sequestration in Hong Kong’s vegetation under climate change" }
   ],
   mphil: [
-    { years: "2024–2026", role: "Co-supervisor", name: "Zou Kang", topic: "Geospatial approaches to multi-scale urban heat dynamics" },
-    { years: "2018–2019", role: "Supervisor", name: "Fatima Ahsan", topic: "Development and validation of a new method for satellite-derived bathymetry" },
-    { years: "2018–2019", role: "Supervisor", name: "Sana Almas Khan", topic: "Sea water intrusion impacts on the Lower Indus Deltaic Region using geo-spatial techniques" },
-    { years: "2017–2019", role: "Supervisor", name: "Hammad Qureshi", topic: "Remote sensing of atmospheric visibility over Pakistan" },
-    { years: "2017–2019", role: "Supervisor", name: "Muhammad Waqas", topic: "Remote sensing of barrier islands along the Indus Delta region" }
+    { years: "2024–2026", role: "Co-supervisor", topic: "Geospatial approaches to multi-scale urban heat dynamics" },
+    { years: "2018–2019", role: "Supervisor", topic: "Development and validation of a new method for satellite-derived bathymetry" },
+    { years: "2018–2019", role: "Supervisor", topic: "Sea water intrusion impacts on the Lower Indus Deltaic Region using geo-spatial techniques" },
+    { years: "2017–2019", role: "Supervisor", topic: "Remote sensing of atmospheric visibility over Pakistan" },
+    { years: "2017–2019", role: "Supervisor", topic: "Remote sensing of barrier islands along the Indus Delta region" }
   ],
   msc: [
-    { years: "2024–2025", role: "Supervisor", name: "Kong Yan Sum", topic: "Demographic and spatial analysis of youth hostel site selection" },
-    { years: "2023–2024", role: "Supervisor", name: "You Mengxin", topic: "Remote sensing-based assessment of vegetation loss from hill fires on Kangaroo Island, Australia" }
+    { years: "2024–2025", role: "Supervisor", topic: "Demographic and spatial analysis of youth hostel site selection" },
+    { years: "2023–2024", role: "Supervisor", topic: "Remote sensing-based assessment of vegetation loss from hill fires on Kangaroo Island, Australia" }
   ],
   bsc: [
-    { years: "2026–present", role: "Supervisor", name: "Law On Kin", topic: "Monitoring fish raft activity and coastal water quality in Hong Kong" },
-    { years: "2026–present", role: "Supervisor", name: "Liu Kwok Fung", topic: "Land use types and urban heat island formation" },
-    { years: "2026–present", role: "Supervisor", name: "Wong Tsz Fung", topic: "Mangrove above-ground biomass via backpack LiDAR" },
-    { years: "2026–present", role: "Supervisor", name: "Chan Randomism", topic: "Mangrove tree characteristics from UAV LiDAR" },
-    { years: "2025–2026", role: "Supervisor", name: "Koo Tsun Hei", topic: "Remote sensing of trace gases from Greater Bay Area wetlands" },
-    { years: "2025–2026", role: "Supervisor", name: "Tsui Kai Ming", topic: "Marine debris detection at Hong Kong beaches" },
-    { years: "2025–2026", role: "Supervisor", name: "Hui Kwok Wa", topic: "Global sea level rise estimation with machine learning" },
-    { years: "2025–2026", role: "Supervisor", name: "Huang Hung Chun", topic: "Machine learning for algal bloom detection" },
-    { years: "2025–2026", role: "Supervisor", name: "Leung Micah", topic: "Remote sensing of coral reefs of Hong Kong" },
-    { years: "2024–2025", role: "Supervisor", name: "Hung Tsz Chung", topic: "Wetland change in the Greater Bay Area" },
-    { years: "2024–2025", role: "Supervisor", name: "Chung Ching Ho", topic: "Coastal water quality and Hong Kong wetland ecosystems" },
-    { years: "2024–2025", role: "Supervisor", name: "Wong Ching Lung", topic: "Remote sensing for water quality monitoring in Hong Kong coastal areas" }
+    { years: "2026–present", role: "Supervisor", topic: "Monitoring fish raft activity and coastal water quality in Hong Kong" },
+    { years: "2026–present", role: "Supervisor", topic: "Land use types and urban heat island formation" },
+    { years: "2026–present", role: "Supervisor", topic: "Mangrove above-ground biomass via backpack LiDAR" },
+    { years: "2026–present", role: "Supervisor", topic: "Mangrove tree characteristics from UAV LiDAR" },
+    { years: "2025–2026", role: "Supervisor", topic: "Remote sensing of trace gases from Greater Bay Area wetlands" },
+    { years: "2025–2026", role: "Supervisor", topic: "Marine debris detection at Hong Kong beaches" },
+    { years: "2025–2026", role: "Supervisor", topic: "Global sea level rise estimation with machine learning" },
+    { years: "2025–2026", role: "Supervisor", topic: "Machine learning for algal bloom detection" },
+    { years: "2025–2026", role: "Supervisor", topic: "Remote sensing of coral reefs of Hong Kong" },
+    { years: "2024–2025", role: "Supervisor", topic: "Wetland change in the Greater Bay Area" },
+    { years: "2024–2025", role: "Supervisor", topic: "Coastal water quality and Hong Kong wetland ecosystems" },
+    { years: "2024–2025", role: "Supervisor", topic: "Remote sensing for water quality monitoring in Hong Kong coastal areas" }
   ],
   staff: [
-    { years: "2023–2024", role: "Research Assistant", name: "Gomal Amin", topic: "Spectral Library for Vegetation Species (SLIVES) over Hong Kong" }
+    { years: "2023–2024", role: "Research Assistant", topic: "Spectral Library for Vegetation Species (SLIVES) over Hong Kong" }
   ]
 };
 

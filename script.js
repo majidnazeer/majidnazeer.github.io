@@ -1074,16 +1074,18 @@
         var items = PEOPLE[g.key] || [];
         if (filter !== "all" && filter !== g.key) return "";
         if (!items.length) return "";
+        var countLabel = g.key === "staff"
+          ? (items.length === 1 ? " member" : " members")
+          : (items.length === 1 ? " student" : " students");
         return '<section class="people-group" data-group="' + g.key + '">' +
           '<h2 class="people-group__title">' + esc(g.label) + '</h2>' +
-          '<p class="people-group__count">' + items.length + (items.length === 1 ? " person" : " people") + '</p>' +
+          '<p class="people-group__count">' + items.length + countLabel + '</p>' +
           '<ul class="person-list">' +
             items.map(function (p) {
               return '<li class="person">' +
                 '<span class="person__years">' + esc(p.years) + '</span>' +
-                '<p class="person__name">' + esc(p.name) +
-                  '<span class="person__role">' + esc(p.role) + '</span></p>' +
                 '<p class="person__topic">' + esc(p.topic) + '</p>' +
+                '<p class="person__role">' + esc(p.role) + '</p>' +
               '</li>';
             }).join("") +
           '</ul>' +
