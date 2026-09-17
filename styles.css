@@ -746,23 +746,18 @@ a:hover { opacity: .75; }
 }
 
 .pub {
-  padding: .9rem 0;
+  padding: .9rem .75rem;
+  margin: 0 -.75rem;
   border-top: 1px solid transparent;
   border-bottom: 1px solid var(--border);
-  border-radius: 0;
-  margin: 0;
+  border-radius: 6px;
   transition: background .18s ease;
 }
 .pub-year__list .pub:first-child { border-top: 0; }
 .pub:hover {
-  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
   box-shadow: none;
   border-color: var(--border);
-  padding-left: .65rem;
-  padding-right: .65rem;
-  margin-left: -.65rem;
-  margin-right: -.65rem;
-  border-radius: 4px;
 }
 
 .pub__title {
@@ -1546,17 +1541,16 @@ a:hover { opacity: .75; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: .35rem 1.5rem;
-  padding: 1.15rem 0;
+  padding: 1.15rem .75rem;
+  margin: 0 -.75rem;
   border-top: 1px solid var(--border);
   align-items: start;
+  border-radius: 6px;
+  transition: background .18s ease;
 }
 .record:last-child { border-bottom: 1px solid var(--border); }
 .record:hover {
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--text) 3.5%, transparent),
-    transparent 70%
-  );
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
 }
 
 .record__title {
@@ -1614,16 +1608,15 @@ a:hover { opacity: .75; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: .3rem 1.25rem;
-  padding: 1rem 0;
+  padding: 1rem .75rem;
+  margin: 0 -.75rem;
   border-top: 1px solid var(--border);
+  border-radius: 6px;
+  transition: background .18s ease;
 }
 .person:last-child { border-bottom: 1px solid var(--border); }
 .person:hover {
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--text) 3.5%, transparent),
-    transparent 70%
-  );
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
 }
 .person__role {
   margin: .2rem 0 0;
