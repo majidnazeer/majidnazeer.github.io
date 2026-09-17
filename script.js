@@ -118,6 +118,58 @@
     conference: "Conference"
   };
 
+  /* Surnames / tokens for supervised students (People page + known first authors). */
+  var STUDENT_TOKENS = [
+    "sattar", "mahmood", "umar", "zohaib", "amin", "adeniran",
+    "ahsan", "qureshi", "waqas", "raza", "kwok", "borsah"
+  ];
+
+  function nazeerIsFirstAuthor(authors) {
+    var first = stripTags(authors || "").split(",")[0].trim();
+    return /^Nazeer\b/i.test(first);
+  }
+
+  function firstAuthorIsStudent(authors) {
+    var first = stripTags(authors || "").split(",")[0].trim().toLowerCase();
+    return STUDENT_TOKENS.some(function (tok) {
+      return first.indexOf(tok) !== -1;
+    });
+  }
+
+  function pubRoleList(p) {
+    var roles = [];
+    var explicit = Array.isArray(p.roles) ? p.roles.slice() : [];
+    var kind = p.type || "journal";
+
+    if (explicit.indexOf("corresponding") !== -1 || p.corresponding === true || nazeerIsFirstAuthor(p.authors)) {
+      roles.push("corresponding");
+    }
+    if (explicit.indexOf("speaker") !== -1 || p.speaker === true ||
+        (kind === "conference" && nazeerIsFirstAuthor(p.authors))) {
+      roles.push("speaker");
+    }
+    if (explicit.indexOf("student-lead") !== -1 || p.studentLead === true ||
+        (firstAuthorIsStudent(p.authors) && !nazeerIsFirstAuthor(p.authors))) {
+      roles.push("student-lead");
+    }
+
+    /* Deduplicate while keeping order */
+    return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
+  }
+
+  var roleLabels = {
+    corresponding: "Corresponding",
+    speaker: "Speaker",
+    "student-lead": "Student lead"
+  };
+
+  function roleBadgesHtml(roles) {
+    if (!roles.length) return "";
+    return '<span class="pub__roles">' + roles.map(function (r) {
+      return '<span class="pub__role pub__role--' + r + '">' + (roleLabels[r] || r) + "</span>";
+    }).join("") + "</span>";
+  }
+
   function renderPubs() {
     var listEl = document.getElementById("pubList");
     var countEl = document.getElementById("pubCount");
@@ -130,7 +182,8 @@
       var t = p.type || "journal";
       if (pubTypeFilter !== "all" && t !== pubTypeFilter) return false;
       if (!q) return true;
-      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t).toLowerCase();
+      var roles = pubRoleList(p).join(" ");
+      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roles).toLowerCase();
       return hay.indexOf(q) !== -1;
     });
 
@@ -152,17 +205,23 @@
     listEl.innerHTML = years.map(function (year) {
       var items = byYear[year].map(function (p) {
         var venue = p.venue || "";
-        var meta = venue;
+        var parts = [];
+        if (venue) {
+          parts.push('<i class="pub__venue-name">' + venue + "</i>");
+        }
         if (p.doi) {
           var doiSafe = String(p.doi).replace(/"/g, "");
-          meta += (meta ? " · " : "") +
+          parts.push(
             '<a class="pub__doi" href="https://doi.org/' + doiSafe +
-            '" target="_blank" rel="noopener noreferrer">doi:' + doiSafe + "</a>";
+            '" target="_blank" rel="noopener noreferrer">doi:' + doiSafe + "</a>"
+          );
         }
+        var meta = parts.join(" · ");
         var kind = p.type || "journal";
         var badge = '<span class="pub__type">' + (typeLabels[kind] || kind) + "</span>";
+        var roles = roleBadgesHtml(pubRoleList(p));
         return '<li class="pub">' +
-          badge +
+          '<div class="pub__badges">' + badge + roles + "</div>" +
           '<h3 class="pub__title">' + p.title + "</h3>" +
           '<p class="pub__authors">' + p.authors + "</p>" +
           (meta ? '<p class="pub__venue">' + meta + "</p>" : "") +
@@ -180,7 +239,7 @@
     if (emptyEl) emptyEl.hidden = shown.length !== 0;
     if (countEl) {
       countEl.textContent = shown.length === PUBLICATIONS.length
-        ? shown.length + " publications"
+        ? shown.length + " outputs"
         : shown.length + " shown";
     }
   }

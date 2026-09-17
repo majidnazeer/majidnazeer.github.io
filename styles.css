@@ -784,7 +784,10 @@ a:hover { opacity: .75; }
   margin: 0;
   max-width: none;
 }
-.pub__venue i { color: var(--text); font-style: italic; }
+.pub__venue-name {
+  font-style: italic;
+  color: var(--text);
+}
 
 .pub__doi {
   font-family: var(--mono);
@@ -794,17 +797,64 @@ a:hover { opacity: .75; }
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
   opacity: .9;
+  font-style: normal;
 }
 .pub__doi:hover { opacity: 1; color: var(--accent); }
+
+.pub__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+  margin-bottom: .4rem;
+}
 
 .pub__type {
   display: inline-block;
   font-size: .68rem;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: .35rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.pub__roles {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+
+.pub__role {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: #fff;
+  border-radius: 3px;
+  padding: .22rem .5rem;
+  line-height: 1.15;
+}
+
+.pub__role--corresponding {
+  background: var(--accent);
+}
+
+.pub__role--speaker {
+  background: #9a5b1a;
+}
+
+[data-theme="dark"] .pub__role--speaker {
+  background: #c4843a;
+}
+
+.pub__role--student-lead {
+  background: #3d5c4a;
+}
+
+[data-theme="dark"] .pub__role--student-lead {
+  background: #6a9a7e;
 }
 
 #pubTypeChips {
