@@ -154,7 +154,7 @@
     conference: "Conference"
   };
 
-  /* Surnames / tokens for supervised students (People page + known first authors). */
+  /* Surnames / tokens for supervised students (Team page + known first authors). */
   var STUDENT_TOKENS = [
     "sattar", "mahmood", "umar", "zohaib", "amin", "adeniran",
     "ahsan", "qureshi", "waqas", "raza", "kwok", "borsah"
@@ -1056,7 +1056,7 @@
     }
   }
 
-  if (page === "people" && typeof PEOPLE !== "undefined") {
+  if ((page === "team" || page === "people") && typeof PEOPLE !== "undefined") {
     var groups = [
       { key: "phd", label: "PhD students" },
       { key: "mphil", label: "MPhil students" },
