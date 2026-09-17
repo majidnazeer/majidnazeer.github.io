@@ -61,7 +61,6 @@
     var cit = document.getElementById("statCitations");
     var h = document.getElementById("statHIndex");
     var i10 = document.getElementById("statI10");
-    var src = document.getElementById("statsSource");
     if (!cit || !h || !i10) return;
 
     var url =
@@ -80,18 +79,8 @@
         if (citations != null) cit.textContent = formatCount(citations);
         if (hIndex != null) h.textContent = formatCount(hIndex);
         if (i10Index != null) i10.textContent = formatCount(i10Index);
-        if (src) {
-          src.innerHTML =
-            "Updated live from <a href=\"https://openalex.org/authors/orcid:0000-0002-7631-1599\" rel=\"noopener\">OpenAlex</a>" +
-            " · open <a href=\"https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ\" rel=\"noopener\">Google Scholar</a>";
-        }
       })
-      .catch(function () {
-        if (src) {
-          src.innerHTML =
-            "Showing saved figures · open <a href=\"https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ\" rel=\"noopener\">Google Scholar</a>";
-        }
-      });
+      .catch(function () { /* keep fallback figures in HTML */ });
   }
 
   if (page === "home") loadLiveMetrics();
