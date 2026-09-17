@@ -63,6 +63,9 @@
     var i10 = document.getElementById("statI10");
     if (!cit || !h || !i10) return;
 
+    /* i10 stays on the Google Scholar figure (OpenAlex often differs). */
+    i10.textContent = i10.getAttribute("data-fallback") || "41";
+
     var url =
       "https://api.openalex.org/authors/orcid:0000-0002-7631-1599" +
       "?mailto=majid.nazeer@connect.polyu.hk";
@@ -75,10 +78,8 @@
       .then(function (data) {
         var citations = data.cited_by_count;
         var hIndex = data.summary_stats && data.summary_stats.h_index;
-        var i10Index = data.summary_stats && data.summary_stats.i10_index;
         if (citations != null) cit.textContent = formatCount(citations);
         if (hIndex != null) h.textContent = formatCount(hIndex);
-        if (i10Index != null) i10.textContent = formatCount(i10Index);
       })
       .catch(function () { /* keep fallback figures in HTML */ });
   }
