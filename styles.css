@@ -312,11 +312,15 @@ a:hover { opacity: .75; }
   border-bottom: 1px solid var(--border);
   font-size: .9rem;
 }
+.about__facts li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
 .about__facts a { text-decoration: none; word-break: break-word; color: var(--accent-deep); }
 .about__facts a:hover { text-decoration: underline; opacity: 1; }
 .about__profiles {
-  margin-top: 1.35rem;
-  padding-top: 1.15rem;
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
   border-top: 1px solid var(--border);
 }
 .about__profile-list {
