@@ -413,7 +413,7 @@
   if (page === "datasets") {
     renderResources(typeof DATASETS !== "undefined" ? DATASETS : [], "datasetList", "datasetEmpty", "dataset");
   }
-  if (page === "resources") {
+  if (page === "data-code" || page === "resources") {
     renderResources(typeof CODES !== "undefined" ? CODES : [], "codeList", "codeEmpty", "code");
     renderResources(typeof DATASETS !== "undefined" ? DATASETS : [], "datasetList", "datasetEmpty", "dataset");
   }
@@ -600,13 +600,6 @@
     if (teachGrantEl && typeof GRANTS_TEACHING !== "undefined") {
       teachGrantEl.innerHTML = GRANTS_TEACHING.map(function (g) {
         return recordHtml(g.title, g.years, g.funder + (g.amount ? " · " + g.amount : ""), g.role);
-      }).join("");
-    }
-
-    var fieldEl = document.getElementById("fieldLeadershipList");
-    if (fieldEl && typeof FIELD_LEADERSHIP !== "undefined") {
-      fieldEl.innerHTML = FIELD_LEADERSHIP.map(function (f) {
-        return recordHtml(f.title, f.years, f.note, "");
       }).join("");
     }
   }

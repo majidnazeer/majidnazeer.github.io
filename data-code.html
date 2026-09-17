@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Field Surveys — Majid Nazeer</title>
-<meta name="description" content="Field research campaigns and survey photo gallery — Dr Majid Nazeer.">
+<title>Data &amp; Code — Majid Nazeer</title>
+<meta name="description" content="Research code repositories and datasets by Dr Majid Nazeer.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -20,7 +20,7 @@
   })();
 </script>
 </head>
-<body data-page="field">
+<body data-page="data-code">
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -37,8 +37,8 @@
       <a href="people.html">People</a>
       <a href="funded.html">Funded Projects</a>
       <a href="service.html">Service &amp; Engagement</a>
-      <a href="field.html" class="is-active">Field Survey</a>
-      <a href="data-code.html">Data &amp; Code</a>
+      <a href="field.html">Field Survey</a>
+      <a href="data-code.html" class="is-active">Data &amp; Code</a>
       <a href="cv.html">CV</a>
     </nav>
     <button class="theme" id="themeToggle" type="button" aria-label="Switch to dark mode">
@@ -53,30 +53,43 @@
 </header>
 
 <main id="main" class="page">
-  <div class="shell page-shell page-shell--wide">
+  <div class="shell page-shell">
     <header class="page__head">
-      <p class="page__kicker">Field research</p>
-      <h1 class="page__title">Field surveys</h1>
-      <p class="page__lead">Campaign leadership and a photo gallery of field surveys. Add images under <code>assets/field/</code> and entries to <code>FIELD_SURVEYS</code> in <code>data.js</code>.</p>
+      <p class="page__kicker">Open research</p>
+      <h1 class="page__title">Data &amp; Code</h1>
+      <p class="page__lead">Code repositories and datasets from the research. Switch tabs below as items are released.</p>
     </header>
 
-    <section class="field-lead" aria-labelledby="field-lead-title">
-      <h2 class="panel-head__title" id="field-lead-title">Data collection leadership</h2>
-      <ol class="record-list" id="fieldLeadershipPreview"></ol>
-    </section>
-
-    <section class="field-gallery-sec" aria-labelledby="gallery-title">
-      <header class="panel-head">
-        <h2 class="panel-head__title" id="gallery-title">Survey gallery</h2>
-        <p class="panel-head__lead">Photos from coastal, forest and marine field campaigns. Captions appear under each image.</p>
-      </header>
-      <div class="gallery" id="fieldGallery"></div>
-      <div class="empty-state" id="fieldEmpty">
-        <p>No survey photos yet. Drop images into <code>assets/field/</code>, then add objects to the
-          <code>FIELD_SURVEYS</code> array — each with <code>image</code>, <code>title</code>,
-          <code>place</code>, <code>year</code> and <code>caption</code>.</p>
+    <div class="subtabs" data-tabs>
+      <div class="subtabs__bar" role="tablist" aria-label="Data and code type">
+        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-codes" aria-selected="true" aria-controls="panel-codes" data-tab="codes">Codes</button>
+        <button type="button" class="subtabs__tab" role="tab" id="tab-datasets" aria-selected="false" aria-controls="panel-datasets" data-tab="datasets" tabindex="-1">Datasets</button>
       </div>
-    </section>
+
+      <div class="subtabs__panels">
+        <section class="subtabs__panel is-active" role="tabpanel" id="panel-codes" aria-labelledby="tab-codes" data-panel="codes">
+          <header class="panel-head">
+            <h2 class="panel-head__title">Codes</h2>
+            <p class="panel-head__lead">Software and analysis scripts.</p>
+          </header>
+          <ul class="resource-grid" id="codeList"></ul>
+          <div class="empty-state" id="codeEmpty">
+            <p>No repositories listed yet. Entries can be added to the <code>CODES</code> array in <code>data.js</code>.</p>
+          </div>
+        </section>
+
+        <section class="subtabs__panel" role="tabpanel" id="panel-datasets" aria-labelledby="tab-datasets" data-panel="datasets" hidden>
+          <header class="panel-head">
+            <h2 class="panel-head__title">Datasets</h2>
+            <p class="panel-head__lead">Spectral libraries and research data products.</p>
+          </header>
+          <ul class="resource-grid" id="datasetList"></ul>
+          <div class="empty-state" id="datasetEmpty">
+            <p>No datasets listed yet. Entries can be added to the <code>DATASETS</code> array in <code>data.js</code>.</p>
+          </div>
+        </section>
+      </div>
+    </div>
   </div>
 </main>
 
