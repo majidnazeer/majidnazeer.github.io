@@ -534,84 +534,6 @@
       }).join("");
     }
 
-    var grantBuckets = [
-      { key: "pi", label: "Principal Investigator", items: typeof GRANTS_PI !== "undefined" ? GRANTS_PI : [] },
-      { key: "coi", label: "Co-Principal / Co-Investigator / Member", items: typeof GRANTS_COI !== "undefined" ? GRANTS_COI : [] },
-      { key: "key", label: "Key team member / researcher", items: typeof GRANTS_KEY !== "undefined" ? GRANTS_KEY : [] },
-      { key: "teaching", label: "Teaching project awards", items: typeof GRANTS_TEACHING !== "undefined" ? GRANTS_TEACHING : [] }
-    ];
-
-    var grantImages = [
-      "assets/grants/blue-carbon.svg",
-      "assets/grants/vegetation.svg",
-      "assets/grants/forest-canopy.svg"
-    ];
-    var grantTones = ["teal", "moss", "slate"];
-
-    function grantImageFor(title, index) {
-      var s = String(title || "").toLowerCase();
-      if (/blue carbon|wetland|mangrove|water quality|coastal|bathym|hydrolog|sha lo tung/.test(s)) {
-        return grantImages[0];
-      }
-      if (/vegetation|tree|forest|canopy|biomass|spectral|slives|land cover|landslide/.test(s)) {
-        return grantImages[1];
-      }
-      if (/carbon|climate|urban|air|aerosol|mobility|education|flipped/.test(s)) {
-        return grantImages[2];
-      }
-      return grantImages[index % grantImages.length];
-    }
-
-    function renderGrants(filter) {
-      var root = document.getElementById("grantsRoot");
-      if (!root) return;
-
-      var flat = [];
-      grantBuckets.forEach(function (b) {
-        if (filter !== "all" && filter !== b.key) return;
-        (b.items || []).forEach(function (g) {
-          flat.push(g);
-        });
-      });
-
-      if (!flat.length) {
-        root.innerHTML = '<p class="empty">No grants in this category.</p>';
-        return;
-      }
-
-      root.innerHTML = flat.map(function (g, i) {
-        var tone = grantTones[i % grantTones.length];
-        var img = grantImageFor(g.title, i);
-        return '<article class="gcard gcard--' + tone + '" title="' + esc(g.title) + '">' +
-          '<div class="gcard__media" aria-hidden="true">' +
-            '<img src="' + esc(img) + '" alt="">' +
-            '<span class="gcard__wash"></span>' +
-          '</div>' +
-          '<div class="gcard__body">' +
-            '<p class="gcard__meta">' + esc(g.role) + ' · ' + esc(g.years) + '</p>' +
-            '<h3 class="gcard__title">' + esc(g.title) + '</h3>' +
-            '<p class="gcard__foot">' +
-              (g.amount ? esc(g.amount) : '') +
-              '<span>' + esc(g.funder) + '</span>' +
-            '</p>' +
-          '</div>' +
-        '</article>';
-      }).join("");
-    }
-
-    renderGrants("all");
-    var grantChips = document.getElementById("grantChips");
-    if (grantChips) {
-      grantChips.addEventListener("click", function (e) {
-        var btn = e.target.closest("[data-grant]");
-        if (!btn) return;
-        Array.prototype.forEach.call(grantChips.querySelectorAll(".chip"), function (c) {
-          c.classList.toggle("is-active", c === btn);
-        });
-        renderGrants(btn.getAttribute("data-grant"));
-      });
-    }
-
     var talkTypeLabel = {
       invited: "Invited",
       keynote: "Keynote",
@@ -705,6 +627,128 @@
       fieldEl.innerHTML = FIELD_LEADERSHIP.map(function (f) {
         return recordHtml(f.title, f.years, f.note, "");
       }).join("");
+    }
+  }
+
+  if (page === "funded") {
+    var grantBuckets = [
+      { key: "pi", tag: "Research grant", label: "Principal Investigator", items: typeof GRANTS_PI !== "undefined" ? GRANTS_PI : [] },
+      { key: "coi", tag: "Co-Investigator", label: "Co-Investigator", items: typeof GRANTS_COI !== "undefined" ? GRANTS_COI : [] },
+      { key: "key", tag: "Key team member", label: "Key member", items: typeof GRANTS_KEY !== "undefined" ? GRANTS_KEY : [] },
+      { key: "teaching", tag: "Teaching project", label: "Teaching project", items: typeof GRANTS_TEACHING !== "undefined" ? GRANTS_TEACHING : [] }
+    ];
+
+    var grantFilter = "all";
+    var grantSort = "newest";
+    var grantQuery = "";
+
+    function parseGrantStartYear(years) {
+      var m = String(years || "").match(/(\d{4})/);
+      return m ? parseInt(m[1], 10) : 0;
+    }
+
+    function parseGrantAmount(amount) {
+      var s = String(amount || "");
+      var hk = s.match(/HK\$\s*([\d,]+)/i);
+      if (hk) return parseInt(hk[1].replace(/,/g, ""), 10);
+      var cny = s.match(/CNY\s*([\d,]+)/i);
+      if (cny) return Math.round(parseInt(cny[1].replace(/,/g, ""), 10) * 1.08);
+      var approx = s.match(/~\s*HK\$\s*([\d,]+)/i);
+      if (approx) return parseInt(approx[1].replace(/,/g, ""), 10);
+      return 0;
+    }
+
+    function allFundedProjects() {
+      var flat = [];
+      grantBuckets.forEach(function (b) {
+        (b.items || []).forEach(function (g) {
+          flat.push({
+            key: b.key,
+            tag: b.tag,
+            title: g.title,
+            years: g.years,
+            funder: g.funder,
+            amount: g.amount,
+            role: g.role,
+            startYear: parseGrantStartYear(g.years),
+            amountNum: parseGrantAmount(g.amount)
+          });
+        });
+      });
+      return flat;
+    }
+
+    function renderFundedList() {
+      var root = document.getElementById("grantsRoot");
+      var emptyEl = document.getElementById("grantEmpty");
+      var countEl = document.getElementById("grantCount");
+      if (!root) return;
+
+      var q = grantQuery.trim().toLowerCase();
+      var items = allFundedProjects().filter(function (g) {
+        if (grantFilter !== "all" && g.key !== grantFilter) return false;
+        if (!q) return true;
+        var hay = (g.title + " " + g.funder + " " + g.role + " " + g.tag + " " + (g.amount || "")).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      items.sort(function (a, b) {
+        if (grantSort === "oldest") return a.startYear - b.startYear || a.title.localeCompare(b.title);
+        if (grantSort === "amount") return b.amountNum - a.amountNum || b.startYear - a.startYear;
+        return b.startYear - a.startYear || a.title.localeCompare(b.title);
+      });
+
+      if (countEl) {
+        countEl.textContent = items.length + (items.length === 1 ? " project" : " projects");
+      }
+
+      if (!items.length) {
+        root.innerHTML = "";
+        if (emptyEl) emptyEl.hidden = false;
+        return;
+      }
+      if (emptyEl) emptyEl.hidden = true;
+
+      root.innerHTML = items.map(function (g) {
+        return '<li class="fund-item">' +
+          '<p class="fund-item__tag">' + esc(g.tag) + "</p>" +
+          '<h3 class="fund-item__title">' + esc(g.title) + "</h3>" +
+          '<p class="fund-item__meta">' + esc(g.funder) + " · " + esc(g.years) + "</p>" +
+          '<p class="fund-item__role">' + esc(g.role) + "</p>" +
+          (g.amount ? '<p class="fund-item__amount"><strong>Project total</strong> ' + esc(g.amount) + "</p>" : "") +
+        "</li>";
+      }).join("");
+    }
+
+    renderFundedList();
+
+    var grantChips = document.getElementById("grantChips");
+    if (grantChips) {
+      grantChips.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-grant]");
+        if (!btn) return;
+        grantFilter = btn.getAttribute("data-grant");
+        Array.prototype.forEach.call(grantChips.querySelectorAll(".chip"), function (c) {
+          c.classList.toggle("is-active", c === btn);
+        });
+        renderFundedList();
+      });
+    }
+
+    var searchEl = document.getElementById("grantSearch");
+    if (searchEl) {
+      searchEl.addEventListener("input", function () {
+        grantQuery = searchEl.value;
+        renderFundedList();
+      });
+    }
+
+    var sortEl = document.getElementById("grantSort");
+    if (sortEl) {
+      sortEl.addEventListener("change", function () {
+        grantSort = sortEl.value;
+        renderFundedList();
+      });
     }
   }
 

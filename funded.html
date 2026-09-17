@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funded Projects — Majid Nazeer</title>
+<meta name="description" content="Research and teaching grants — Principal Investigator, Co-Investigator, key team member and teaching awards — Dr Majid Nazeer, PolyU.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("mn-theme") || "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+</head>
+<body data-page="funded">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="shell site-head__inner">
+    <a class="site-head__brand" href="index.html">Majid Nazeer</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      Menu
+    </button>
+    <nav class="site-nav profile-tabs" id="siteNav" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#publications">Research Outputs</a>
+      <a href="people.html">People</a>
+      <a href="cv.html">CV</a>
+      <a href="funded.html" class="is-active">Funded Projects</a>
+      <a href="field.html">Field</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+    <button class="theme" id="themeToggle" type="button" aria-label="Switch to dark mode">
+      <svg class="theme__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.6"/><path d="M12 2.8v1.8M12 19.4v1.8M2.8 12h1.8M19.4 12h1.8"/>
+      </svg>
+      <svg class="theme__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+        <path d="M20.2 14.1A8.2 8.2 0 0 1 9.9 3.8 8.4 8.4 0 1 0 20.2 14.1z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="shell page-shell">
+    <header class="page__head">
+      <p class="page__kicker">Funding</p>
+      <h1 class="page__title">Funded Projects</h1>
+      <p class="page__lead">Competitive research grants, collaborative awards and teaching projects — as Principal Investigator, Co-Investigator and key team member.</p>
+    </header>
+
+    <section class="fund-block" aria-labelledby="research-summary-title">
+      <h2 class="fund-block__title" id="research-summary-title">Research summary</h2>
+      <p class="fund-keywords">Remote sensing, coastal water quality, blue carbon ecosystems, mangroves and wetlands, atmospheric correction, spectral libraries, AI for Earth observation, urban and forest canopy, Greater Bay Area.</p>
+      <div class="fund-summary">
+        <p>Dr Majid Nazeer’s research develops satellite, airborne and ground-based methods to monitor coastal water quality, blue carbon systems and vegetated landscapes under climate change. Work centres on the Guangdong–Hong Kong–Macao Greater Bay Area, with algorithms and libraries that transfer to other coasts and cities.</p>
+        <p>Funding supports projects as Principal Investigator (including RGC GRF blue-carbon work and PolyU SLIVES), Co-Investigator on collaborative environmental and geospatial awards, and key researcher roles on major consortium grants — plus a UGC teaching innovation award.</p>
+      </div>
+      <ul class="fund-totals" aria-label="Funding totals">
+        <li><span class="fund-totals__n">HK$1.38M</span><span class="fund-totals__l">as PI</span></li>
+        <li><span class="fund-totals__n">HK$14.6M</span><span class="fund-totals__l">as Co-I</span></li>
+        <li><span class="fund-totals__n">HK$6.05M</span><span class="fund-totals__l">as Member</span></li>
+      </ul>
+    </section>
+
+    <section class="fund-block" aria-labelledby="funded-list-title">
+      <div class="fund-block__head">
+        <h2 class="fund-block__title" id="funded-list-title">Funded projects</h2>
+        <label class="fund-search">
+          <span class="visually-hidden">Search by title</span>
+          <input type="search" id="grantSearch" placeholder="Search by title" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="chip-row" id="grantChips" role="tablist" aria-label="Filter by role">
+        <button type="button" class="chip is-active" data-grant="all">All</button>
+        <button type="button" class="chip" data-grant="pi">Principal Investigator</button>
+        <button type="button" class="chip" data-grant="coi">Co-Investigator</button>
+        <button type="button" class="chip" data-grant="key">Key member</button>
+        <button type="button" class="chip" data-grant="teaching">Teaching project</button>
+      </div>
+
+      <div class="fund-toolbar">
+        <label class="fund-sort">
+          <span>Sort by</span>
+          <select id="grantSort">
+            <option value="newest">Date (newest first)</option>
+            <option value="oldest">Date (oldest first)</option>
+            <option value="amount">Amount (high to low)</option>
+          </select>
+        </label>
+        <p class="fund-count" id="grantCount" role="status" aria-live="polite"></p>
+      </div>
+
+      <ol class="fund-list" id="grantsRoot"></ol>
+      <p class="empty" id="grantEmpty" hidden>No projects match your search.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="shell site-foot__inner">
+    <p>&copy; <span id="year"></span> Majid Nazeer · Department of Land Surveying and Geospatial Science · PolyU</p>
+    <ul class="foot-icons" aria-label="Profiles">
+      <li>
+        <a href="mailto:majid.nazeer@connect.polyu.hk" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://orcid.org/0000-0002-7631-1599" rel="noopener" aria-label="ORCID" title="ORCID">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="currentColor"/>
+            <text x="12" y="15.5" text-anchor="middle" font-size="9" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="var(--bg)">iD</text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.5 9.2 12 3.6l7.5 5.6H16v.2c0 1.4-1.8 2.55-4 2.55s-4-1.15-4-2.55v-.2H4.5z"/>
+            <path d="M7.2 11.2v3.6c0 1.7 2.15 3.05 4.8 3.05s4.8-1.35 4.8-3.05v-3.6"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
