@@ -632,10 +632,10 @@
 
   if (page === "funded") {
     var grantBuckets = [
-      { key: "pi", tag: "Research grant", label: "Principal Investigator", items: typeof GRANTS_PI !== "undefined" ? GRANTS_PI : [] },
-      { key: "coi", tag: "Co-Investigator", label: "Co-Investigator", items: typeof GRANTS_COI !== "undefined" ? GRANTS_COI : [] },
-      { key: "key", tag: "Key team member", label: "Key member", items: typeof GRANTS_KEY !== "undefined" ? GRANTS_KEY : [] },
-      { key: "teaching", tag: "Teaching project", label: "Teaching project", items: typeof GRANTS_TEACHING !== "undefined" ? GRANTS_TEACHING : [] }
+      { key: "pi", label: "Principal Investigator", items: typeof GRANTS_PI !== "undefined" ? GRANTS_PI : [] },
+      { key: "coi", label: "Co-Investigator", items: typeof GRANTS_COI !== "undefined" ? GRANTS_COI : [] },
+      { key: "key", label: "Key member", items: typeof GRANTS_KEY !== "undefined" ? GRANTS_KEY : [] },
+      { key: "teaching", label: "Teaching project", items: typeof GRANTS_TEACHING !== "undefined" ? GRANTS_TEACHING : [] }
     ];
 
     var grantFilter = "all";
@@ -658,18 +658,49 @@
       return 0;
     }
 
+    function grantTypeTag(key, funder) {
+      var f = String(funder || "").toLowerCase();
+      if (key === "teaching") return "Teaching project";
+      if (/large equipment|equipment fund/.test(f)) return "Equipment grant";
+      if (/seed funding|preliminary research|research institute|risud|state key laboratory|carbon neutrality funding|polyu$|the hong kong polytechnic university/.test(f) &&
+          !/research grants council|collaborative research fund|nsfc|national natural|countryside|environment and ecology|otto poon|kuwait|ugc|university grants/.test(f)) {
+        return "Internal research grant";
+      }
+      return "Grant";
+    }
+
+    function roleShort(role, key) {
+      var r = String(role || "");
+      if (/principal investigator/i.test(r) || key === "pi") return "PI";
+      if (/co-investigator|co-principal/i.test(r) || key === "coi") return "Co-I";
+      if (/key|member|researcher/i.test(r) || key === "key") return "Key member";
+      if (key === "teaching") return "Co-I";
+      return r || "Investigator";
+    }
+
+    function grantBlurb(g) {
+      var bits = [];
+      if (g.amount) bits.push("Project Total: " + g.amount + ".");
+      bits.push("Role: " + g.role + ".");
+      bits.push("Supported by " + g.funder + " (" + g.years + ").");
+      bits.push(g.title);
+      return bits.join(" ");
+    }
+
     function allFundedProjects() {
       var flat = [];
       grantBuckets.forEach(function (b) {
         (b.items || []).forEach(function (g) {
           flat.push({
             key: b.key,
-            tag: b.tag,
+            tag: grantTypeTag(b.key, g.funder),
             title: g.title,
             years: g.years,
             funder: g.funder,
             amount: g.amount,
             role: g.role,
+            roleShort: roleShort(g.role, b.key),
+            blurb: grantBlurb(g),
             startYear: parseGrantStartYear(g.years),
             amountNum: parseGrantAmount(g.amount)
           });
@@ -709,18 +740,41 @@
       }
       if (emptyEl) emptyEl.hidden = true;
 
-      root.innerHTML = items.map(function (g) {
-        return '<li class="fund-item">' +
-          '<p class="fund-item__tag">' + esc(g.tag) + "</p>" +
-          '<h3 class="fund-item__title">' + esc(g.title) + "</h3>" +
-          '<p class="fund-item__meta">' + esc(g.funder) + " · " + esc(g.years) + "</p>" +
-          '<p class="fund-item__role">' + esc(g.role) + "</p>" +
-          (g.amount ? '<p class="fund-item__amount"><strong>Project total</strong> ' + esc(g.amount) + "</p>" : "") +
+      var peopleIcon =
+        '<svg class="fund-card__people-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">' +
+        '<circle cx="9" cy="8" r="2.4"/><circle cx="16" cy="9" r="2"/><path d="M4.5 17.5c.6-2.2 2.3-3.4 4.5-3.4s3.9 1.2 4.5 3.4"/>' +
+        '<path d="M13.2 17.2c.4-1.5 1.5-2.4 3-2.4 1.3 0 2.3.7 2.8 1.9"/>' +
+        "</svg>";
+
+      root.innerHTML = items.map(function (g, i) {
+        var id = "fund-more-" + i;
+        return '<li class="fund-card">' +
+          '<p class="fund-card__tag">' + esc(g.tag) + "</p>" +
+          '<h3 class="fund-card__title">' + esc(g.title) + "</h3>" +
+          '<p class="fund-card__meta">' + esc(g.funder) + " · " + esc(g.years) + "</p>" +
+          '<p class="fund-card__role">' + peopleIcon + "<span>" + esc(g.roleShort) + " — " + esc(g.role) + "</span></p>" +
+          '<div class="fund-card__expand">' +
+            '<p class="fund-card__blurb" id="' + id + '">' + esc(g.blurb) + "</p>" +
+            '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
+          "</div>" +
         "</li>";
       }).join("");
     }
 
     renderFundedList();
+
+    var grantsRoot = document.getElementById("grantsRoot");
+    if (grantsRoot) {
+      grantsRoot.addEventListener("click", function (e) {
+        var btn = e.target.closest(".fund-card__toggle");
+        if (!btn || !grantsRoot.contains(btn)) return;
+        var card = btn.closest(".fund-card");
+        if (!card) return;
+        var open = card.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.textContent = open ? "… See less" : "… See more";
+      });
+    }
 
     var grantChips = document.getElementById("grantChips");
     if (grantChips) {
