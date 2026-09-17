@@ -430,6 +430,21 @@
       .replace(/"/g, "&quot;");
   }
 
+  function revealExpandToggles(root) {
+    if (!root) return;
+    Array.prototype.forEach.call(root.querySelectorAll(".fund-card"), function (card) {
+      var blurb = card.querySelector(".fund-card__blurb");
+      var btn = card.querySelector(".fund-card__toggle");
+      if (!blurb || !btn) return;
+      if (blurb.scrollHeight > blurb.clientHeight + 1) {
+        btn.hidden = false;
+      } else {
+        btn.remove();
+        card.classList.add("is-open");
+      }
+    });
+  }
+
   function recordHtml(title, when, org, note) {
     return '<li class="record">' +
       (when ? '<span class="record__when">' + esc(when) + '</span>' : '') +
@@ -784,11 +799,12 @@
           (showSummary ? (
             '<div class="fund-card__expand">' +
               '<p class="fund-card__blurb" id="' + id + '">' + esc(s.summary) + "</p>" +
-              '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
+              '<button type="button" class="fund-card__toggle" hidden aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
             "</div>"
           ) : "") +
         "</li>";
       }).join("");
+      revealExpandToggles(root);
     }
 
     renderServiceList();
@@ -962,10 +978,11 @@
           '<p class="fund-card__role">' + peopleIcon + "<span>" + esc(g.roleShort) + "</span></p>" +
           '<div class="fund-card__expand">' +
             '<p class="fund-card__blurb" id="' + id + '">' + esc(g.blurb) + "</p>" +
-            '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
+            '<button type="button" class="fund-card__toggle" hidden aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
           "</div>" +
         "</li>";
       }).join("");
+      revealExpandToggles(root);
     }
 
     renderFundedList();
