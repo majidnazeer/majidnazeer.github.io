@@ -588,45 +588,194 @@
       }).join("");
     }
 
-    var deptEl = document.getElementById("deptServiceList");
-    if (deptEl && typeof DEPT_SERVICE !== "undefined") {
-      deptEl.innerHTML = DEPT_SERVICE.map(function (s) {
-        return recordHtml(s.title, s.years, s.note, "");
-      }).join("");
-    }
-
-    var svcEl = document.getElementById("serviceList");
-    if (svcEl && typeof SERVICE_HIGHLIGHTS !== "undefined") {
-      svcEl.innerHTML = SERVICE_HIGHLIGHTS.map(function (s) {
-        return recordHtml(s.title, s.years, s.note, "");
-      }).join("");
-    }
-
-    var examEl = document.getElementById("examsList");
-    if (examEl && typeof EXTERNAL_EXAMS !== "undefined") {
-      examEl.innerHTML = EXTERNAL_EXAMS.map(function (x) {
-        return '<li class="record">' +
-          '<span class="record__when">' + esc(x.years) + '</span>' +
-          '<p class="role-tag">' + esc(x.degree) + ' · External examiner</p>' +
-          '<p class="record__title">' + esc(x.name) + '</p>' +
-          '<p class="record__org">' + esc(x.place) + '</p>' +
-          '<p class="record__note">' + esc(x.topic) + '</p>' +
-        '</li>';
-      }).join("");
-    }
-
-    var engEl = document.getElementById("engagementList");
-    if (engEl && typeof ENGAGEMENT !== "undefined") {
-      engEl.innerHTML = ENGAGEMENT.map(function (e) {
-        return recordHtml(e.title, e.years, e.note, "");
-      }).join("");
-    }
-
     var fieldEl = document.getElementById("fieldLeadershipList");
     if (fieldEl && typeof FIELD_LEADERSHIP !== "undefined") {
       fieldEl.innerHTML = FIELD_LEADERSHIP.map(function (f) {
         return recordHtml(f.title, f.years, f.note, "");
       }).join("");
+    }
+  }
+
+  if (page === "service") {
+    function parseServiceYear(years) {
+      var m = String(years || "").match(/(\d{4})/g);
+      if (!m || !m.length) return 0;
+      return parseInt(m[m.length - 1], 10);
+    }
+
+    function classifyDeptItem(s) {
+      var t = String(s.title || "").toLowerCase();
+      if (/representative|moderator/.test(t)) {
+        return { key: "leadership", tag: "Leadership", role: s.title.replace(/,.*/, "").trim() };
+      }
+      if (/member/.test(t)) {
+        return { key: "departmental", tag: "Departmental service", role: "Member" };
+      }
+      return { key: "departmental", tag: "Departmental service", role: "" };
+    }
+
+    function allServiceItems() {
+      var items = [];
+
+      if (typeof DEPT_SERVICE !== "undefined") {
+        DEPT_SERVICE.forEach(function (s) {
+          var c = classifyDeptItem(s);
+          items.push({
+            key: c.key,
+            tag: c.tag,
+            title: s.title,
+            years: s.years,
+            org: s.note || "",
+            role: c.role,
+            detail: s.note || "",
+            startYear: parseServiceYear(s.years)
+          });
+        });
+      }
+
+      if (typeof SERVICE_HIGHLIGHTS !== "undefined") {
+        SERVICE_HIGHLIGHTS.forEach(function (s) {
+          items.push({
+            key: "reviewing",
+            tag: "Assessing and reviewing",
+            title: s.title,
+            years: s.years,
+            org: s.note || "",
+            role: s.title,
+            detail: s.note || "",
+            startYear: parseServiceYear(s.years)
+          });
+        });
+      }
+
+      if (typeof EXTERNAL_EXAMS !== "undefined") {
+        EXTERNAL_EXAMS.forEach(function (x) {
+          items.push({
+            key: "examining",
+            tag: "External examination",
+            title: x.name,
+            years: x.years,
+            org: x.place,
+            role: x.degree + " · External examiner",
+            detail: x.topic || "",
+            startYear: parseServiceYear(x.years)
+          });
+        });
+      }
+
+      if (typeof ENGAGEMENT !== "undefined") {
+        ENGAGEMENT.forEach(function (e) {
+          items.push({
+            key: "engagement",
+            tag: "Engagement",
+            title: e.title,
+            years: e.years,
+            org: e.note || "",
+            role: "",
+            detail: e.note || "",
+            startYear: parseServiceYear(e.years)
+          });
+        });
+      }
+
+      return items;
+    }
+
+    var serviceFilter = "all";
+    var serviceSort = "newest";
+    var serviceQuery = "";
+
+    function renderServiceList() {
+      var root = document.getElementById("serviceRoot");
+      var emptyEl = document.getElementById("serviceEmpty");
+      var countEl = document.getElementById("serviceCount");
+      if (!root) return;
+
+      var q = serviceQuery.trim().toLowerCase();
+      var items = allServiceItems().filter(function (s) {
+        if (serviceFilter !== "all" && s.key !== serviceFilter) return false;
+        if (!q) return true;
+        var hay = (s.title + " " + s.org + " " + s.tag + " " + s.role + " " + s.detail).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      items.sort(function (a, b) {
+        if (serviceSort === "oldest") return a.startYear - b.startYear || a.title.localeCompare(b.title);
+        return b.startYear - a.startYear || a.title.localeCompare(b.title);
+      });
+
+      if (countEl) {
+        countEl.textContent = items.length + (items.length === 1 ? " item" : " items");
+      }
+
+      if (!items.length) {
+        root.innerHTML = "";
+        if (emptyEl) emptyEl.hidden = false;
+        return;
+      }
+      if (emptyEl) emptyEl.hidden = true;
+
+      root.innerHTML = items.map(function (s, i) {
+        var id = "svc-more-" + i;
+        var hasMore = !!(s.detail && s.detail !== s.org);
+        var blurb = s.detail || s.org || "";
+        return '<li class="fund-card">' +
+          '<p class="fund-card__tag">' + esc(s.tag) + "</p>" +
+          '<h3 class="fund-card__title">' + esc(s.title) + "</h3>" +
+          '<p class="fund-card__meta">' + esc(s.years) + (s.org ? " · " + esc(s.org) : "") + "</p>" +
+          (s.role && s.role !== s.title ? '<p class="fund-card__role"><span>' + esc(s.role) + "</span></p>" : "") +
+          (blurb ? (
+            '<div class="fund-card__expand">' +
+              '<p class="fund-card__blurb" id="' + id + '">' + esc(blurb) + "</p>" +
+              (hasMore ? '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' : "") +
+            "</div>"
+          ) : "") +
+        "</li>";
+      }).join("");
+    }
+
+    renderServiceList();
+
+    var serviceRoot = document.getElementById("serviceRoot");
+    if (serviceRoot) {
+      serviceRoot.addEventListener("click", function (e) {
+        var btn = e.target.closest(".fund-card__toggle");
+        if (!btn || !serviceRoot.contains(btn)) return;
+        var card = btn.closest(".fund-card");
+        if (!card) return;
+        var open = card.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.textContent = open ? "… See less" : "… See more";
+      });
+    }
+
+    var serviceChips = document.getElementById("serviceChips");
+    if (serviceChips) {
+      serviceChips.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-service]");
+        if (!btn) return;
+        serviceFilter = btn.getAttribute("data-service");
+        Array.prototype.forEach.call(serviceChips.querySelectorAll(".chip"), function (c) {
+          c.classList.toggle("is-active", c === btn);
+        });
+        renderServiceList();
+      });
+    }
+
+    var searchEl = document.getElementById("serviceSearch");
+    if (searchEl) {
+      searchEl.addEventListener("input", function () {
+        serviceQuery = searchEl.value;
+        renderServiceList();
+      });
+    }
+
+    var sortEl = document.getElementById("serviceSort");
+    if (sortEl) {
+      sortEl.addEventListener("change", function () {
+        serviceSort = sortEl.value;
+        renderServiceList();
+      });
     }
   }
 
