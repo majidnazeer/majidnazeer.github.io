@@ -752,7 +752,7 @@
           '<p class="fund-card__tag">' + esc(g.tag) + "</p>" +
           '<h3 class="fund-card__title">' + esc(g.title) + "</h3>" +
           '<p class="fund-card__meta">' + esc(g.funder) + " · " + esc(g.years) + "</p>" +
-          '<p class="fund-card__role">' + peopleIcon + "<span>" + esc(g.roleShort) + " — " + esc(g.role) + "</span></p>" +
+          '<p class="fund-card__role">' + peopleIcon + "<span>" + esc(g.roleShort) + "</span></p>" +
           '<div class="fund-card__expand">' +
             '<p class="fund-card__blurb" id="' + id + '">' + esc(g.blurb) + "</p>" +
             '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
