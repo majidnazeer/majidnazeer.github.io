@@ -49,6 +49,53 @@
   var sections = Array.prototype.slice.call(document.querySelectorAll(".sec[id]"));
   var page = document.body.getAttribute("data-page") || "home";
 
+  /* =======================================================
+     LIVE CITATION METRICS (OpenAlex — Scholar has no public API)
+     ======================================================= */
+
+  function formatCount(n) {
+    return Number(n).toLocaleString("en-US");
+  }
+
+  function loadLiveMetrics() {
+    var cit = document.getElementById("statCitations");
+    var h = document.getElementById("statHIndex");
+    var i10 = document.getElementById("statI10");
+    var src = document.getElementById("statsSource");
+    if (!cit || !h || !i10) return;
+
+    var url =
+      "https://api.openalex.org/authors/orcid:0000-0002-7631-1599" +
+      "?mailto=majid.nazeer@connect.polyu.hk";
+
+    fetch(url)
+      .then(function (res) {
+        if (!res.ok) throw new Error("OpenAlex " + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        var citations = data.cited_by_count;
+        var hIndex = data.summary_stats && data.summary_stats.h_index;
+        var i10Index = data.summary_stats && data.summary_stats.i10_index;
+        if (citations != null) cit.textContent = formatCount(citations);
+        if (hIndex != null) h.textContent = formatCount(hIndex);
+        if (i10Index != null) i10.textContent = formatCount(i10Index);
+        if (src) {
+          src.innerHTML =
+            "Updated live from <a href=\"https://openalex.org/authors/orcid:0000-0002-7631-1599\" rel=\"noopener\">OpenAlex</a>" +
+            " · open <a href=\"https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ\" rel=\"noopener\">Google Scholar</a>";
+        }
+      })
+      .catch(function () {
+        if (src) {
+          src.innerHTML =
+            "Showing saved figures · open <a href=\"https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ\" rel=\"noopener\">Google Scholar</a>";
+        }
+      });
+  }
+
+  if (page === "home") loadLiveMetrics();
+
   if (navToggle && siteNav) {
     navToggle.addEventListener("click", function () {
       var open = siteNav.classList.toggle("is-open");

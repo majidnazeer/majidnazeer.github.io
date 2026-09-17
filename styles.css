@@ -419,6 +419,22 @@ a:hover { opacity: .75; }
   color: var(--muted);
   margin-top: .35rem;
 }
+.stats__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.stats__link:hover .stats__n { color: var(--accent); }
+.stats__source {
+  margin: -.75rem 0 1.5rem;
+  font-size: .72rem;
+  color: var(--muted);
+}
+.stats__source a {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+.stats__source a:hover { text-decoration: underline; }
 
 /* Research activity chart */
 .activity {
