@@ -63,7 +63,8 @@
     var i10 = document.getElementById("statI10");
     if (!cit || !h || !i10) return;
 
-    /* i10 stays on the Google Scholar figure (OpenAlex often differs). */
+    /* h-index and i10 stay on Google Scholar figures (OpenAlex often differs). */
+    h.textContent = h.getAttribute("data-fallback") || "27";
     i10.textContent = i10.getAttribute("data-fallback") || "41";
 
     var url =
@@ -77,9 +78,7 @@
       })
       .then(function (data) {
         var citations = data.cited_by_count;
-        var hIndex = data.summary_stats && data.summary_stats.h_index;
         if (citations != null) cit.textContent = formatCount(citations);
-        if (hIndex != null) h.textContent = formatCount(hIndex);
       })
       .catch(function () { /* keep fallback figures in HTML */ });
   }
