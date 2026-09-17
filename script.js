@@ -614,6 +614,29 @@
       return { key: "departmental", tag: "Departmental service", role: "" };
     }
 
+    function splitReviewVenue(note) {
+      var text = String(note || "").trim();
+      if (!text) return { summary: "", venue: "" };
+      var known = text.match(/,\s*((?:MDPI\s+)?Remote Sensing|Climate|Frontiers in Marine Science|Journal of Marine Science and Engineering|Kuwait Journal of Science)\s*$/i);
+      if (known) {
+        return {
+          summary: text.slice(0, known.index).replace(/[,\s]+$/, ""),
+          venue: known[1]
+        };
+      }
+      var parts = text.split(/,\s*/);
+      if (parts.length >= 2) {
+        var last = parts[parts.length - 1];
+        if (last.length <= 70) {
+          return {
+            summary: parts.slice(0, -1).join(", "),
+            venue: last
+          };
+        }
+      }
+      return { summary: "", venue: text };
+    }
+
     function allServiceItems() {
       var items = [];
 
@@ -625,9 +648,9 @@
             tag: c.tag,
             title: s.title,
             years: s.years,
-            org: s.note || "",
+            venue: s.note || "",
             role: c.role,
-            detail: s.note || "",
+            summary: "",
             startYear: parseServiceYear(s.years)
           });
         });
@@ -635,14 +658,15 @@
 
       if (typeof SERVICE_HIGHLIGHTS !== "undefined") {
         SERVICE_HIGHLIGHTS.forEach(function (s) {
+          var split = splitReviewVenue(s.note || "");
           items.push({
             key: "reviewing",
             tag: "Assessing and reviewing",
             title: s.title,
             years: s.years,
-            org: s.note || "",
-            role: s.title,
-            detail: s.note || "",
+            venue: split.venue,
+            role: "",
+            summary: split.summary,
             startYear: parseServiceYear(s.years)
           });
         });
@@ -655,9 +679,9 @@
             tag: "External examination",
             title: x.name,
             years: x.years,
-            org: x.place,
+            venue: x.place,
             role: x.degree + " · External examiner",
-            detail: x.topic || "",
+            summary: x.topic || "",
             startYear: parseServiceYear(x.years)
           });
         });
@@ -670,9 +694,9 @@
             tag: "Engagement",
             title: e.title,
             years: e.years,
-            org: e.note || "",
+            venue: e.note || "",
             role: "",
-            detail: e.note || "",
+            summary: "",
             startYear: parseServiceYear(e.years)
           });
         });
@@ -695,7 +719,7 @@
       var items = allServiceItems().filter(function (s) {
         if (serviceFilter !== "all" && s.key !== serviceFilter) return false;
         if (!q) return true;
-        var hay = (s.title + " " + s.org + " " + s.tag + " " + s.role + " " + s.detail).toLowerCase();
+        var hay = (s.title + " " + s.venue + " " + s.tag + " " + s.role + " " + s.summary).toLowerCase();
         return hay.indexOf(q) !== -1;
       });
 
@@ -717,17 +741,19 @@
 
       root.innerHTML = items.map(function (s, i) {
         var id = "svc-more-" + i;
-        var hasMore = !!(s.detail && s.detail !== s.org);
-        var blurb = s.detail || s.org || "";
+        var showSummary = !!(s.summary && s.summary !== s.venue);
         return '<li class="fund-card">' +
-          '<p class="fund-card__tag">' + esc(s.tag) + "</p>" +
+          '<div class="fund-card__top">' +
+            '<p class="fund-card__tag">' + esc(s.tag) + "</p>" +
+            '<p class="fund-card__when">' + esc(s.years) + "</p>" +
+          "</div>" +
           '<h3 class="fund-card__title">' + esc(s.title) + "</h3>" +
-          '<p class="fund-card__meta">' + esc(s.years) + (s.org ? " · " + esc(s.org) : "") + "</p>" +
           (s.role && s.role !== s.title ? '<p class="fund-card__role"><span>' + esc(s.role) + "</span></p>" : "") +
-          (blurb ? (
+          (s.venue ? '<p class="fund-card__venue">' + esc(s.venue) + "</p>" : "") +
+          (showSummary ? (
             '<div class="fund-card__expand">' +
-              '<p class="fund-card__blurb" id="' + id + '">' + esc(blurb) + "</p>" +
-              (hasMore ? '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' : "") +
+              '<p class="fund-card__blurb" id="' + id + '">' + esc(s.summary) + "</p>" +
+              '<button type="button" class="fund-card__toggle" aria-expanded="false" aria-controls="' + id + '">… See more</button>' +
             "</div>"
           ) : "") +
         "</li>";
@@ -830,8 +856,6 @@
     function grantBlurb(g) {
       var bits = [];
       if (g.amount) bits.push("Project Total: " + g.amount + ".");
-      bits.push("Role: " + g.role + ".");
-      bits.push("Supported by " + g.funder + " (" + g.years + ").");
       bits.push(g.title);
       return bits.join(" ");
     }
@@ -898,9 +922,12 @@
       root.innerHTML = items.map(function (g, i) {
         var id = "fund-more-" + i;
         return '<li class="fund-card">' +
-          '<p class="fund-card__tag">' + esc(g.tag) + "</p>" +
+          '<div class="fund-card__top">' +
+            '<p class="fund-card__tag">' + esc(g.tag) + "</p>" +
+            '<p class="fund-card__when">' + esc(g.years) + "</p>" +
+          "</div>" +
           '<h3 class="fund-card__title">' + esc(g.title) + "</h3>" +
-          '<p class="fund-card__meta">' + esc(g.funder) + " · " + esc(g.years) + "</p>" +
+          '<p class="fund-card__venue">' + esc(g.funder) + "</p>" +
           '<p class="fund-card__role">' + peopleIcon + "<span>" + esc(g.roleShort) + "</span></p>" +
           '<div class="fund-card__expand">' +
             '<p class="fund-card__blurb" id="' + id + '">' + esc(g.blurb) + "</p>" +

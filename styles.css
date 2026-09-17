@@ -1029,13 +1029,29 @@ a:hover { opacity: .75; }
   border: 1px solid var(--border);
   border-radius: 6px;
 }
+.fund-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: .55rem;
+}
 .fund-card__tag {
-  margin: 0 0 .55rem;
+  margin: 0;
   font-size: .68rem;
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--accent-deep);
+}
+.fund-card__when {
+  margin: 0;
+  flex-shrink: 0;
+  font-size: .88rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
 }
 .fund-card__title {
   margin: 0 0 .45rem;
@@ -1050,6 +1066,13 @@ a:hover { opacity: .75; }
   margin: 0 0 .65rem;
   font-size: .92rem;
   color: var(--muted);
+  line-height: 1.45;
+}
+.fund-card__venue {
+  margin: 0 0 .55rem;
+  font-size: .98rem;
+  font-style: italic;
+  color: var(--accent-deep);
   line-height: 1.45;
 }
 .fund-card__role {
