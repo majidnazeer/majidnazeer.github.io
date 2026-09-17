@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources — Majid Nazeer</title>
+<meta name="description" content="Open-source code and research datasets by Dr Majid Nazeer.">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("mn-theme") || "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+</head>
+<body data-page="resources">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="shell site-head__inner">
+    <a class="site-head__brand" href="index.html">Majid Nazeer</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      Menu
+    </button>
+    <nav class="site-nav profile-tabs" id="siteNav" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="people.html">People</a>
+      <a href="cv.html">CV</a>
+      <a href="field.html">Field</a>
+      <a href="resources.html" class="is-active">Resources</a>
+    </nav>
+    <button class="theme" id="themeToggle" type="button" aria-label="Switch to dark mode">
+      <svg class="theme__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.6"/><path d="M12 2.8v1.8M12 19.4v1.8M2.8 12h1.8M19.4 12h1.8"/>
+      </svg>
+      <svg class="theme__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+        <path d="M20.2 14.1A8.2 8.2 0 0 1 9.9 3.8 8.4 8.4 0 1 0 20.2 14.1z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="shell page-shell">
+    <header class="page__head">
+      <p class="page__kicker">Open research</p>
+      <h1 class="page__title">Resources</h1>
+      <p class="page__lead">Code repositories and datasets. Switch tabs below as items are released.</p>
+    </header>
+
+    <div class="subtabs" data-tabs>
+      <div class="subtabs__bar" role="tablist" aria-label="Resource type">
+        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-codes" aria-selected="true" aria-controls="panel-codes" data-tab="codes">Codes</button>
+        <button type="button" class="subtabs__tab" role="tab" id="tab-datasets" aria-selected="false" aria-controls="panel-datasets" data-tab="datasets" tabindex="-1">Datasets</button>
+      </div>
+
+      <div class="subtabs__panels">
+        <section class="subtabs__panel is-active" role="tabpanel" id="panel-codes" aria-labelledby="tab-codes" data-panel="codes">
+          <header class="panel-head">
+            <h2 class="panel-head__title">Codes</h2>
+            <p class="panel-head__lead">Open-source software and analysis scripts.</p>
+          </header>
+          <ul class="resource-grid" id="codeList"></ul>
+          <div class="empty-state" id="codeEmpty">
+            <p>No repositories listed yet. Entries can be added to the <code>CODES</code> array in <code>data.js</code>.</p>
+          </div>
+        </section>
+
+        <section class="subtabs__panel" role="tabpanel" id="panel-datasets" aria-labelledby="tab-datasets" data-panel="datasets" hidden>
+          <header class="panel-head">
+            <h2 class="panel-head__title">Datasets</h2>
+            <p class="panel-head__lead">Spectral libraries and research data products.</p>
+          </header>
+          <ul class="resource-grid" id="datasetList"></ul>
+          <div class="empty-state" id="datasetEmpty">
+            <p>No datasets listed yet. Entries can be added to the <code>DATASETS</code> array in <code>data.js</code>.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="shell site-foot__inner">
+    <p>&copy; <span id="year"></span> Majid Nazeer · Department of Land Surveying and Geospatial Science · PolyU</p>
+    <ul class="foot-icons" aria-label="Profiles">
+      <li>
+        <a href="mailto:nmajid.nazeer@polyu.edu.hk" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://orcid.org/0000-0002-7631-1599" rel="noopener" aria-label="ORCID" title="ORCID">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="currentColor"/>
+            <text x="12" y="15.5" text-anchor="middle" font-size="9" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="var(--bg)">iD</text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.5 9.2 12 3.6l7.5 5.6H16v.2c0 1.4-1.8 2.55-4 2.55s-4-1.15-4-2.55v-.2H4.5z"/>
+            <path d="M7.2 11.2v3.6c0 1.7 2.15 3.05 4.8 3.05s4.8-1.35 4.8-3.05v-3.6"/>
+            <text x="12" y="12.8" text-anchor="middle" font-size="8" font-family="Segoe UI, Arial, sans-serif" font-weight="700">g</text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.researchgate.net/profile/Majid-Nazeer" rel="noopener" aria-label="ResearchGate" title="ResearchGate">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <text x="2" y="18" font-size="14" font-family="Segoe UI, Arial, sans-serif" font-weight="700">R</text>
+            <text x="12.2" y="11.2" font-size="8.5" font-family="Segoe UI, Arial, sans-serif" font-weight="700">G</text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.polyu.edu.hk/lsgs/people/academic-staff/dr-majid-nazeer/" rel="noopener" aria-label="PolyU staff page" title="PolyU">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3.5 10.5 12 5.5l8.5 5"/><path d="M6 11.5v6.5M10 11.5v6.5M14 11.5v6.5M18 11.5v6.5"/><path d="M4.5 19.5h15"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
