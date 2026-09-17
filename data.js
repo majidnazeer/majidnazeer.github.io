@@ -1180,5 +1180,4 @@ var FIELD_LEADERSHIP = [
   { years: "2009–2010", title: "Water quality researcher — Rawal Lake, Pakistan", note: "Field assessments of Secchi depth, chlorophyll-a and total phosphorus." }
 ];
 
-/* Gallery entries: add { year, title, place, caption, image: "assets/field/your-photo.jpg" } */
 var FIELD_SURVEYS = [];
