@@ -50,6 +50,88 @@
   var page = document.body.getAttribute("data-page") || "home";
 
   /* =======================================================
+     PROFILE SIDEBAR (Discovery-style, every page)
+     ======================================================= */
+
+  function injectProfileSidebar() {
+    var mount = document.getElementById("profileSidebar");
+    if (!mount) return;
+
+    mount.innerHTML =
+      '<div class="profile-sidebar__card">' +
+        '<figure class="profile-sidebar__photo">' +
+          '<img src="assets/majid-nazeer-2026.jpg" alt="Portrait of Dr Majid Nazeer" width="280" height="280" loading="eager">' +
+        '</figure>' +
+        '<p class="profile-sidebar__eyebrow">Research Assistant Professor</p>' +
+        '<h2 class="profile-sidebar__name">Majid Nazeer</h2>' +
+        '<hr class="profile-sidebar__divider">' +
+        '<ul class="profile-sidebar__list">' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="15.4" text-anchor="middle" font-size="8.5" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="var(--surface)">iD</text></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<span class="profile-sidebar__label">ORCID</span>' +
+              '<a href="https://orcid.org/0000-0002-7631-1599" rel="noopener">0000-0002-7631-1599</a>' +
+            '</span>' +
+          '</li>' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<span class="profile-sidebar__text">Research Assistant Professor</span>' +
+              '<span class="profile-sidebar__sub">Land Surveying and Geospatial Science, PolyU</span>' +
+            '</span>' +
+          '</li>' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<span class="profile-sidebar__label">Email</span>' +
+              '<a href="mailto:majid.nazeer@connect.polyu.hk">majid.nazeer@connect.polyu.hk</a>' +
+            '</span>' +
+          '</li>' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4.2 9h2.6v.2c0 1.55 2.3 2.85 5.2 2.85s5.2-1.3 5.2-2.85V9h2.6L12 3.2zm0 10.1c-2.45 0-4.55-.75-5.5-1.85v2.35c0 1.55 2.45 2.85 5.5 2.85s5.5-1.3 5.5-2.85v-2.35c-.95 1.1-3.05 1.85-5.5 1.85z"/></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<a href="https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ" rel="noopener">Google Scholar</a>' +
+            '</span>' +
+          '</li>' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7.5" r="2.2"/><circle cx="7.2" cy="15.5" r="2.2"/><circle cx="16.8" cy="15.5" r="2.2"/><path d="M10.2 9.2 8.5 13.5M13.8 9.2l1.7 4.3M9.4 15.5h5.2"/></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<a href="https://www.webofscience.com/wos/author/record/631583" rel="noopener">Web of Science</a>' +
+            '</span>' +
+          '</li>' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<a href="https://www.linkedin.com/in/majid-nazeer-29897914" rel="noopener">LinkedIn</a>' +
+            '</span>' +
+          '</li>' +
+          '<li class="profile-sidebar__item">' +
+            '<span class="profile-sidebar__icon" aria-hidden="true">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 10.5 12 5.5l8.5 5"/><path d="M6 11.5v6.5M10 11.5v6.5M14 11.5v6.5M18 11.5v6.5"/><path d="M4.5 19.5h15"/></svg>' +
+            '</span>' +
+            '<span class="profile-sidebar__item-body">' +
+              '<a href="https://www.polyu.edu.hk/lsgs/people/academic-staff/dr-majid-nazeer/" rel="noopener">PolyU staff page</a>' +
+            '</span>' +
+          '</li>' +
+        '</ul>' +
+      '</div>';
+  }
+
+  injectProfileSidebar();
+
+  /* =======================================================
      LIVE CITATION METRICS (OpenAlex — Scholar has no public API)
      ======================================================= */
 
@@ -454,6 +536,22 @@
     '</li>';
   }
 
+  if (page === "home") {
+    var aboutPos = document.getElementById("aboutPositions");
+    if (aboutPos && typeof POSITIONS !== "undefined") {
+      aboutPos.innerHTML = POSITIONS.map(function (p) {
+        return recordHtml(p.role, p.years, p.org, "");
+      }).join("");
+    }
+
+    var aboutEdu = document.getElementById("aboutEducation");
+    if (aboutEdu && typeof EDUCATION !== "undefined") {
+      aboutEdu.innerHTML = EDUCATION.map(function (e) {
+        return recordHtml(e.degree, e.years, e.place, e.note);
+      }).join("");
+    }
+  }
+
   function activateTab(root, id) {
     var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-tab]"));
     var panels = Array.prototype.slice.call(root.querySelectorAll("[data-panel]"));
@@ -521,20 +619,6 @@
   document.querySelectorAll("[data-tabs]").forEach(initPanelTabs);
 
   if (page === "cv") {
-    var posEl = document.getElementById("positionsList");
-    if (posEl && typeof POSITIONS !== "undefined") {
-      posEl.innerHTML = POSITIONS.map(function (p) {
-        return recordHtml(p.role, p.years, p.org, "");
-      }).join("");
-    }
-
-    var eduEl = document.getElementById("educationList");
-    if (eduEl && typeof EDUCATION !== "undefined") {
-      eduEl.innerHTML = EDUCATION.map(function (e) {
-        return recordHtml(e.degree, e.years, e.place, e.note);
-      }).join("");
-    }
-
     var memEl = document.getElementById("membershipsList");
     if (memEl && typeof MEMBERSHIPS !== "undefined") {
       memEl.innerHTML = MEMBERSHIPS.map(function (m) {

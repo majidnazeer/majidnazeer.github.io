@@ -53,41 +53,25 @@
 </header>
 
 <main id="main" class="page">
-  <div class="shell page-shell page-shell--wide">
+  <div class="shell profile-layout">
+    <aside id="profileSidebar" class="profile-sidebar" aria-label="Profile"></aside>
+    <div class="profile-main">
     <header class="page__head">
       <p class="page__kicker">Curriculum vitae</p>
       <h1 class="page__title">Academic record</h1>
-      <p class="page__lead">Appointments, talks and teaching — each on its own tab. Grants are on <a href="funded.html">Funded Projects</a>; service, exams and engagement are on <a href="service.html">Service &amp; Engagement</a>; field campaigns are on <a href="field.html">Field Survey</a>.</p>
+      <p class="page__lead">Memberships, awards, talks and teaching — each on its own tab. Appointments and degrees are on <a href="index.html#about">About</a>. Grants are on <a href="funded.html">Funded Projects</a>; service, exams and engagement are on <a href="service.html">Service &amp; Engagement</a>; field campaigns are on <a href="field.html">Field Survey</a>.</p>
     </header>
 
     <div class="subtabs" data-tabs>
       <div class="subtabs__bar" role="tablist" aria-label="CV sections">
-        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-positions" aria-selected="true" aria-controls="panel-positions" data-tab="positions">Appointments</button>
-        <button type="button" class="subtabs__tab" role="tab" id="tab-education" aria-selected="false" aria-controls="panel-education" data-tab="education" tabindex="-1">Education</button>
-        <button type="button" class="subtabs__tab" role="tab" id="tab-memberships" aria-selected="false" aria-controls="panel-memberships" data-tab="memberships" tabindex="-1">Memberships</button>
+        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-memberships" aria-selected="true" aria-controls="panel-memberships" data-tab="memberships">Memberships</button>
         <button type="button" class="subtabs__tab" role="tab" id="tab-awards" aria-selected="false" aria-controls="panel-awards" data-tab="awards" tabindex="-1">Awards</button>
         <button type="button" class="subtabs__tab" role="tab" id="tab-talks" aria-selected="false" aria-controls="panel-talks" data-tab="talks" tabindex="-1">Talks</button>
         <button type="button" class="subtabs__tab" role="tab" id="tab-teaching" aria-selected="false" aria-controls="panel-teaching" data-tab="teaching" tabindex="-1">Teaching</button>
       </div>
 
       <div class="subtabs__panels">
-        <section class="subtabs__panel is-active" role="tabpanel" id="panel-positions" aria-labelledby="tab-positions" data-panel="positions">
-          <header class="panel-head">
-            <h2 class="panel-head__title">Academic appointments</h2>
-            <p class="panel-head__lead">Current and previous positions, newest first.</p>
-          </header>
-          <ol class="record-list" id="positionsList"></ol>
-        </section>
-
-        <section class="subtabs__panel" role="tabpanel" id="panel-education" aria-labelledby="tab-education" data-panel="education" hidden>
-          <header class="panel-head">
-            <h2 class="panel-head__title">Degrees</h2>
-            <p class="panel-head__lead">Formal qualifications and dissertations.</p>
-          </header>
-          <ol class="record-list" id="educationList"></ol>
-        </section>
-
-        <section class="subtabs__panel" role="tabpanel" id="panel-memberships" aria-labelledby="tab-memberships" data-panel="memberships" hidden>
+        <section class="subtabs__panel is-active" role="tabpanel" id="panel-memberships" aria-labelledby="tab-memberships" data-panel="memberships">
           <header class="panel-head">
             <h2 class="panel-head__title">Professional memberships</h2>
             <p class="panel-head__lead">Societies and professional communities.</p>
@@ -132,6 +116,7 @@
         </section>
       </div>
     </div>
+  </div>
   </div>
 </main>
 
