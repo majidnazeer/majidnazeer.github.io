@@ -77,15 +77,6 @@
           '</li>' +
           '<li class="profile-sidebar__item">' +
             '<span class="profile-sidebar__icon" aria-hidden="true">' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>' +
-            '</span>' +
-            '<span class="profile-sidebar__item-body">' +
-              '<span class="profile-sidebar__text">Research Assistant Professor</span>' +
-              '<span class="profile-sidebar__sub">Land Surveying and Geospatial Science, PolyU</span>' +
-            '</span>' +
-          '</li>' +
-          '<li class="profile-sidebar__item">' +
-            '<span class="profile-sidebar__icon" aria-hidden="true">' +
               '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>' +
             '</span>' +
             '<span class="profile-sidebar__item-body">' +
