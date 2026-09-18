@@ -1192,12 +1192,12 @@ var TEACHING = [
 ];
 
 var EXTERNAL_EXAMS = [
-  { years: "2025", degree: "PhD", name: "Usman Ahmad", place: "College of Earth & Environmental Sciences, University of the Punjab, Lahore", topic: "Environmental impacts of mega infrastructure projects in Upper Indus Basin using geospatial techniques" },
-  { years: "2021", degree: "PhD", name: "Muhammad Habib ul Haq", place: "College of Earth & Environmental Sciences, University of the Punjab, Lahore", topic: "Recycling potential assessment of asphalt roads in Lahore" },
-  { years: "2020", degree: "PhD", name: "Muhammad Zeeshan", place: "Institute of Geology, University of the Punjab, Lahore", topic: "Landslide hazard zonation mapping using geotechnical and remote sensing data, NW Sub-Himalayas, Azad Kashmir" },
-  { years: "2020", degree: "PhD", name: "Muhammad Asif Javed", place: "College of Earth & Environmental Sciences, University of the Punjab, Lahore", topic: "Irrigation water demand modeling by monitoring crop health cycle: a GIS and remote sensing perspective" },
-  { years: "2017", degree: "MPhil", name: "Muhammad Aaqib Javad Chaudhary", place: "Department of Space Science, Institute of Space Technology, Islamabad", topic: "Identifying upwelling-related biogenic slicks in Northern Arabian Sea using L-band SAR data" },
-  { years: "2017", degree: "MPhil", name: "Amir Iqbal", place: "Department of Space Science, Institute of Space Technology, Islamabad", topic: "Satellite remote sensing mapping of coral reefs in Pakistan’s coastal ocean: Astola Island, Indus Delta" }
+  { years: "2025", degree: "PhD", role: "External examiner", topic: "Environmental impacts of mega infrastructure projects in Upper Indus Basin using geospatial techniques" },
+  { years: "2021", degree: "PhD", role: "External examiner", topic: "Recycling potential assessment of asphalt roads in Lahore" },
+  { years: "2020", degree: "PhD", role: "External examiner", topic: "Landslide hazard zonation mapping using geotechnical and remote sensing data, NW Sub-Himalayas, Azad Kashmir" },
+  { years: "2020", degree: "PhD", role: "External examiner", topic: "Irrigation water demand modeling by monitoring crop health cycle: a GIS and remote sensing perspective" },
+  { years: "2017", degree: "MPhil", role: "External examiner", topic: "Identifying upwelling-related biogenic slicks in Northern Arabian Sea using L-band SAR data" },
+  { years: "2017", degree: "MPhil", role: "External examiner", topic: "Satellite remote sensing mapping of coral reefs in Pakistan’s coastal ocean: Astola Island, Indus Delta" }
 ];
 
 var ENGAGEMENT = [

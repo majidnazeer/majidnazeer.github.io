@@ -62,7 +62,6 @@
         '<figure class="profile-sidebar__photo">' +
           '<img src="assets/majid-nazeer-2026.jpg" alt="Portrait of Dr Majid Nazeer" width="280" height="280" loading="eager">' +
         '</figure>' +
-        '<p class="profile-sidebar__eyebrow">Research Assistant Professor</p>' +
         '<h2 class="profile-sidebar__name">Majid Nazeer</h2>' +
         '<hr class="profile-sidebar__divider">' +
         '<ul class="profile-sidebar__list">' +
@@ -73,15 +72,6 @@
             '<span class="profile-sidebar__item-body">' +
               '<span class="profile-sidebar__label">ORCID</span>' +
               '<a href="https://orcid.org/0000-0002-7631-1599" rel="noopener">0000-0002-7631-1599</a>' +
-            '</span>' +
-          '</li>' +
-          '<li class="profile-sidebar__item">' +
-            '<span class="profile-sidebar__icon" aria-hidden="true">' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>' +
-            '</span>' +
-            '<span class="profile-sidebar__item-body">' +
-              '<span class="profile-sidebar__text">Research Assistant Professor</span>' +
-              '<span class="profile-sidebar__sub">Land Surveying and Geospatial Science, PolyU</span>' +
             '</span>' +
           '</li>' +
           '<li class="profile-sidebar__item">' +
@@ -267,12 +257,18 @@
       return explicit.indexOf(role) !== -1;
     }
 
-    /* 1. First author */
+    /* Conference: Speaker only (Dataset/Code are separate resource badges). */
+    if (kind === "conference") {
+      if (has("speaker") || p.speaker === true || isFirst) {
+        roles.push("speaker");
+      }
+      return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
+    }
+
     if (has("first-author") || p.firstAuthor === true || isFirst) {
       roles.push("first-author");
     }
 
-    /* 2. Corresponding — first-author papers, or explicit / student paper where he is 2nd */
     if (
       has("corresponding") ||
       p.corresponding === true ||
@@ -282,37 +278,12 @@
       roles.push("corresponding");
     }
 
-    /* 3. Student supervision work */
-    if (has("student-supervision") || has("student-lead") || p.studentLead === true || isStudentWork) {
-      roles.push("student-supervision");
-    }
-
-    /* 4. Associated staff work — co-author, not first author, not his student-led paper */
-    if (
-      has("associated-staff") ||
-      p.associatedStaff === true ||
-      (!isFirst && !isStudentWork && nazeerIdx > 0)
-    ) {
-      roles.push("associated-staff");
-    }
-
-    /* 7. Speaker — conference talks he led, or explicit */
-    if (
-      has("speaker") ||
-      p.speaker === true ||
-      (kind === "conference" && isFirst)
-    ) {
-      roles.push("speaker");
-    }
-
     return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
   }
 
   var roleLabels = {
     "first-author": "First author",
-    corresponding: "Corresponding",
-    "student-supervision": "Student supervision",
-    "associated-staff": "Associated staff",
+    corresponding: "Corresponding author",
     speaker: "Speaker"
   };
 
@@ -745,7 +716,19 @@
 
   if (page === "service") {
     function parseServiceYear(years) {
-      var m = String(years || "").match(/(\d{4})/g);
+      var m = String(years || "").match(/(\d{4})/);
+      if (!m) return 0;
+      return parseInt(m[1], 10);
+    }
+
+    function isServiceOngoing(years) {
+      return /present/i.test(String(years || ""));
+    }
+
+    function parseServiceEndYear(years) {
+      var text = String(years || "");
+      if (/present/i.test(text)) return 9999;
+      var m = text.match(/(\d{4})/g);
       if (!m || !m.length) return 0;
       return parseInt(m[m.length - 1], 10);
     }
@@ -825,7 +808,9 @@
             venues: s.note ? [s.note] : [],
             role: c.role,
             summary: "",
-            startYear: parseServiceYear(s.years)
+            startYear: parseServiceYear(s.years),
+            endYear: parseServiceEndYear(s.years),
+            ongoing: isServiceOngoing(s.years)
           });
         });
       }
@@ -841,7 +826,9 @@
             venues: split.venues,
             role: "",
             summary: split.summary,
-            startYear: parseServiceYear(s.years)
+            startYear: parseServiceYear(s.years),
+            endYear: parseServiceEndYear(s.years),
+            ongoing: isServiceOngoing(s.years)
           });
         });
       }
@@ -851,12 +838,14 @@
           items.push({
             key: "examining",
             tag: "External examination",
-            title: x.name,
+            title: x.topic,
             years: x.years,
-            venues: x.place ? [x.place] : [],
-            role: x.degree + " · External examiner",
-            summary: x.topic || "",
-            startYear: parseServiceYear(x.years)
+            venues: [],
+            role: (x.degree ? x.degree + " · " : "") + (x.role || "External examiner"),
+            summary: "",
+            startYear: parseServiceYear(x.years),
+            endYear: parseServiceEndYear(x.years),
+            ongoing: isServiceOngoing(x.years)
           });
         });
       }
@@ -871,7 +860,9 @@
             venues: e.note ? [e.note] : [],
             role: "",
             summary: "",
-            startYear: parseServiceYear(e.years)
+            startYear: parseServiceYear(e.years),
+            endYear: parseServiceEndYear(e.years),
+            ongoing: isServiceOngoing(e.years)
           });
         });
       }
@@ -898,8 +889,16 @@
       });
 
       items.sort(function (a, b) {
-        if (serviceSort === "oldest") return a.startYear - b.startYear || a.title.localeCompare(b.title);
-        return b.startYear - a.startYear || a.title.localeCompare(b.title);
+        if (serviceSort === "oldest") {
+          return a.endYear - b.endYear ||
+            a.startYear - b.startYear ||
+            a.title.localeCompare(b.title);
+        }
+        /* Newest: later end year first (present = ongoing), then later start;
+           so 2017–2019 before 2017, and 2023–2024 before 2023. */
+        return b.endYear - a.endYear ||
+          b.startYear - a.startYear ||
+          a.title.localeCompare(b.title);
       });
 
       if (countEl) {
