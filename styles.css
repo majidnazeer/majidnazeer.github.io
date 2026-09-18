@@ -269,7 +269,7 @@ a:hover { opacity: .75; }
 
 .profile-layout {
   display: grid;
-  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
   gap: clamp(1.75rem, 4vw, 3rem);
   align-items: start;
   padding-block: clamp(1.75rem, 4vh, 2.75rem) clamp(2.5rem, 6vh, 4rem);
@@ -390,7 +390,8 @@ a:hover { opacity: .75; }
   color: var(--accent-deep);
   text-decoration: underline;
   text-underline-offset: 2px;
-  word-break: break-word;
+  white-space: nowrap;
+  word-break: normal;
 }
 .profile-sidebar__item a:hover { opacity: 1; }
 .profile-sidebar__text {
