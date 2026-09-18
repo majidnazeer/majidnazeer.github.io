@@ -1,10 +1,10 @@
 /* =========================================================
-   Majid Nazeer — academic portfolio
+   Majid Nazeer - academic portfolio
    Wide desktop layout, minimal, professional
    ========================================================= */
 
 :root {
-  /* Coastal academic — one accent family, not a rainbow */
+  /* Coastal academic - one accent family, not a rainbow */
   --bg: #f4f6f5;
   --surface: #ffffff;
   --text: #15201e;
@@ -237,7 +237,7 @@ a:hover { opacity: .75; }
 .sec__head--pubs .sec__lead { margin: 0; }
 .sec__head--pubs .activity { margin-left: auto; }
 
-/* Section / page labels — Discovery-style uppercase teal */
+/* Section / page labels - Discovery-style uppercase teal */
 .sec__title,
 .page__title,
 .about-block__title,
@@ -1459,7 +1459,7 @@ a.pub__role:hover {
   .gcard__media { height: 3.75rem; }
 }
 
-/* Membership affiliation plates removed — uses shared .record-list */
+/* Membership affiliation plates removed - uses shared .record-list */
 
 .field-lead { margin-bottom: 3rem; }
 .field-gallery-sec { margin-top: 0.5rem; }

@@ -115,7 +115,7 @@
   injectProfileSidebar();
 
   /* =======================================================
-     LIVE CITATION METRICS (OpenAlex — Scholar has no public API)
+     LIVE CITATION METRICS (OpenAlex - Scholar has no public API)
      ======================================================= */
 
   function formatCount(n) {
@@ -163,7 +163,7 @@
     });
   }
 
-  /* Scrollspy — home page sections only */
+  /* Scrollspy - home page sections only */
   if (page === "home" && sections.length && navLinks.length) {
     var hashLinks = navLinks.filter(function (a) {
       return a.getAttribute("href").charAt(0) === "#";
@@ -357,7 +357,7 @@
             '" target="_blank" rel="noopener noreferrer">doi:' + doiSafe + "</a>"
           );
         }
-        var meta = parts.join(" · ");
+        var meta = parts.join("  -  ");
         var kind = p.type || "journal";
         var badge = '<span class="pub__type">' + (typeLabels[kind] || kind) + "</span>";
         var roles = roleBadgesHtml(pubRoleList(p));
@@ -588,7 +588,7 @@
     var aboutTeachGrant = document.getElementById("aboutTeachingGrant");
     if (aboutTeachGrant && typeof GRANTS_TEACHING !== "undefined") {
       aboutTeachGrant.innerHTML = GRANTS_TEACHING.map(function (g) {
-        return recordHtml(g.title, g.years, g.funder + (g.amount ? " · " + g.amount : ""), g.role);
+        return recordHtml(g.title, g.years, g.funder + (g.amount ? "  -  " + g.amount : ""), g.role);
       }).join("");
     }
   }
@@ -842,7 +842,7 @@
             title: x.topic,
             years: x.years,
             venues: [],
-            role: (x.degree ? x.degree + " · " : "") + (x.role || "External examiner"),
+            role: (x.degree ? x.degree + "  -  " : "") + (x.role || "External examiner"),
             summary: "",
             startYear: parseServiceYear(x.years),
             endYear: parseServiceEndYear(x.years),
@@ -896,7 +896,7 @@
             a.title.localeCompare(b.title);
         }
         /* Newest: later end year first (present = ongoing), then later start;
-           so 2017–2019 before 2017, and 2023–2024 before 2023. */
+           so 2017-2019 before 2017, and 2023-2024 before 2023. */
         return b.endYear - a.endYear ||
           b.startYear - a.startYear ||
           a.title.localeCompare(b.title);
@@ -1186,7 +1186,7 @@
             '</div>' +
             '<figcaption class="gallery-card__meta">' +
               '<p class="gallery-card__title">' + esc(s.title) + '</p>' +
-              '<p class="gallery-card__place">' + esc([s.place, s.year].filter(Boolean).join(" · ")) + '</p>' +
+              '<p class="gallery-card__place">' + esc([s.place, s.year].filter(Boolean).join("  -  ")) + '</p>' +
               (s.caption ? '<p class="gallery-card__caption">' + esc(s.caption) + '</p>' : '') +
             '</figcaption>' +
           '</figure>';

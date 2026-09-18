@@ -1,12 +1,12 @@
-# Majid Nazeer — academic portfolio
+# Majid Nazeer - academic portfolio
 
-A minimal static academic site — no build step, no dependencies. Inspired by clean faculty profiles like [Coco Kwok's portfolio](https://cocokwok.github.io/).
+A minimal static academic site - no build step, no dependencies. Inspired by clean faculty profiles like [Coco Kwok's portfolio](https://cocokwok.github.io/).
 
 ```
 index.html      About, Research, Publications
 codes.html      GitHub repositories
 datasets.html   Released data products
-data.js         All content — edit publications, codes, datasets here
+data.js         All content - edit publications, codes, datasets here
 script.js       Theme, navigation, rendering
 styles.css      Layout and theme
 assets/         Portrait photo
@@ -22,9 +22,9 @@ assets/         Portrait photo
 
 ## Deploy to GitHub Pages
 
-Same approach as [cocokwok.github.io](https://cocokwok.github.io/) — push to a GitHub repo and enable Pages.
+Same approach as [cocokwok.github.io](https://cocokwok.github.io/) - push to a GitHub repo and enable Pages.
 
-### Option A — User site (`username.github.io`)
+### Option A - User site (`username.github.io`)
 
 1. Create a repository named `<username>.github.io`.
 2. Push this folder to the `main` branch.
@@ -33,7 +33,7 @@ Same approach as [cocokwok.github.io](https://cocokwok.github.io/) — push to a
 
 Live URL: `https://<username>.github.io/`
 
-### Option B — Project site (`username.github.io/repo-name`)
+### Option B - Project site (`username.github.io/repo-name`)
 
 1. Create any repository (e.g. `majid-nazeer`).
 2. Push to `main`, enable Pages with GitHub Actions.
@@ -54,7 +54,7 @@ Preview locally: `python -m http.server 8000` → open `http://localhost:8000`
 
 ## Adding publications
 
-The list shows **all papers from Google Scholar**, grouped by year (2026 → earliest). Edit `PUBLICATIONS` in `data.js`. Keep `year` accurate — the page groups and sorts automatically.
+The list shows **all papers from Google Scholar**, grouped by year (2026 → earliest). Edit `PUBLICATIONS` in `data.js`. Keep `year` accurate - the page groups and sorts automatically.
 
 ## Adding codes (GitHub repos)
 

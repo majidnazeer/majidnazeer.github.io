@@ -29,7 +29,7 @@ var PUBLICATIONS = [
   {
     year: 2026,
     type: "journal",
-    title: "Diurnal Air–Surface Temperature Dynamics in Hong Kong: An Analysis Across Land Use and Climate Zones",
+    title: "Diurnal Air-Surface Temperature Dynamics in Hong Kong: An Analysis Across Land Use and Climate Zones",
     authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, J Yang, PW Chan",
     venue: "International Journal of Climatology 46 (6), e70297",
     doi: "10.1002/joc.70297"
@@ -251,7 +251,7 @@ var PUBLICATIONS = [
     type: "journal",
     title: "Improved fusion model for generating hourly fine scale land surface temperature data under all-weather condition",
     authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, R Zhu, J Yang, PW Chan",
-    venue: "International Journal of Applied Earth Observation and Geoinformation 131 …",
+    venue: "International Journal of Applied Earth Observation and Geoinformation 131 …",
     doi: "10.1016/j.jag.2024.103981"
   },
   {
@@ -344,7 +344,7 @@ var PUBLICATIONS = [
   {
     year: 2022,
     type: "journal",
-    title: "Long-term variability of atmospheric visual range (1980–2020) over diverse topography of Pakistan",
+    title: "Long-term variability of atmospheric visual range (1980-2020) over diverse topography of Pakistan",
     authors: "S Javed, MI Shahzad, S Abbas, <b>Nazeer, M.</b>",
     venue: "Remote Sensing 15 (1), 46",
     doi: "10.3390/rs15010046"
@@ -354,13 +354,13 @@ var PUBLICATIONS = [
     type: "journal",
     title: "Modeling Secchi disk depth over the north arabian gulf waters using MODIS and MERIS images",
     authors: "MMM Alsahli, <b>Nazeer, M.</b>",
-    venue: "PFG–Journal of Photogrammetry, Remote Sensing and Geoinformation Science 90 …",
+    venue: "PFG-Journal of Photogrammetry, Remote Sensing and Geoinformation Science 90 …",
     doi: "10.1007/s41064-021-00189-2"
   },
   {
     year: 2022,
     type: "chapter",
-    title: "The geographic, geological, and oceanographic setting of the Indus river–an update",
+    title: "The geographic, geological, and oceanographic setting of the Indus river-an update",
     authors: "A Inam, PD Clift, L Giosan, A Alizai, S Kidwai, MI Shahzad, I Zia, <b>Nazeer, M.</b>, ...",
     venue: "Large Rivers: Geomorphology and Management, Second Edition, 488-520",
     doi: "10.1002/9781119412632.ch17"
@@ -566,7 +566,7 @@ var PUBLICATIONS = [
     type: "conference",
     title: "Estimation of surface deformation due to Pasni earthquake using SAR interferometry",
     authors: "M Ali, MI Shahzad, <b>Nazeer, M.</b>, JH Kazmi",
-    venue: "The International Archives of the Photogrammetry, Remote Sensing and Spatial …"
+    venue: "The International Archives of the Photogrammetry, Remote Sensing and Spatial …"
   },
   {
     year: 2018,
@@ -702,7 +702,7 @@ var PUBLICATIONS = [
     type: "journal",
     title: "Evaluation of atmospheric correction models and Landsat surface reflectance product in an urban coastal environment",
     authors: "<b>Nazeer, M.</b>, JE Nichol, Y Yung",
-    venue: "International Journal of Remote Sensing 35 (16), 6271–6291",
+    venue: "International Journal of Remote Sensing 35 (16), 6271-6291",
     doi: "10.1080/01431161.2014.951742"
   },
   {
@@ -710,7 +710,7 @@ var PUBLICATIONS = [
     type: "conference",
     title: "Selection of atmospheric correction method and estimation of Chlorophyll-a (Chl-a) in coastal waters of Hong Kong",
     authors: "<b>Nazeer, M.</b>, JE Nichol",
-    venue: "2014 third international workshop on earth observation and remote sensing …",
+    venue: "2014 third international workshop on earth observation and remote sensing …",
     doi: "10.1109/EORSA.2014.6927916"
   },
   {
@@ -722,7 +722,7 @@ var PUBLICATIONS = [
   }
 ];
 
-/* Activity chart counts (Google Scholar), 2014–2026 */
+/* Activity chart counts (Google Scholar), 2014-2026 */
 var ACTIVITY = [
   { year: 2014, count: 4 },
   { year: 2015, count: 4 },
@@ -745,56 +745,56 @@ var DATASETS = [
   {
     title: "Hyperspectral Data for Mangrove Species of Hong Kong",
     url: "https://zenodo.org/records/22818840",
-    format: "Zenodo · XLSX",
+    format: "Zenodo  -  XLSX",
     desc: "Specim IQ and NEO HySpex reflectance library for Hong Kong mangroves (Science of Remote Sensing)."
   },
   {
-    title: "CROPSPECPK — Spectral Library for Seasonal Crops",
+    title: "CROPSPECPK - Spectral Library for Seasonal Crops",
     url: "https://doi.org/10.5281/zenodo.13372659",
-    format: "Zenodo · Data archive",
+    format: "Zenodo  -  Data archive",
     desc: "Ground-based reflectance spectra for major seasonal crops in Pakistan (BMC Plant Biology)."
   },
   {
     title: "Data-Driven Modelling of Coastal Water Quality Dynamics",
     url: "https://doi.org/10.5281/zenodo.21040636",
-    format: "Zenodo · CSV",
+    format: "Zenodo  -  CSV",
     desc: "Regional coastal water-quality tables for Hong Kong waters (Frontiers in Marine Science)."
   },
   {
     title: "LiDAR-Calibrated Landsat Mapping of Subtropical Mangrove Biomass",
     url: "https://doi.org/10.5281/zenodo.21802136",
-    format: "Zenodo · 2026",
+    format: "Zenodo  -  2026",
     desc: "Dataset deposit by Mahmood, Nazeer, Wong & Abbas for subtropical mangrove biomass mapping."
   },
   {
     title: "Average surface color reflectance after atmospheric correction (SiTAC)",
     url: "https://doi.org/10.1594/PANGAEA.870922",
-    format: "PANGAEA · 2017",
-    desc: "Water-surface reflectance series (Landsat / HJ-1 / VIIRS) after SiTAC correction — Bilal, Nazeer, Nichol, Wong & Bleiweiss."
+    format: "PANGAEA  -  2017",
+    desc: "Water-surface reflectance series (Landsat / HJ-1 / VIIRS) after SiTAC correction - Bilal, Nazeer, Nichol, Wong & Bleiweiss."
   }
 ];
 
 /* =========================================================
-   CV / PEOPLE / AWARDS — public academic record from CV
+   CV / PEOPLE / AWARDS - public academic record from CV
    (no private contact details beyond the staff page email)
    ========================================================= */
 
 var EDUCATION = [
   {
     degree: "Doctor of Philosophy",
-    years: "2012–2016",
+    years: "2012-2016",
     place: "The Hong Kong Polytechnic University, Hong Kong",
     note: "Dissertation: Water quality monitoring in Hong Kong using remote sensing"
   },
   {
     degree: "Master of Philosophy",
-    years: "2008–2010",
+    years: "2008-2010",
     place: "COMSATS University Islamabad, Pakistan",
     note: "Thesis: Environmental study of Rawal Lake using satellite and Secchi Disc data"
   },
   {
     degree: "Bachelor of Science (Hons) in Space Science",
-    years: "2004–2008",
+    years: "2004-2008",
     place: "University of the Punjab, Lahore, Pakistan",
     note: "FYP: Application of remote sensing in the field of glaciology in Pakistan"
   }
@@ -804,32 +804,32 @@ var POSITIONS = [
   {
     role: "Research Assistant Professor",
     org: "Department of Land Surveying and Geospatial Science, The Hong Kong Polytechnic University",
-    years: "12/2022–present"
+    years: "12/2022-present"
   },
   {
     role: "Senior Research Analyst",
     org: "Urban Sector Planning and Management Services Unit (Pvt.) Ltd, Lahore, Pakistan",
-    years: "04/2022–12/2022"
+    years: "04/2022-12/2022"
   },
   {
     role: "Associate Professor",
     org: "Key Lab of Digital Land and Resources, East China University of Technology, Nanchang, China",
-    years: "08/2019–10/2021"
+    years: "08/2019-10/2021"
   },
   {
     role: "Assistant Professor",
     org: "Department of Meteorology, COMSATS University Islamabad, Pakistan",
-    years: "04/2017–07/2019"
+    years: "04/2017-07/2019"
   },
   {
     role: "Postdoctoral Fellow / Research Associate",
     org: "Department of Land Surveying and Geospatial Science, The Hong Kong Polytechnic University",
-    years: "06/2016–03/2017"
+    years: "06/2016-03/2017"
   },
   {
     role: "Lecturer",
     org: "Department of Meteorology, King Abdulaziz University, Jeddah, Saudi Arabia",
-    years: "12/2011–07/2012"
+    years: "12/2011-07/2012"
   }
 ];
 
@@ -837,21 +837,21 @@ var MEMBERSHIPS = [
   {
     role: "Early Career member",
     org: "The Oceanography Society",
-    years: "2013–present",
+    years: "2013-present",
     code: "TOS",
     note: "International society for ocean science and coastal research."
   },
   {
     role: "Member",
     org: "Pacific GIS and Remote Sensing Council",
-    years: "2024–present",
+    years: "2024-present",
     code: "PGRS",
     note: "Regional network for GIS and Earth observation practice across the Pacific."
   },
   {
     role: "Community Member",
     org: "Hawaiʻi Geographic Information Coordinating Council",
-    years: "2025–present",
+    years: "2025-present",
     code: "HGICC",
     note: "Statewide geospatial community for coordination and open geographic data."
   }
@@ -885,7 +885,7 @@ var AWARDS = [
   {
     year: "2015",
     title: "Travel Grant Award",
-    org: "ESA & Swiss Space Center — JURSE 2015, Lausanne",
+    org: "ESA & Swiss Space Center - JURSE 2015, Lausanne",
     note: ""
   },
   {
@@ -897,23 +897,23 @@ var AWARDS = [
   {
     year: "2014",
     title: "Travel Grant",
-    org: "NASA / The Oceanography Society — Ocean Optics XXII, Portland, USA",
+    org: "NASA / The Oceanography Society - Ocean Optics XXII, Portland, USA",
     note: ""
   },
   {
     year: "2014",
     title: "Travel Grant Award",
-    org: "ISNET / SUPARCO / IST — ICS 2014, Islamabad",
+    org: "ISNET / SUPARCO / IST - ICS 2014, Islamabad",
     note: ""
   },
   {
     year: "2013",
     title: "Travel Grant",
-    org: "ISNET — Space Applications for Disaster Risk Reduction, Tehran",
+    org: "ISNET - Space Applications for Disaster Risk Reduction, Tehran",
     note: ""
   },
   {
-    year: "2012–2015",
+    year: "2012-2015",
     title: "International Postgraduate Scholarship for PhD Studies",
     org: "The Hong Kong Polytechnic University",
     note: ""
@@ -921,11 +921,11 @@ var AWARDS = [
   {
     year: "2009",
     title: "Travel Grant",
-    org: "COMSATS University Islamabad — Global Conference on Microbial Contaminants in Drinking Water, Singapore",
+    org: "COMSATS University Islamabad - Global Conference on Microbial Contaminants in Drinking Water, Singapore",
     note: ""
   },
   {
-    year: "2008–2010",
+    year: "2008-2010",
     title: "Scholarship for Masters Studies",
     org: "COMSATS University Islamabad",
     note: "Merit-based scholarship."
@@ -934,78 +934,78 @@ var AWARDS = [
 
 var PEOPLE = {
   phd: [
-    { years: "2025–present", role: "Chief Supervisor", topic: "Hyperspectral remote sensing of blue carbon stocks in the Greater Bay Area" },
-    { years: "2025–present", role: "Chief Supervisor", topic: "Carbon stock estimation and offset modelling of coastal wetlands in the Greater Bay Area" },
-    { years: "2025–present", role: "Chief Supervisor", topic: "Spatiotemporal analysis and stress modelling of blue carbon ecosystems using remote sensing and machine learning" },
-    { years: "2025–present", role: "Co-supervisor", topic: "PhD research (topic to be confirmed)" },
-    { years: "2025–present", role: "Co-supervisor", topic: "PhD research (topic to be confirmed)" },
-    { years: "2023–present", role: "Co-supervisor", topic: "Carbon sequestration in Hong Kong’s vegetation under climate change" }
+    { years: "2025-present", role: "Chief Supervisor", topic: "Hyperspectral remote sensing of blue carbon stocks in the Greater Bay Area" },
+    { years: "2025-present", role: "Chief Supervisor", topic: "Carbon stock estimation and offset modelling of coastal wetlands in the Greater Bay Area" },
+    { years: "2025-present", role: "Chief Supervisor", topic: "Spatiotemporal analysis and stress modelling of blue carbon ecosystems using remote sensing and machine learning" },
+    { years: "2025-present", role: "Co-supervisor", topic: "PhD research (topic to be confirmed)" },
+    { years: "2025-present", role: "Co-supervisor", topic: "PhD research (topic to be confirmed)" },
+    { years: "2023-present", role: "Co-supervisor", topic: "Carbon sequestration in Hong Kong's vegetation under climate change" }
   ],
   mphil: [
-    { years: "2024–2026", role: "Co-supervisor", topic: "Geospatial approaches to multi-scale urban heat dynamics" },
-    { years: "2018–2019", role: "Supervisor", topic: "Development and validation of a new method for satellite-derived bathymetry" },
-    { years: "2018–2019", role: "Supervisor", topic: "Sea water intrusion impacts on the Lower Indus Deltaic Region using geo-spatial techniques" },
-    { years: "2017–2019", role: "Supervisor", topic: "Remote sensing of atmospheric visibility over Pakistan" },
-    { years: "2017–2019", role: "Supervisor", topic: "Remote sensing of barrier islands along the Indus Delta region" }
+    { years: "2024-2026", role: "Co-supervisor", topic: "Geospatial approaches to multi-scale urban heat dynamics" },
+    { years: "2018-2019", role: "Supervisor", topic: "Development and validation of a new method for satellite-derived bathymetry" },
+    { years: "2018-2019", role: "Supervisor", topic: "Sea water intrusion impacts on the Lower Indus Deltaic Region using geo-spatial techniques" },
+    { years: "2017-2019", role: "Supervisor", topic: "Remote sensing of atmospheric visibility over Pakistan" },
+    { years: "2017-2019", role: "Supervisor", topic: "Remote sensing of barrier islands along the Indus Delta region" }
   ],
   msc: [
-    { years: "2024–2025", role: "Supervisor", topic: "Demographic and spatial analysis of youth hostel site selection" },
-    { years: "2023–2024", role: "Supervisor", topic: "Remote sensing-based assessment of vegetation loss from hill fires on Kangaroo Island, Australia" }
+    { years: "2024-2025", role: "Supervisor", topic: "Demographic and spatial analysis of youth hostel site selection" },
+    { years: "2023-2024", role: "Supervisor", topic: "Remote sensing-based assessment of vegetation loss from hill fires on Kangaroo Island, Australia" }
   ],
   bsc: [
-    { years: "2026–present", role: "Supervisor", topic: "Monitoring fish raft activity and coastal water quality in Hong Kong" },
-    { years: "2026–present", role: "Supervisor", topic: "Land use types and urban heat island formation" },
-    { years: "2026–present", role: "Supervisor", topic: "Mangrove above-ground biomass via backpack LiDAR" },
-    { years: "2026–present", role: "Supervisor", topic: "Mangrove tree characteristics from UAV LiDAR" },
-    { years: "2025–2026", role: "Supervisor", topic: "Remote sensing of trace gases from Greater Bay Area wetlands" },
-    { years: "2025–2026", role: "Supervisor", topic: "Marine debris detection at Hong Kong beaches" },
-    { years: "2025–2026", role: "Supervisor", topic: "Global sea level rise estimation with machine learning" },
-    { years: "2025–2026", role: "Supervisor", topic: "Machine learning for algal bloom detection" },
-    { years: "2025–2026", role: "Supervisor", topic: "Remote sensing of coral reefs of Hong Kong" },
-    { years: "2024–2025", role: "Supervisor", topic: "Wetland change in the Greater Bay Area" },
-    { years: "2024–2025", role: "Supervisor", topic: "Coastal water quality and Hong Kong wetland ecosystems" },
-    { years: "2024–2025", role: "Supervisor", topic: "Remote sensing for water quality monitoring in Hong Kong coastal areas" }
+    { years: "2026-present", role: "Supervisor", topic: "Monitoring fish raft activity and coastal water quality in Hong Kong" },
+    { years: "2026-present", role: "Supervisor", topic: "Land use types and urban heat island formation" },
+    { years: "2026-present", role: "Supervisor", topic: "Mangrove above-ground biomass via backpack LiDAR" },
+    { years: "2026-present", role: "Supervisor", topic: "Mangrove tree characteristics from UAV LiDAR" },
+    { years: "2025-2026", role: "Supervisor", topic: "Remote sensing of trace gases from Greater Bay Area wetlands" },
+    { years: "2025-2026", role: "Supervisor", topic: "Marine debris detection at Hong Kong beaches" },
+    { years: "2025-2026", role: "Supervisor", topic: "Global sea level rise estimation with machine learning" },
+    { years: "2025-2026", role: "Supervisor", topic: "Machine learning for algal bloom detection" },
+    { years: "2025-2026", role: "Supervisor", topic: "Remote sensing of coral reefs of Hong Kong" },
+    { years: "2024-2025", role: "Supervisor", topic: "Wetland change in the Greater Bay Area" },
+    { years: "2024-2025", role: "Supervisor", topic: "Coastal water quality and Hong Kong wetland ecosystems" },
+    { years: "2024-2025", role: "Supervisor", topic: "Remote sensing for water quality monitoring in Hong Kong coastal areas" }
   ],
   staff: [
-    { years: "2023–2024", role: "Research Assistant", topic: "Spectral Library for Vegetation Species (SLIVES) over Hong Kong" }
+    { years: "2023-2024", role: "Research Assistant", topic: "Spectral Library for Vegetation Species (SLIVES) over Hong Kong" }
   ]
 };
 
 var SERVICE_HIGHLIGHTS = [
-  { years: "2025–present", title: "Section Editor", note: "Earth and Environmental Science, Kuwait Journal of Science" },
-  { years: "2026–present", title: "Guest Editor", note: "Special issue on next-generation Earth observation for inland and coastal ecosystems, Remote Sensing" },
+  { years: "2025-present", title: "Section Editor", note: "Earth and Environmental Science, Kuwait Journal of Science" },
+  { years: "2026-present", title: "Guest Editor", note: "Special issue on next-generation Earth observation for inland and coastal ecosystems, Remote Sensing" },
   {
-    years: "2025–present",
+    years: "2025-present",
     title: "Guest Editor",
     note: "Urban heat island special issues in Remote Sensing and Climate"
   },
-  { years: "2023–2024", title: "Guest Editor", note: "Coastal and estuarine hydrodynamic variability special topic, Frontiers in Marine Science" },
-  { years: "2020–2021", title: "Guest Editor", note: "Remote sensing advancements in sustaining coastal zones, Journal of Marine Science and Engineering" },
-  { years: "2015–present", title: "Peer reviewer", note: "Active reviewer for 50+ international journals (Web of Science verified record)" }
+  { years: "2023-2024", title: "Guest Editor", note: "Coastal and estuarine hydrodynamic variability special topic, Frontiers in Marine Science" },
+  { years: "2020-2021", title: "Guest Editor", note: "Remote sensing advancements in sustaining coastal zones, Journal of Marine Science and Engineering" },
+  { years: "2015-present", title: "Peer reviewer", note: "Active reviewer for 50+ international journals (Web of Science verified record)" }
 ];
 
 var DEPT_SERVICE = [
-  { years: "2023–present", title: "Member, PhD Student Recruitment Interview Panel", note: "Department of LSGS, PolyU" },
-  { years: "2023–present", title: "Member, Research Staff Recruitment Interview Panel", note: "Department of LSGS, PolyU" },
-  { years: "2023–present", title: "Moderator, MSc and BSc Final-Year Project Evaluation Panels", note: "Department of LSGS, PolyU" },
+  { years: "2023-present", title: "Member, PhD Student Recruitment Interview Panel", note: "Department of LSGS, PolyU" },
+  { years: "2023-present", title: "Member, Research Staff Recruitment Interview Panel", note: "Department of LSGS, PolyU" },
+  { years: "2023-present", title: "Moderator, MSc and BSc Final-Year Project Evaluation Panels", note: "Department of LSGS, PolyU" },
   { years: "2025", title: "Departmental Representative, PolyU Info Day", note: "The Hong Kong Polytechnic University" },
   { years: "2024", title: "Departmental Representative, PolyU Info Day", note: "The Hong Kong Polytechnic University" },
   { years: "2024", title: "Departmental Representative, International Research Summer School consultation", note: "Department of LSGS, PolyU" },
   { years: "2023", title: "Departmental Representative, International Research Summer School consultation", note: "PolyU" },
-  { years: "2017–2019", title: "Member, Departmental Advisory Committee", note: "Department of Meteorology, COMSATS University Islamabad" },
-  { years: "2017–2019", title: "Member, Departmental Security Committee", note: "Department of Meteorology, COMSATS University Islamabad" }
+  { years: "2017-2019", title: "Member, Departmental Advisory Committee", note: "Department of Meteorology, COMSATS University Islamabad" },
+  { years: "2017-2019", title: "Member, Departmental Security Committee", note: "Department of Meteorology, COMSATS University Islamabad" }
 ];
 
 var GRANTS_PI = [
   {
-    years: "2025–2027",
-    title: "Harnessing the potential of Blue Carbon Ecosystems over the Guangdong–Hong Kong–Macao Greater Bay Area (GBA)",
+    years: "2025-2027",
+    title: "Harnessing the potential of Blue Carbon Ecosystems over the Guangdong-Hong Kong-Macao Greater Bay Area (GBA)",
     funder: "General Research Fund, Research Grants Council of Hong Kong",
     amount: "HK$1,134,931",
     role: "Principal Investigator"
   },
   {
-    years: "2023–2027",
+    years: "2023-2027",
     title: "Development of the Spectral Library for Vegetation Species (SLIVES) over Hong Kong",
     funder: "The Hong Kong Polytechnic University",
     amount: "HK$250,000",
@@ -1015,112 +1015,112 @@ var GRANTS_PI = [
 
 var GRANTS_COI = [
   {
-    years: "2027–2030",
+    years: "2027-2030",
     title: "Monitoring and Early Warning of Forest-Concealed Landslides Using MTInSAR Technology",
     funder: "National Natural Science Foundation of China (NSFC)",
     amount: "CNY 660,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2029",
+    years: "2026-2029",
     title: "Mapping morphological and hydrological baseline conditions of Sha Lo Tung water resources using remote sensing technologies",
     funder: "Countryside Conservation Funding Scheme, Environment and Ecology Bureau of Hong Kong",
     amount: "HK$2,999,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "Decadal Reconstruction of Hong Kong Urban-Forest Canopy-Height Using Satellite Imagery",
     funder: "Research Institute of Land and Space, PolyU",
     amount: "HK$299,900",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "Unlocking the Past: Super-Resolution and Land Cover Analysis of Historical Aerial Photographs for Automated Map Updating and Geospatial Archive Modernization",
     funder: "Research Institute of Land and Space, PolyU",
     amount: "HK$680,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "Geospatial Technologies and Artificial Intelligence for Tree Survey and Assessment",
     funder: "Research Institute of Land and Space, PolyU",
     amount: "HK$195,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "Simulation-Based Assessment of Urban Air Mobility Noise in High-Density Cities",
     funder: "Seed Funding for Major Grants, PolyU",
     amount: "HK$200,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "From Data to Credits: Smart Monitoring and Economic Optimization for Carbon Neutrality at PolyU",
     funder: "Carbon Neutrality Funding Scheme, PolyU",
     amount: "HK$1,912,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "Qualification of Aerosol-Type-Dependent Effects on Land Surface Temperature",
     funder: "Preliminary research for GRF projects, PolyU",
     amount: "HK$150,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2028",
+    years: "2026-2028",
     title: "Remote Sensing-Driven Assessment of Vegetation Health and Land Stability for Enhancing Climate Resilience in Coastal Urban Landscapes",
     funder: "State Key Laboratory of Climate Resilience for Coastal Cities (SKL-CRCC)",
     amount: "HK$158,680",
     role: "Co-Investigator"
   },
   {
-    years: "2026–2027",
+    years: "2026-2027",
     title: "Advancing Urban Air Mobility: Scalable Solutions through Aerodynamic Analysis and Network Optimization in Dense Urban Environments",
     funder: "Research Institute of Land and Space, PolyU",
     amount: "HK$300,000",
     role: "Co-Investigator"
   },
   {
-    years: "2025–2027",
+    years: "2025-2027",
     title: "Next Generation of AI-embedded Remote Sensing Technology for Detecting Building Facet Leakage",
     funder: "Research Institute for Sustainable Urban Development (RISUD)",
     amount: "HK$1,252,000",
     role: "Co-Investigator"
   },
   {
-    years: "2025–2027",
+    years: "2025-2027",
     title: "Nature-Based Solutions for Urban Infrastructure Resilience and Water Disaster Management",
     funder: "Otto Poon Charitable Foundation",
     amount: "HK$1,440,000",
     role: "Co-Investigator"
   },
   {
-    years: "2024–2026",
-    title: "An optimized ‘walk+wait+ride’ public transport route planning",
+    years: "2024-2026",
+    title: "An optimized 'walk+wait+ride' public transport route planning",
     funder: "Research Institute of Land and Space, PolyU",
     amount: "HK$300,000",
     role: "Co-Investigator"
   },
   {
-    years: "2024–2025",
+    years: "2024-2025",
     title: "Mini Micro Pulse LiDAR (MiniMPL)",
     funder: "Large Equipment Fund for Research, PolyU",
     amount: "HK$2,484,180",
     role: "Co-Investigator"
   },
   {
-    years: "2023–2025",
+    years: "2023-2025",
     title: "Quantifying the tree healthiness and carbon stock using Mobile Mapping System (MMS)",
     funder: "RISUD Strategic Focus Area, PolyU",
     amount: "HK$1,366,046",
     role: "Co-Investigator"
   },
   {
-    years: "2017–2018",
+    years: "2017-2018",
     title: "Modeling water clarity of Northern Arabian Gulf using satellite and in situ datasets",
     funder: "Kuwait University Research Sector",
     amount: "KWD 3,990 (~HK$101,500)",
@@ -1130,14 +1130,14 @@ var GRANTS_COI = [
 
 var GRANTS_KEY = [
   {
-    years: "2022–2025",
-    title: "Study of Carbon Sequestration in Hong Kong’s Vegetation: from Present to Future Prediction under Climate Change",
+    years: "2022-2025",
+    title: "Study of Carbon Sequestration in Hong Kong's Vegetation: from Present to Future Prediction under Climate Change",
     funder: "Collaborative Research Fund, Research Grants Council",
     amount: "HK$4,949,639",
     role: "Key team member / researcher"
   },
   {
-    years: "2021–2024",
+    years: "2021-2024",
     title: "Study of Water Quality Parameters in Hong Kong: From Present to Future Prediction under the Government Development Schemes",
     funder: "Research Institute of Land and Space, PolyU",
     amount: "HK$1,100,000",
@@ -1147,7 +1147,7 @@ var GRANTS_KEY = [
 
 var GRANTS_TEACHING = [
   {
-    years: "2023–2026",
+    years: "2023-2026",
     title: "Revolutionizing Higher Education through Innovative and Emerging Technologies in Flipped Learning",
     funder: "Fund for Innovative Technology-in-Education, University Grants Committee of Hong Kong",
     amount: "HK$2,000,000",
@@ -1182,13 +1182,13 @@ var TALKS = [
 ];
 
 var TEACHING = [
-  { years: "2023–present", title: "Subject Leader — LSGI3321A Remote Sensing", note: "Higher Diploma and BSc programmes, Department of LSGS, PolyU" },
-  { years: "2018", title: "Instructor — HIS622 Geographical Information Systems for Health Informatics", note: "Department of Health Informatics, COMSATS University Islamabad" },
-  { years: "2018", title: "Instructor — MET735 Advanced Geo-Statistical Analysis", note: "Department of Meteorology, COMSATS University Islamabad" },
-  { years: "2018–2019", title: "Instructor — MET604 Geo-Statistical Analysis", note: "Department of Meteorology, COMSATS University Islamabad" },
-  { years: "2017–2018", title: "Instructor — MET602 Advanced GIS", note: "Department of Meteorology, COMSATS University Islamabad" },
-  { years: "2017", title: "Teaching Assistant — LSGI3332A Photogrammetry and Remote Sensing", note: "Department of LSGS, PolyU" },
-  { years: "2016", title: "Teaching Assistant — LSGI4221A Geostatistics and Exploratory Data Analysis", note: "Department of LSGS, PolyU" }
+  { years: "2023-present", title: "Subject Leader - LSGI3321A Remote Sensing", note: "Higher Diploma and BSc programmes, Department of LSGS, PolyU" },
+  { years: "2018", title: "Instructor - HIS622 Geographical Information Systems for Health Informatics", note: "Department of Health Informatics, COMSATS University Islamabad" },
+  { years: "2018", title: "Instructor - MET735 Advanced Geo-Statistical Analysis", note: "Department of Meteorology, COMSATS University Islamabad" },
+  { years: "2018-2019", title: "Instructor - MET604 Geo-Statistical Analysis", note: "Department of Meteorology, COMSATS University Islamabad" },
+  { years: "2017-2018", title: "Instructor - MET602 Advanced GIS", note: "Department of Meteorology, COMSATS University Islamabad" },
+  { years: "2017", title: "Teaching Assistant - LSGI3332A Photogrammetry and Remote Sensing", note: "Department of LSGS, PolyU" },
+  { years: "2016", title: "Teaching Assistant - LSGI4221A Geostatistics and Exploratory Data Analysis", note: "Department of LSGS, PolyU" }
 ];
 
 var EXTERNAL_EXAMS = [
@@ -1197,22 +1197,22 @@ var EXTERNAL_EXAMS = [
   { years: "2020", degree: "PhD", role: "External examiner", topic: "Landslide hazard zonation mapping using geotechnical and remote sensing data, NW Sub-Himalayas, Azad Kashmir" },
   { years: "2020", degree: "PhD", role: "External examiner", topic: "Irrigation water demand modeling by monitoring crop health cycle: a GIS and remote sensing perspective" },
   { years: "2017", degree: "MPhil", role: "External examiner", topic: "Identifying upwelling-related biogenic slicks in Northern Arabian Sea using L-band SAR data" },
-  { years: "2017", degree: "MPhil", role: "External examiner", topic: "Satellite remote sensing mapping of coral reefs in Pakistan’s coastal ocean: Astola Island, Indus Delta" }
+  { years: "2017", degree: "MPhil", role: "External examiner", topic: "Satellite remote sensing mapping of coral reefs in Pakistan's coastal ocean: Astola Island, Indus Delta" }
 ];
 
 var ENGAGEMENT = [
-  { years: "2025", title: "Expert reviewer / contributor — Hong Kong Nature-based Solutions Guidelines", note: "Civil Engineering and Development Department (CEDD), Hong Kong" },
-  { years: "2023", title: "Collaborator — real-time coastal water quality monitoring platform", note: "Environmental Protection Department (EPD), Hong Kong" },
-  { years: "2022", title: "Collaborator — urban master planning geospatial support", note: "The Urban Unit, Government of Punjab, Pakistan" },
-  { years: "2017–2019", title: "Research collaborator — agricultural residue burning and regional smog", note: "Food and Agriculture Organization (FAO) of the United Nations, Pakistan" },
-  { years: "2010–2011", title: "GIS and remote sensing assistant — forest conservation monitoring", note: "WWF-Pakistan, Murree Forests Division" }
+  { years: "2025", title: "Expert reviewer / contributor - Hong Kong Nature-based Solutions Guidelines", note: "Civil Engineering and Development Department (CEDD), Hong Kong" },
+  { years: "2023", title: "Collaborator - real-time coastal water quality monitoring platform", note: "Environmental Protection Department (EPD), Hong Kong" },
+  { years: "2022", title: "Collaborator - urban master planning geospatial support", note: "The Urban Unit, Government of Punjab, Pakistan" },
+  { years: "2017-2019", title: "Research collaborator - agricultural residue burning and regional smog", note: "Food and Agriculture Organization (FAO) of the United Nations, Pakistan" },
+  { years: "2010-2011", title: "GIS and remote sensing assistant - forest conservation monitoring", note: "WWF-Pakistan, Murree Forests Division" }
 ];
 
 var FIELD_LEADERSHIP = [
-  { years: "2025–present", title: "Team Lead — Blue Carbon Ecosystem Surveys", note: "Multidisciplinary field data collection across Hong Kong and the Greater Bay Area in support of blue carbon research." },
-  { years: "2023–2025", title: "Field Survey Coordinator — Carbon Sequestration in Hong Kong Vegetation", note: "Planned and led forest surveys for a UGC-funded project, covering vegetation, soil, LiDAR, hyperspectral and ecological measurements." },
-  { years: "2014", title: "Marine environmental monitoring — research vessel campaigns", note: "Six months of marine monitoring with the Hong Kong EPD aboard Dr Catherine Lam, collecting coastal water quality, surface reflectance and aerosol optical data." },
-  { years: "2009–2010", title: "Water quality researcher — Rawal Lake, Pakistan", note: "Field assessments of Secchi depth, chlorophyll-a and total phosphorus." }
+  { years: "2025-present", title: "Team Lead - Blue Carbon Ecosystem Surveys", note: "Multidisciplinary field data collection across Hong Kong and the Greater Bay Area in support of blue carbon research." },
+  { years: "2023-2025", title: "Field Survey Coordinator - Carbon Sequestration in Hong Kong Vegetation", note: "Planned and led forest surveys for a UGC-funded project, covering vegetation, soil, LiDAR, hyperspectral and ecological measurements." },
+  { years: "2014", title: "Marine environmental monitoring - research vessel campaigns", note: "Six months of marine monitoring with the Hong Kong EPD aboard Dr Catherine Lam, collecting coastal water quality, surface reflectance and aerosol optical data." },
+  { years: "2009-2010", title: "Water quality researcher - Rawal Lake, Pakistan", note: "Field assessments of Secchi depth, chlorophyll-a and total phosphorus." }
 ];
 
 var FIELD_SURVEYS = [];
