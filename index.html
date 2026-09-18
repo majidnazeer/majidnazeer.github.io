@@ -24,6 +24,9 @@
     }
   })();
 </script>
+<script>
+  if (location.hash === "#publications") location.replace("outputs.html");
+</script>
 </head>
 <body data-page="home">
 
@@ -38,13 +41,13 @@
     </button>
     <nav class="site-nav profile-tabs" id="siteNav" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#publications">Research Outputs</a>
+      <a href="outputs.html">Research Outputs</a>
       <a href="funded.html">Funded Projects</a>
-      <a href="service.html">Service &amp; Engagement</a>
+      <a href="supervision.html">Supervision</a>
+      <a href="service.html">Service</a>
       <a href="field.html">Field Survey</a>
       <a href="data-code.html">Data &amp; Code</a>
-      <a href="team.html">Team</a>
-      <a href="cv.html">CV</a>
+      <a href="recognition.html">Memberships</a>
     </nav>
     <button class="theme" id="themeToggle" type="button" aria-label="Switch to dark mode">
       <svg class="theme__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
@@ -67,7 +70,7 @@
           <h2 class="about-block__title">Bio</h2>
           <div class="about__bio">
             <p><strong>Dr Majid Nazeer</strong> works at the interface of remote sensing, coastal environmental science and artificial intelligence — building satellite, airborne and ground-based methods to monitor coastal water quality, blue carbon ecosystems and urban environments under climate change.</p>
-            <p>Most of his fieldwork and modelling sits in the Guangdong-Hong Kong-Macao Greater Bay Area, though the atmospheric correction routines, spectral libraries and retrieval algorithms developed here travel well beyond it. He holds a PhD from PolyU (2016) and currently supervises PhD, MPhil and undergraduate researchers — see <a href="team.html">Team</a>.</p>
+            <p>Most of his fieldwork and modelling sits in the Guangdong-Hong Kong-Macao Greater Bay Area, though the atmospheric correction routines, spectral libraries and retrieval algorithms developed here travel well beyond it. He holds a PhD from PolyU (2016) and currently supervises PhD, MPhil and undergraduate researchers — see <a href="supervision.html">Supervision and teaching</a>.</p>
           </div>
           <ul class="stats" aria-label="Citation metrics">
             <li>
@@ -112,41 +115,6 @@
             <li>Forest and urban vegetation remote sensing</li>
           </ul>
         </article>
-      </section>
-
-      <section class="sec" id="publications">
-        <div class="sec__head sec__head--pubs">
-          <div class="sec__head-text">
-            <h2 class="sec__title">Research Outputs</h2>
-            <p class="sec__lead">Journal articles, book chapters and conference papers newest first.</p>
-          </div>
-          <div class="activity activity--compact" id="activity">
-            <div class="activity__top">
-              <p class="activity__label">Activity per year</p>
-              <p class="activity__hint" id="activityHint" aria-live="polite"></p>
-            </div>
-            <div class="activity__chart" id="activityChart" role="img" aria-label="Bar chart of publications per year from 2014 to 2026"></div>
-            <div class="activity__axis">
-              <span id="activityStart">2014</span>
-              <span id="activityEnd">2026</span>
-            </div>
-          </div>
-        </div>
-        <div class="chip-row" id="pubTypeChips" role="tablist" aria-label="Publication type">
-          <button type="button" class="chip is-active" data-pub-type="all">All</button>
-          <button type="button" class="chip" data-pub-type="journal">Journals</button>
-          <button type="button" class="chip" data-pub-type="chapter">Book chapters</button>
-          <button type="button" class="chip" data-pub-type="conference">Conference</button>
-        </div>
-        <div class="toolbar">
-          <label class="toolbar__search">
-            <span class="visually-hidden">Search publications</span>
-            <input type="search" id="pubSearch" placeholder="Search title, journal, author or DOI" autocomplete="off">
-          </label>
-          <p class="toolbar__count" id="pubCount" role="status" aria-live="polite"></p>
-        </div>
-        <ol class="pubs" id="pubList"></ol>
-        <p class="empty" id="pubEmpty" hidden>No publications match your search.</p>
       </section>
     </div>
   </div>

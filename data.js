@@ -14,7 +14,8 @@ var PUBLICATIONS = [
     title: "Data-driven modelling of coastal water quality dynamics",
     authors: "MU Mahmood, MS Wong, <b>Nazeer, M.</b>, S Abbas, A Stocchino, KTM Wong",
     venue: "Frontiers in Marine Science 13, 1897038",
-    doi: "10.3389/fmars.2026.1897038"
+    doi: "10.3389/fmars.2026.1897038",
+    dataset: "https://zenodo.org/records/21040636"
   },
   {
     year: 2026,
@@ -22,7 +23,8 @@ var PUBLICATIONS = [
     title: "Development of a spectral library (CROPSPECPK) for major crops through spectroscopy modeling and in-situ spectrometer data",
     authors: "D Raza, H Shu, H Aslam, <b>Nazeer, M.</b>, H Fan, JE Nichol, RW Aslam, ...",
     venue: "BMC Plant Biology 26 (1), 561",
-    doi: "10.1186/s12870-026-08387-z"
+    doi: "10.1186/s12870-026-08387-z",
+    dataset: "https://doi.org/10.5281/zenodo.13372659"
   },
   {
     year: 2026,
@@ -38,7 +40,8 @@ var PUBLICATIONS = [
     title: "Establishing a hyperspectral library for Hong Kong mangroves: Species differentiation and leaf decay dynamics",
     authors: "T Sattar, <b>Nazeer, M.</b>, MS Wong, JE Nichol, X Zhu",
     venue: "Science of Remote Sensing, 100362",
-    doi: "10.1016/j.srs.2025.100362"
+    doi: "10.1016/j.srs.2025.100362",
+    dataset: "https://zenodo.org/records/22818840"
   },
   {
     year: 2026,
@@ -737,7 +740,39 @@ var ACTIVITY = [
 ];
 
 var CODES = [];
-var DATASETS = [];
+
+var DATASETS = [
+  {
+    title: "Hyperspectral Data for Mangrove Species of Hong Kong",
+    url: "https://zenodo.org/records/22818840",
+    format: "Zenodo · XLSX",
+    desc: "Specim IQ and NEO HySpex reflectance library for Hong Kong mangroves (Science of Remote Sensing)."
+  },
+  {
+    title: "CROPSPECPK — Spectral Library for Seasonal Crops",
+    url: "https://doi.org/10.5281/zenodo.13372659",
+    format: "Zenodo · Data archive",
+    desc: "Ground-based reflectance spectra for major seasonal crops in Pakistan (BMC Plant Biology)."
+  },
+  {
+    title: "Data-Driven Modelling of Coastal Water Quality Dynamics",
+    url: "https://doi.org/10.5281/zenodo.21040636",
+    format: "Zenodo · CSV",
+    desc: "Regional coastal water-quality tables for Hong Kong waters (Frontiers in Marine Science)."
+  },
+  {
+    title: "LiDAR-Calibrated Landsat Mapping of Subtropical Mangrove Biomass",
+    url: "https://doi.org/10.5281/zenodo.21802136",
+    format: "Zenodo · 2026",
+    desc: "Dataset deposit by Mahmood, Nazeer, Wong & Abbas for subtropical mangrove biomass mapping."
+  },
+  {
+    title: "Average surface color reflectance after atmospheric correction (SiTAC)",
+    url: "https://doi.org/10.1594/PANGAEA.870922",
+    format: "PANGAEA · 2017",
+    desc: "Water-surface reflectance series (Landsat / HJ-1 / VIIRS) after SiTAC correction — Bilal, Nazeer, Nichol, Wong & Bleiweiss."
+  }
+];
 
 /* =========================================================
    CV / PEOPLE / AWARDS — public academic record from CV

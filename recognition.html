@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Funded Projects — Majid Nazeer</title>
-<meta name="description" content="Research and teaching grants — Principal Investigator, Co-Investigator, key team member and teaching awards — Dr Majid Nazeer, PolyU.">
+<title>Memberships, awards &amp; talks — Majid Nazeer</title>
+<meta name="description" content="Professional memberships, scholarships and awards, and talks by Dr Majid Nazeer.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -20,7 +20,7 @@
   })();
 </script>
 </head>
-<body data-page="funded">
+<body data-page="recognition">
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -34,12 +34,12 @@
     <nav class="site-nav profile-tabs" id="siteNav" aria-label="Primary">
       <a href="index.html#about">About</a>
       <a href="outputs.html">Research Outputs</a>
-      <a href="funded.html" class="is-active">Funded Projects</a>
+      <a href="funded.html">Funded Projects</a>
       <a href="supervision.html">Supervision</a>
       <a href="service.html">Service</a>
       <a href="field.html">Field Survey</a>
       <a href="data-code.html">Data &amp; Code</a>
-      <a href="recognition.html">Memberships</a>
+      <a href="recognition.html" class="is-active">Memberships</a>
     </nav>
     <button class="theme" id="themeToggle" type="button" aria-label="Switch to dark mode">
       <svg class="theme__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
@@ -56,59 +56,34 @@
   <div class="shell profile-layout">
     <aside id="profileSidebar" class="profile-sidebar" aria-label="Profile"></aside>
     <div class="profile-main">
-    <header class="page__head">
-      <p class="page__kicker">Funding</p>
-      <h1 class="page__title">Funded Projects</h1>
-      <p class="page__lead">Competitive research grants, collaborative awards and teaching projects — as Principal Investigator, Co-Investigator and key team member.</p>
-    </header>
+      <header class="page__head">
+        <h1 class="page__title">Memberships, awards &amp; talks</h1>
+        <p class="page__lead">Professional societies, scholarships and awards, and invited or conference talks.</p>
+      </header>
 
-    <section class="fund-block" aria-labelledby="research-summary-title">
-      <h2 class="fund-block__title" id="research-summary-title">Research summary</h2>
-      <p class="fund-keywords">Remote sensing, coastal water quality, blue carbon ecosystems, mangroves and wetlands, atmospheric correction, spectral libraries, AI for Earth observation, urban and forest canopy, Greater Bay Area.</p>
-      <div class="fund-summary">
-        <p>Dr Majid Nazeer’s research develops satellite, airborne and ground-based methods to monitor coastal water quality, blue carbon systems and vegetated landscapes under climate change. Work centres on the Guangdong–Hong Kong–Macao Greater Bay Area, with algorithms and libraries that transfer to other coasts and cities.</p>
-        <p>Funding supports projects as Principal Investigator (including RGC GRF blue-carbon work and PolyU SLIVES), Co-Investigator on collaborative environmental and geospatial awards, and key researcher roles on major consortium grants — plus a UGC teaching innovation award.</p>
-      </div>
-      <ul class="fund-totals" aria-label="Funding totals">
-        <li><span class="fund-totals__n">HK$1.38M</span><span class="fund-totals__l">as PI</span></li>
-        <li><span class="fund-totals__n">HK$14.6M</span><span class="fund-totals__l">as Co-I</span></li>
-        <li><span class="fund-totals__n">HK$6.05M</span><span class="fund-totals__l">as Member</span></li>
-      </ul>
-    </section>
+      <article class="about-block" id="memberships">
+        <h2 class="about-block__title">Memberships</h2>
+        <ul class="record-list" id="membershipsList"></ul>
+      </article>
 
-    <section class="fund-block" aria-labelledby="funded-list-title">
-      <div class="fund-block__head">
-        <h2 class="fund-block__title" id="funded-list-title">Funded projects</h2>
-        <label class="fund-search">
-          <span class="visually-hidden">Search by title</span>
-          <input type="search" id="grantSearch" placeholder="Search by title" autocomplete="off">
-        </label>
-      </div>
+      <article class="about-block" id="awards">
+        <h2 class="about-block__title">Awards</h2>
+        <ol class="record-list" id="awardsList"></ol>
+      </article>
 
-      <div class="chip-row" id="grantChips" role="tablist" aria-label="Filter by role">
-        <button type="button" class="chip is-active" data-grant="all">All</button>
-        <button type="button" class="chip" data-grant="pi">Principal Investigator</button>
-        <button type="button" class="chip" data-grant="coi">Co-Investigator</button>
-        <button type="button" class="chip" data-grant="key">Key member</button>
-        <button type="button" class="chip" data-grant="teaching">Teaching project</button>
-      </div>
-
-      <div class="fund-toolbar">
-        <label class="fund-sort">
-          <span>Sort by</span>
-          <select id="grantSort">
-            <option value="newest">Date (newest first)</option>
-            <option value="oldest">Date (oldest first)</option>
-            <option value="amount">Amount (high to low)</option>
-          </select>
-        </label>
-        <p class="fund-count" id="grantCount" role="status" aria-live="polite"></p>
-      </div>
-
-      <ol class="fund-list" id="grantsRoot"></ol>
-      <p class="empty" id="grantEmpty" hidden>No projects match your search.</p>
-    </section>
-  </div>
+      <article class="about-block" id="talks">
+        <h2 class="about-block__title">Talks</h2>
+        <div class="chip-row" id="talkChips" role="tablist" aria-label="Talk type">
+          <button type="button" class="chip is-active" data-talk="all">All</button>
+          <button type="button" class="chip" data-talk="invited">Invited</button>
+          <button type="button" class="chip" data-talk="keynote">Keynote</button>
+          <button type="button" class="chip" data-talk="conference">Conference</button>
+          <button type="button" class="chip" data-talk="organised">Organised</button>
+          <button type="button" class="chip" data-talk="chair">Chair</button>
+        </div>
+        <ol class="record-list" id="talksList"></ol>
+      </article>
+    </div>
   </div>
 </main>
 
@@ -136,6 +111,22 @@
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M4.5 9.2 12 3.6l7.5 5.6H16v.2c0 1.4-1.8 2.55-4 2.55s-4-1.15-4-2.55v-.2H4.5z"/>
             <path d="M7.2 11.2v3.6c0 1.7 2.15 3.05 4.8 3.05s4.8-1.35 4.8-3.05v-3.6"/>
+            <text x="12" y="12.8" text-anchor="middle" font-size="8" font-family="Segoe UI, Arial, sans-serif" font-weight="700">g</text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.researchgate.net/profile/Majid-Nazeer" rel="noopener" aria-label="ResearchGate" title="ResearchGate">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <text x="2" y="18" font-size="14" font-family="Segoe UI, Arial, sans-serif" font-weight="700">R</text>
+            <text x="12.2" y="11.2" font-size="8.5" font-family="Segoe UI, Arial, sans-serif" font-weight="700">G</text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.polyu.edu.hk/lsgs/people/academic-staff/dr-majid-nazeer/" rel="noopener" aria-label="PolyU staff page" title="PolyU">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3.5 10.5 12 5.5l8.5 5"/><path d="M6 11.5v6.5M10 11.5v6.5M14 11.5v6.5M18 11.5v6.5"/><path d="M4.5 19.5h15"/>
           </svg>
         </a>
       </li>

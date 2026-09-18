@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Data &amp; Code — Majid Nazeer</title>
-<meta name="description" content="Research code repositories and datasets by Dr Majid Nazeer.">
+<title>Supervision and teaching — Majid Nazeer</title>
+<meta name="description" content="Supervision and teaching summary, courses, and students supervised by Dr Majid Nazeer at PolyU.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -20,7 +20,7 @@
   })();
 </script>
 </head>
-<body data-page="data-code">
+<body data-page="supervision">
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -35,10 +35,10 @@
       <a href="index.html#about">About</a>
       <a href="outputs.html">Research Outputs</a>
       <a href="funded.html">Funded Projects</a>
-      <a href="supervision.html">Supervision</a>
+      <a href="supervision.html" class="is-active">Supervision</a>
       <a href="service.html">Service</a>
       <a href="field.html">Field Survey</a>
-      <a href="data-code.html" class="is-active">Data &amp; Code</a>
+      <a href="data-code.html">Data &amp; Code</a>
       <a href="recognition.html">Memberships</a>
     </nav>
     <button class="theme" id="themeToggle" type="button" aria-label="Switch to dark mode">
@@ -56,43 +56,45 @@
   <div class="shell profile-layout">
     <aside id="profileSidebar" class="profile-sidebar" aria-label="Profile"></aside>
     <div class="profile-main">
-    <header class="page__head">
-      <p class="page__kicker">Open research</p>
-      <h1 class="page__title">Data &amp; Code</h1>
-      <p class="page__lead">Code repositories and datasets from the research.</p>
-    </header>
+      <header class="page__head">
+        <h1 class="page__title">Supervision and teaching</h1>
+        <p class="page__lead">Summary of teaching practice, supervised projects and current students.</p>
+      </header>
 
-    <div class="subtabs" data-tabs>
-      <div class="subtabs__bar" role="tablist" aria-label="Data and code type">
-        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-codes" aria-selected="true" aria-controls="panel-codes" data-tab="codes">Codes</button>
-        <button type="button" class="subtabs__tab" role="tab" id="tab-datasets" aria-selected="false" aria-controls="panel-datasets" data-tab="datasets" tabindex="-1">Datasets</button>
-      </div>
+      <article class="about-block">
+        <h2 class="about-block__title">Supervision and teaching summary</h2>
+        <div class="about__bio">
+          <p>Majid teaches remote sensing, GIS and geo-statistical methods to undergraduate and postgraduate students in land surveying and geospatial science. At PolyU he leads <strong>LSGI3321A Remote Sensing</strong> and has supported photogrammetry, geostatistics and exploratory data analysis as a teaching assistant.</p>
+          <p>His supervision spans PhD, MPhil, MSc and BSc projects on coastal water quality, blue carbon ecosystems, mangrove and wetland mapping, urban vegetation, and machine learning for Earth observation — with a strong focus on the Guangdong–Hong Kong–Macao Greater Bay Area and transferable retrieval methods.</p>
+          <p>Students are encouraged to combine field measurement, satellite and airborne data, and transparent analysis. Prior coding experience is welcome but not required; curiosity about coastal and environmental remote sensing matters more. Prospective students should be ready to learn quantitative workflows and to engage with real coastal and terrestrial datasets.</p>
+          <p>He has also taught advanced GIS and geo-statistical analysis at COMSATS University Islamabad, and continues to mentor research staff on spectral libraries and field campaigns linked to funded blue-carbon and vegetation projects.</p>
+        </div>
+      </article>
 
-      <div class="subtabs__panels">
-        <section class="subtabs__panel is-active" role="tabpanel" id="panel-codes" aria-labelledby="tab-codes" data-panel="codes">
-          <header class="panel-head">
-            <h2 class="panel-head__title">Codes</h2>
-            <p class="panel-head__lead">Software and analysis scripts.</p>
-          </header>
-          <ul class="resource-grid" id="codeList"></ul>
-          <div class="empty-state" id="codeEmpty">
-            <p>No repositories listed yet.</p>
+      <article class="about-block">
+        <h2 class="about-block__title">Teaching</h2>
+        <ol class="record-list" id="aboutTeaching"></ol>
+        <h3 class="about-block__subtitle">Teaching project award</h3>
+        <ol class="record-list" id="aboutTeachingGrant"></ol>
+      </article>
+
+      <article class="about-block about-block--flush">
+        <h2 class="about-block__title">Supervised students and staff</h2>
+        <div class="subtabs" data-filter-tabs>
+          <div class="subtabs__bar" role="tablist" aria-label="Filter by programme" id="peopleTabs">
+            <button type="button" class="subtabs__tab is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button type="button" class="subtabs__tab" role="tab" aria-selected="false" data-filter="phd">PhD</button>
+            <button type="button" class="subtabs__tab" role="tab" aria-selected="false" data-filter="mphil">MPhil</button>
+            <button type="button" class="subtabs__tab" role="tab" aria-selected="false" data-filter="msc">MSc</button>
+            <button type="button" class="subtabs__tab" role="tab" aria-selected="false" data-filter="bsc">BSc</button>
+            <button type="button" class="subtabs__tab" role="tab" aria-selected="false" data-filter="staff">Staff</button>
           </div>
-        </section>
-
-        <section class="subtabs__panel" role="tabpanel" id="panel-datasets" aria-labelledby="tab-datasets" data-panel="datasets" hidden>
-          <header class="panel-head">
-            <h2 class="panel-head__title">Datasets</h2>
-            <p class="panel-head__lead">Spectral libraries and research data products.</p>
-          </header>
-          <ul class="resource-grid" id="datasetList"></ul>
-          <div class="empty-state" id="datasetEmpty">
-            <p>No datasets listed yet.</p>
+          <div class="subtabs__panels">
+            <div class="subtabs__panel is-active" id="peopleRoot"></div>
           </div>
-        </section>
-      </div>
+        </div>
+      </article>
     </div>
-  </div>
   </div>
 </main>
 

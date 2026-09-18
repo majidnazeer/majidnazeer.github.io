@@ -216,7 +216,7 @@
   }
 
   /* =======================================================
-     PUBLICATIONS (home page)
+     PUBLICATIONS (outputs page)
      ======================================================= */
 
   function stripTags(s) { return s.replace(/<[^>]+>/g, ""); }
@@ -228,7 +228,7 @@
     conference: "Conference"
   };
 
-  /* Surnames / tokens for supervised students (Team page + known first authors). */
+  /* Surnames / tokens for supervised students (Supervision page + known first authors). */
   var STUDENT_TOKENS = [
     "sattar", "mahmood", "umar", "zohaib", "amin", "adeniran",
     "ahsan", "qureshi", "waqas", "raza", "kwok", "borsah"
@@ -275,9 +275,24 @@
 
   function roleBadgesHtml(roles) {
     if (!roles.length) return "";
-    return '<span class="pub__roles">' + roles.map(function (r) {
+    return roles.map(function (r) {
       return '<span class="pub__role pub__role--' + r + '">' + (roleLabels[r] || r) + "</span>";
-    }).join("") + "</span>";
+    }).join("");
+  }
+
+  function resourceLinkBadgesHtml(p) {
+    var bits = [];
+    if (p.code) {
+      bits.push(
+        '<a class="pub__role pub__role--code" href="data-code.html#codes">Code</a>'
+      );
+    }
+    if (p.dataset) {
+      bits.push(
+        '<a class="pub__role pub__role--dataset" href="data-code.html#datasets">Dataset</a>'
+      );
+    }
+    return bits.join("");
   }
 
   function renderPubs() {
@@ -293,7 +308,7 @@
       if (pubTypeFilter !== "all" && t !== pubTypeFilter) return false;
       if (!q) return true;
       var roles = pubRoleList(p).join(" ");
-      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roles).toLowerCase();
+      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roles + " " + (p.code || "") + " " + (p.dataset || "")).toLowerCase();
       return hay.indexOf(q) !== -1;
     });
 
@@ -330,8 +345,12 @@
         var kind = p.type || "journal";
         var badge = '<span class="pub__type">' + (typeLabels[kind] || kind) + "</span>";
         var roles = roleBadgesHtml(pubRoleList(p));
+        var resources = resourceLinkBadgesHtml(p);
+        var badges = '<div class="pub__badges">' + badge +
+          (roles || resources ? '<span class="pub__roles">' + roles + resources + "</span>" : "") +
+          "</div>";
         return '<li class="pub">' +
-          '<div class="pub__badges">' + badge + roles + "</div>" +
+          badges +
           '<h3 class="pub__title">' + p.title + "</h3>" +
           '<p class="pub__authors">' + p.authors + "</p>" +
           (meta ? '<p class="pub__venue">' + meta + "</p>" : "") +
@@ -528,7 +547,7 @@
     '</li>';
   }
 
-  if (page === "home") {
+  if (page === "home" || page === "supervision") {
     var aboutPos = document.getElementById("aboutPositions");
     if (aboutPos && typeof POSITIONS !== "undefined") {
       aboutPos.innerHTML = POSITIONS.map(function (p) {
@@ -540,6 +559,20 @@
     if (aboutEdu && typeof EDUCATION !== "undefined") {
       aboutEdu.innerHTML = EDUCATION.map(function (e) {
         return recordHtml(e.degree, e.years, e.place, e.note);
+      }).join("");
+    }
+
+    var aboutTeach = document.getElementById("aboutTeaching");
+    if (aboutTeach && typeof TEACHING !== "undefined") {
+      aboutTeach.innerHTML = TEACHING.map(function (t) {
+        return recordHtml(t.title, t.years, t.note, "");
+      }).join("");
+    }
+
+    var aboutTeachGrant = document.getElementById("aboutTeachingGrant");
+    if (aboutTeachGrant && typeof GRANTS_TEACHING !== "undefined") {
+      aboutTeachGrant.innerHTML = GRANTS_TEACHING.map(function (g) {
+        return recordHtml(g.title, g.years, g.funder + (g.amount ? " · " + g.amount : ""), g.role);
       }).join("");
     }
   }
@@ -610,7 +643,7 @@
 
   document.querySelectorAll("[data-tabs]").forEach(initPanelTabs);
 
-  if (page === "cv") {
+  if (page === "recognition" || page === "cv") {
     var memEl = document.getElementById("membershipsList");
     if (memEl && typeof MEMBERSHIPS !== "undefined") {
       memEl.innerHTML = MEMBERSHIPS.map(function (m) {
@@ -663,20 +696,6 @@
         });
         renderTalks(btn.getAttribute("data-talk"));
       });
-    }
-
-    var teachEl = document.getElementById("teachingList");
-    if (teachEl && typeof TEACHING !== "undefined") {
-      teachEl.innerHTML = TEACHING.map(function (t) {
-        return recordHtml(t.title, t.years, t.note, "");
-      }).join("");
-    }
-
-    var teachGrantEl = document.getElementById("teachingGrantList");
-    if (teachGrantEl && typeof GRANTS_TEACHING !== "undefined") {
-      teachGrantEl.innerHTML = GRANTS_TEACHING.map(function (g) {
-        return recordHtml(g.title, g.years, g.funder + (g.amount ? " · " + g.amount : ""), g.role);
-      }).join("");
     }
   }
 
@@ -1132,7 +1151,7 @@
     }
   }
 
-  if ((page === "team" || page === "people") && typeof PEOPLE !== "undefined") {
+  if ((page === "supervision" || page === "team" || page === "people") && typeof PEOPLE !== "undefined") {
     var groups = [
       { key: "phd", label: "PhD students" },
       { key: "mphil", label: "MPhil students" },
