@@ -117,14 +117,6 @@
               '<a href="https://www.linkedin.com/in/majid-nazeer-29897914" rel="noopener">LinkedIn</a>' +
             '</span>' +
           '</li>' +
-          '<li class="profile-sidebar__item">' +
-            '<span class="profile-sidebar__icon" aria-hidden="true">' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 10.5 12 5.5l8.5 5"/><path d="M6 11.5v6.5M10 11.5v6.5M14 11.5v6.5M18 11.5v6.5"/><path d="M4.5 19.5h15"/></svg>' +
-            '</span>' +
-            '<span class="profile-sidebar__item-body">' +
-              '<a href="https://www.polyu.edu.hk/lsgs/people/academic-staff/dr-majid-nazeer/" rel="noopener">PolyU staff page</a>' +
-            '</span>' +
-          '</li>' +
         '</ul>' +
       '</div>';
   }
