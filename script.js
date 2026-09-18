@@ -228,15 +228,24 @@
     conference: "Conference"
   };
 
-  /* Surnames / tokens for supervised students (Supervision page + known first authors). */
+  /* Surnames / tokens for supervised students (known student first authors). */
   var STUDENT_TOKENS = [
     "sattar", "mahmood", "umar", "zohaib", "amin", "adeniran",
-    "ahsan", "qureshi", "waqas", "raza", "kwok", "borsah"
+    "ahsan", "qureshi", "waqas", "raza", "kwok", "borsah",
+    "iqbal", "hafeez", "choi", "awais", "kanwal", "javed", "inam"
   ];
 
   function nazeerIsFirstAuthor(authors) {
     var first = stripTags(authors || "").split(",")[0].trim();
     return /^Nazeer\b/i.test(first);
+  }
+
+  function nazeerAuthorIndex(authors) {
+    var parts = stripTags(authors || "").split(",");
+    for (var i = 0; i < parts.length; i++) {
+      if (/Nazeer/i.test(parts[i])) return i;
+    }
+    return -1;
   }
 
   function firstAuthorIsStudent(authors) {
@@ -250,27 +259,61 @@
     var roles = [];
     var explicit = Array.isArray(p.roles) ? p.roles.slice() : [];
     var kind = p.type || "journal";
+    var isFirst = nazeerIsFirstAuthor(p.authors);
+    var isStudentWork = firstAuthorIsStudent(p.authors) && !isFirst;
+    var nazeerIdx = nazeerAuthorIndex(p.authors);
 
-    if (explicit.indexOf("corresponding") !== -1 || p.corresponding === true || nazeerIsFirstAuthor(p.authors)) {
+    function has(role) {
+      return explicit.indexOf(role) !== -1;
+    }
+
+    /* 1. First author */
+    if (has("first-author") || p.firstAuthor === true || isFirst) {
+      roles.push("first-author");
+    }
+
+    /* 2. Corresponding — first-author papers, or explicit / student paper where he is 2nd */
+    if (
+      has("corresponding") ||
+      p.corresponding === true ||
+      isFirst ||
+      (isStudentWork && nazeerIdx === 1)
+    ) {
       roles.push("corresponding");
     }
-    if (explicit.indexOf("speaker") !== -1 || p.speaker === true ||
-        (kind === "conference" && nazeerIsFirstAuthor(p.authors))) {
-      roles.push("speaker");
-    }
-    if (explicit.indexOf("student-lead") !== -1 || p.studentLead === true ||
-        (firstAuthorIsStudent(p.authors) && !nazeerIsFirstAuthor(p.authors))) {
-      roles.push("student-lead");
+
+    /* 3. Student supervision work */
+    if (has("student-supervision") || has("student-lead") || p.studentLead === true || isStudentWork) {
+      roles.push("student-supervision");
     }
 
-    /* Deduplicate while keeping order */
+    /* 4. Associated staff work — co-author, not first author, not his student-led paper */
+    if (
+      has("associated-staff") ||
+      p.associatedStaff === true ||
+      (!isFirst && !isStudentWork && nazeerIdx > 0)
+    ) {
+      roles.push("associated-staff");
+    }
+
+    /* 7. Speaker — conference talks he led, or explicit */
+    if (
+      has("speaker") ||
+      p.speaker === true ||
+      (kind === "conference" && isFirst)
+    ) {
+      roles.push("speaker");
+    }
+
     return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
   }
 
   var roleLabels = {
+    "first-author": "First author",
     corresponding: "Corresponding",
-    speaker: "Speaker",
-    "student-lead": "Student lead"
+    "student-supervision": "Student supervision",
+    "associated-staff": "Associated staff",
+    speaker: "Speaker"
   };
 
   function roleBadgesHtml(roles) {
@@ -307,8 +350,9 @@
       var t = p.type || "journal";
       if (pubTypeFilter !== "all" && t !== pubTypeFilter) return false;
       if (!q) return true;
-      var roles = pubRoleList(p).join(" ");
-      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roles + " " + (p.code || "") + " " + (p.dataset || "")).toLowerCase();
+      var roles = pubRoleList(p);
+      var roleText = roles.concat(roles.map(function (r) { return roleLabels[r] || ""; })).join(" ");
+      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roleText + " " + (p.code || "") + " " + (p.dataset || "")).toLowerCase();
       return hay.indexOf(q) !== -1;
     });
 

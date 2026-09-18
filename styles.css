@@ -968,6 +968,14 @@ a:hover { opacity: .75; }
   background: var(--accent);
 }
 
+.pub__role--first-author {
+  background: #2f4a6b;
+}
+
+[data-theme="dark"] .pub__role--first-author {
+  background: #7a9bc4;
+}
+
 .pub__role--speaker {
   background: #9a5b1a;
 }
@@ -976,12 +984,22 @@ a:hover { opacity: .75; }
   background: #c4843a;
 }
 
+.pub__role--student-supervision,
 .pub__role--student-lead {
   background: #3d5c4a;
 }
 
+[data-theme="dark"] .pub__role--student-supervision,
 [data-theme="dark"] .pub__role--student-lead {
   background: #6a9a7e;
+}
+
+.pub__role--associated-staff {
+  background: #5c4a5e;
+}
+
+[data-theme="dark"] .pub__role--associated-staff {
+  background: #a888aa;
 }
 
 a.pub__role {
