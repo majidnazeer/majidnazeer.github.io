@@ -2,14 +2,25 @@
 var PUBLICATIONS = [
   {
     year: 2026,
+    published: "2026-08-25",
     type: "journal",
-    title: "Artificial Intelligence in Cadastre: A Systematic Review of Methods, Applications, and Trends",
-    authors: "J Chen, <b>Nazeer, M.</b>, BS Lee, MS Wong",
-    venue: "Land 15 (3), 411",
-    doi: "10.3390/land15030411"
+    title: "How urban surface and morphological features shape air and surface temperatures disparities: a spatiotemporal investigation in Hong Kong",
+    authors: "S Li, MS Wong, <b>Nazeer, M.</b>, J Yang, PW Chan",
+    venue: "City and Environment Interactions, 100453",
+    doi: "10.1016/j.cacint.2026.100453"
   },
   {
     year: 2026,
+    published: "2026-08-11",
+    type: "journal",
+    title: "Quantifying the spatio-temporal sensitivity of NO2 to daily human activities through interpretable machine learning: a case study in the USA",
+    authors: "Y Luo, X Yu, <b>Nazeer, M.</b>, J Heo, MP Kwan, Y Meng, CYT Kwok, ...",
+    venue: "Geo-spatial Information Science, 1-19",
+    doi: "10.1080/10095020.2026.2712868"
+  },
+  {
+    year: 2026,
+    published: "2026-07-24",
     type: "journal",
     title: "Data-driven modelling of coastal water quality dynamics",
     authors: "MU Mahmood, MS Wong, <b>Nazeer, M.</b>, S Abbas, A Stocchino, KTM Wong",
@@ -19,23 +30,59 @@ var PUBLICATIONS = [
   },
   {
     year: 2026,
+    published: "2026-07-07",
     type: "journal",
-    title: "Development of a spectral library (CROPSPECPK) for major crops through spectroscopy modeling and in-situ spectrometer data",
-    authors: "D Raza, H Shu, H Aslam, <b>Nazeer, M.</b>, H Fan, JE Nichol, RW Aslam, ...",
-    venue: "BMC Plant Biology 26 (1), 561",
-    doi: "10.1186/s12870-026-08387-z",
-    dataset: "https://doi.org/10.5281/zenodo.13372659"
+    title: "Explainable HybridEnsemble approach with golden jackal optimization for AGB estimation using multi-sensor remote sensing",
+    authors: "A Aidoo Borsah, MS Wong, <b>Nazeer, M.</b>, SY Leu, J Wu, APK Tai, JE Nichol",
+    venue: "Frontiers in Remote Sensing 7, 1804569",
+    doi: "10.3389/frsen.2026.1804569"
   },
   {
     year: 2026,
-    type: "journal",
-    title: "Diurnal Air-Surface Temperature Dynamics in Hong Kong: An Analysis Across Land Use and Climate Zones",
-    authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, J Yang, PW Chan",
-    venue: "International Journal of Climatology 46 (6), e70297",
-    doi: "10.1002/joc.70297"
+    published: "2026-07-04",
+    type: "conference",
+    title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH4) and Carbon Dioxide (CO2) Dynamics in the Greater Bay Area",
+    authors: "M Umar, <b>Nazeer, M.</b>, MS Wong",
+    venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto"
   },
   {
     year: 2026,
+    published: "2026-07-04",
+    type: "conference",
+    title: "Integrating Spectral Indices with Terrestrial Laser Scanner for Biomass Estimation in Hong Kong Mangroves",
+    authors: "MU Mahmood, <b>Nazeer, M.</b>, MS Wong",
+    venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto"
+  },
+  {
+    year: 2026,
+    published: "2026-07-01",
+    type: "journal",
+    title: "Tracking functional shifts in fishpond wetlands of Hong Kong&#39;s Deep Bay and their implications for conservation planning",
+    authors: "S Abbas, X Ding, N Habib, <b>Nazeer, M.</b>, JE Nichol, MU Mahmood",
+    venue: "Ecological Indicators 188, 115051",
+    doi: "10.1016/j.ecolind.2026.115051"
+  },
+  {
+    year: 2026,
+    published: "2026-06-17",
+    type: "journal",
+    title: "Predicting urban tree falls: a machine learning-based approach using low-cost MEMS",
+    authors: "CYT Kwok, H Li, MS Wong, <b>Nazeer, M.</b>, PK Chan, KKW Hui, MU Mahmood",
+    venue: "IEEE Access",
+    doi: "10.1109/ACCESS.2026.3704640"
+  },
+  {
+    year: 2026,
+    published: "2026-06-15",
+    type: "journal",
+    title: "Multi-Task Learning for Subtropical Forest Canopy Height Mapping from Sentinel-2 Imagery and Airborne LiDAR",
+    authors: "X Liu, <b>Nazeer, M.</b>, X Yu, JE Nichol, J Wu, APK Tai, SY Leu, MS Wong",
+    venue: "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    doi: "10.1109/JSTARS.2026.3702756"
+  },
+  {
+    year: 2026,
+    published: "2026-06-01",
     type: "journal",
     title: "Establishing a hyperspectral library for Hong Kong mangroves: Species differentiation and leaf decay dynamics",
     authors: "T Sattar, <b>Nazeer, M.</b>, MS Wong, JE Nichol, X Zhu",
@@ -46,6 +93,7 @@ var PUBLICATIONS = [
   },
   {
     year: 2026,
+    published: "2026-06-01",
     type: "journal",
     title: "Estimating multi-scale ventilation corridors in complex 3D urban space: A graph-based least-cost path model",
     authors: "Y Luo, X Yu, <b>Nazeer, M.</b>, MS Wong, J Yang, R Zhu",
@@ -54,35 +102,35 @@ var PUBLICATIONS = [
   },
   {
     year: 2026,
+    published: "2026-03-02",
     type: "journal",
-    title: "Explainable HybridEnsemble approach with golden jackal optimization for AGB estimation using multi-sensor remote sensing",
-    authors: "A Aidoo Borsah, MS Wong, <b>Nazeer, M.</b>, SY Leu, J Wu, APK Tai, JE Nichol",
-    venue: "Frontiers in Remote Sensing 7, 1804569",
-    doi: "10.3389/frsen.2026.1804569"
+    title: "Artificial Intelligence in Cadastre: A Systematic Review of Methods, Applications, and Trends",
+    authors: "J Chen, <b>Nazeer, M.</b>, BS Lee, MS Wong",
+    venue: "Land 15 (3), 411",
+    doi: "10.3390/land15030411"
   },
   {
     year: 2026,
+    published: "2026-02-26",
     type: "journal",
-    title: "How urban surface and morphological features shape air and surface temperatures disparities: a spatiotemporal investigation in Hong Kong",
-    authors: "S Li, MS Wong, <b>Nazeer, M.</b>, J Yang, PW Chan",
-    venue: "City and Environment Interactions, 100453"
+    title: "Diurnal Air-Surface Temperature Dynamics in Hong Kong: An Analysis Across Land Use and Climate Zones",
+    authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, J Yang, PW Chan",
+    venue: "International Journal of Climatology 46 (6), e70297",
+    doi: "10.1002/joc.70297"
   },
   {
     year: 2026,
-    type: "conference",
-    title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH4) and Carbon Dioxide (CO2) Dynamics in the Greater Bay Area",
-    authors: "M Umar, <b>Nazeer, M.</b>, MS Wong",
-    venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto"
+    published: "2026-02-20",
+    type: "journal",
+    title: "Development of a spectral library (CROPSPECPK) for major crops through spectroscopy modeling and in-situ spectrometer data",
+    authors: "D Raza, H Shu, H Aslam, <b>Nazeer, M.</b>, H Fan, JE Nichol, RW Aslam, ...",
+    venue: "BMC Plant Biology 26 (1), 561",
+    doi: "10.1186/s12870-026-08387-z",
+    dataset: "https://doi.org/10.5281/zenodo.13372659"
   },
   {
     year: 2026,
-    type: "conference",
-    title: "Integrating Spectral Indices with Terrestrial Laser Scanner for Biomass Estimation in Hong Kong Mangroves",
-    authors: "MU Mahmood, <b>Nazeer, M.</b>, MS Wong",
-    venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto"
-  },
-  {
-    year: 2026,
+    published: "2025-09-04",
     type: "journal",
     title: "Land cover simulation and analysis for the Greater Bay Area of China in the context of the 2035 development plan",
     authors: "G Amin, <b>Nazeer, M.</b>, M Sing Wong",
@@ -90,93 +138,17 @@ var PUBLICATIONS = [
     doi: "10.1080/10095020.2025.2548360"
   },
   {
-    year: 2026,
+    year: 2025,
+    published: "2026-01-01",
     type: "journal",
-    title: "Multi-Task Learning for Subtropical Forest Canopy Height Mapping from Sentinel-2 Imagery and Airborne LiDAR",
-    authors: "X Liu, <b>Nazeer, M.</b>, X Yu, JE Nichol, J Wu, APK Tai, SY Leu, MS Wong",
-    venue: "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
-    doi: "10.1109/JSTARS.2026.3702756"
-  },
-  {
-    year: 2026,
-    type: "journal",
-    title: "Predicting urban tree falls: a machine learning-based approach using low-cost MEMS",
-    authors: "CYT Kwok, H Li, MS Wong, <b>Nazeer, M.</b>, PK Chan, KKW Hui, MU Mahmood",
-    venue: "IEEE Access",
-    doi: "10.1109/ACCESS.2026.3704640"
-  },
-  {
-    year: 2026,
-    type: "journal",
-    title: "Quantifying the spatio-temporal sensitivity of NO2 to daily human activities through interpretable machine learning: a case study in the USA",
-    authors: "Y Luo, X Yu, <b>Nazeer, M.</b>, J Heo, MP Kwan, Y Meng, CYT Kwok, ...",
-    venue: "Geo-spatial Information Science, 1-19",
-    doi: "10.1080/10095020.2026.2712868"
-  },
-  {
-    year: 2026,
-    type: "journal",
-    title: "Tracking functional shifts in fishpond wetlands of Hong Kong&#39;s Deep Bay and their implications for conservation planning",
-    authors: "S Abbas, X Ding, N Habib, <b>Nazeer, M.</b>, JE Nichol, MU Mahmood",
-    venue: "Ecological Indicators 188, 115051",
-    doi: "10.1016/j.ecolind.2026.115051"
+    title: "Unravelling the street thermal features network and spatial visual thermal inertia: a study in Hong Kong",
+    authors: "K Zou, MS Wong, <b>Nazeer, M.</b>, X Yu, G Tan, HC Hou, J Yang, PW Chan",
+    venue: "Sustainable Cities and Society, 107054",
+    doi: "10.1016/j.scs.2025.107054"
   },
   {
     year: 2025,
-    type: "journal",
-    title: "Advanced point cloud completion for urban trees: A novel approach using enhanced SnowflakeNet",
-    authors: "L Xindi, J Li, <b>Nazeer, M.</b>, MS Wong",
-    venue: "Urban Forestry &amp; Urban Greening",
-    doi: "10.1016/j.ufug.2025.129107"
-  },
-  {
-    year: 2025,
-    type: "conference",
-    title: "Assessing the Impact of Climate Change on Land Use Patterns in the Greater Bay Area of China: A Scenario-Based Approach for 2035",
-    authors: "<b>Nazeer, M.</b>, G Amin, MS Wong",
-    venue: "2025 IEEE International Geoscience and Remote Sensing Symposium"
-  },
-  {
-    year: 2025,
-    type: "journal",
-    title: "Bridging the biomass gap: Advances, challenges and prospects in unlocking Radar&#39;s potential in terrestrial ecosystems",
-    authors: "S Ullah, <b>Nazeer, M.</b>, MS Wong",
-    venue: "Earth-Science Reviews, 105275",
-    doi: "10.1016/j.earscirev.2025.105275"
-  },
-  {
-    year: 2025,
-    type: "conference",
-    title: "Diurnal Air-Surface Temperature Variations in a Densely Populated Urban Environment: A Study of Land Use and Climate Zones",
-    authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong",
-    venue: "International Geoscience and Remote Sensing Symposium (IGARSS 2025), Brisbane"
-  },
-  {
-    year: 2025,
-    type: "journal",
-    title: "Emerging from the depth: preliminary clues on groundwater upsurge in the coastal city of Zliten, Libya",
-    authors: "<b>Nazeer, M.</b>, G Amin, MS Wong",
-    venue: "Geomatics, Natural Hazards and Risk 16 (1), 2475889",
-    doi: "10.1080/19475705.2025.2475889"
-  },
-  {
-    year: 2025,
-    type: "journal",
-    title: "Evaluation of agriculture land transformations with socio-economic influences on wheat demand and supply for food sustainability",
-    authors: "D Raza, H Shu, M Ehsan, H Fan, K Abdelrahman, H Aslam, A Quddoos, ...",
-    venue: "Cogent Food &amp; Agriculture 11 (1), 2448597",
-    doi: "10.1080/23311932.2024.2448597"
-  },
-  {
-    year: 2025,
-    type: "journal",
-    title: "Individual tree above-ground biomass estimation by integrating LiDAR and machine learning",
-    authors: "YT Choi, <b>Nazeer, M.</b>, MS Wong, JE Nichol, SY Leu, J Wu, APK Tai",
-    venue: "Trees, Forests and People 21, 100955",
-    doi: "10.1016/j.tfp.2025.100955"
-  },
-  {
-    year: 2025,
+    published: "2025-12-15",
     type: "conference",
     title: "Linking Coastal Water Quality to Blue Carbon Ecosystems Health: A Case Study from Hong Kong",
     authors: "<b>Nazeer, M.</b>, CC Ho, MS Wong, T Sattar",
@@ -185,6 +157,50 @@ var PUBLICATIONS = [
   },
   {
     year: 2025,
+    published: "2025-12-01",
+    type: "journal",
+    title: "Bridging the biomass gap: Advances, challenges and prospects in unlocking Radar&#39;s potential in terrestrial ecosystems",
+    authors: "S Ullah, <b>Nazeer, M.</b>, MS Wong",
+    venue: "Earth-Science Reviews, 105275",
+    doi: "10.1016/j.earscirev.2025.105275"
+  },
+  {
+    year: 2025,
+    published: "2025-11-01",
+    type: "journal",
+    title: "Advanced point cloud completion for urban trees: A novel approach using enhanced SnowflakeNet",
+    authors: "L Xindi, J Li, <b>Nazeer, M.</b>, MS Wong",
+    venue: "Urban Forestry &amp; Urban Greening",
+    doi: "10.1016/j.ufug.2025.129107"
+  },
+  {
+    year: 2025,
+    published: "2025-09-01",
+    type: "journal",
+    title: "Individual tree above-ground biomass estimation by integrating LiDAR and machine learning",
+    authors: "YT Choi, <b>Nazeer, M.</b>, MS Wong, JE Nichol, SY Leu, J Wu, APK Tai",
+    venue: "Trees, Forests and People 21, 100955",
+    doi: "10.1016/j.tfp.2025.100955"
+  },
+  {
+    year: 2025,
+    published: "2025-08-07",
+    type: "conference",
+    title: "Assessing the Impact of Climate Change on Land Use Patterns in the Greater Bay Area of China: A Scenario-Based Approach for 2035",
+    authors: "<b>Nazeer, M.</b>, G Amin, MS Wong",
+    venue: "2025 IEEE International Geoscience and Remote Sensing Symposium"
+  },
+  {
+    year: 2025,
+    published: "2025-08-07",
+    type: "conference",
+    title: "Diurnal Air-Surface Temperature Variations in a Densely Populated Urban Environment: A Study of Land Use and Climate Zones",
+    authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong",
+    venue: "International Geoscience and Remote Sensing Symposium (IGARSS 2025), Brisbane"
+  },
+  {
+    year: 2025,
+    published: "2025-08-01",
     type: "journal",
     title: "Machine learning models for subtropical forest aboveground biomass mapping using combined SAR and optical satellite imagery",
     authors: "AA Borsah, MS Wong, <b>Nazeer, M.</b>, G Shi",
@@ -193,6 +209,7 @@ var PUBLICATIONS = [
   },
   {
     year: 2025,
+    published: "2025-08-01",
     type: "journal",
     title: "Remote sensing for aboveground biomass monitoring in terrestrial ecosystems: A systematic review",
     authors: "S Ullah, <b>Nazeer, M.</b>, MS Wong, G Amin",
@@ -201,30 +218,25 @@ var PUBLICATIONS = [
   },
   {
     year: 2025,
+    published: "2025-03-10",
     type: "journal",
-    title: "Unravelling the street thermal features network and spatial visual thermal inertia: a study in Hong Kong",
-    authors: "K Zou, MS Wong, <b>Nazeer, M.</b>, X Yu, G Tan, HC Hou, J Yang, PW Chan",
-    venue: "Sustainable Cities and Society, 107054",
-    doi: "10.1016/j.scs.2025.107054"
+    title: "Emerging from the depth: preliminary clues on groundwater upsurge in the coastal city of Zliten, Libya",
+    authors: "<b>Nazeer, M.</b>, G Amin, MS Wong",
+    venue: "Geomatics, Natural Hazards and Risk 16 (1), 2475889",
+    doi: "10.1080/19475705.2025.2475889"
+  },
+  {
+    year: 2025,
+    published: "2025-01-07",
+    type: "journal",
+    title: "Evaluation of agriculture land transformations with socio-economic influences on wheat demand and supply for food sustainability",
+    authors: "D Raza, H Shu, M Ehsan, H Fan, K Abdelrahman, H Aslam, A Quddoos, ...",
+    venue: "Cogent Food &amp; Agriculture 11 (1), 2448597",
+    doi: "10.1080/23311932.2024.2448597"
   },
   {
     year: 2024,
-    type: "journal",
-    title: "A novel algorithm for full-coverage daily aerosol optical depth retrievals using machine learning-based reconstruction technique",
-    authors: "X Yu, MS Wong, <b>Nazeer, M.</b>, Z Li, CYT Kwok",
-    venue: "Atmospheric Environment 318, 120216",
-    doi: "10.1016/j.atmosenv.2023.120216"
-  },
-  {
-    year: 2024,
-    type: "journal",
-    title: "Advances in ecological environment changes in coastal and estuarine waters in response to hydrodynamic variability",
-    authors: "J Pan, Y Shu, ZW Zheng, AT Devlin, <b>Nazeer, M.</b>, AM Fischer",
-    venue: "Frontiers in Marine Science 11, 1508825",
-    doi: "10.3389/fmars.2024.1508825"
-  },
-  {
-    year: 2024,
+    published: "2024-11-09",
     type: "journal",
     title: "An improved machine learning-based model for prediction of diurnal and spatially continuous near surface air temperature",
     authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, PW Chan",
@@ -233,6 +245,25 @@ var PUBLICATIONS = [
   },
   {
     year: 2024,
+    published: "2024-11-01",
+    type: "journal",
+    title: "Urban tree health assessment using multifaceted remote sensing datasets: A case study in Hong Kong",
+    authors: "<b>Nazeer, M.</b>, MS Wong, X Yu, CYT Kwok, Q Peng, YS Dai",
+    venue: "Remote Sensing Applications: Society and Environment 36, 101347",
+    doi: "10.1016/j.rsase.2024.101347"
+  },
+  {
+    year: 2024,
+    published: "2024-10-30",
+    type: "journal",
+    title: "Advances in ecological environment changes in coastal and estuarine waters in response to hydrodynamic variability",
+    authors: "J Pan, Y Shu, ZW Zheng, AT Devlin, <b>Nazeer, M.</b>, AM Fischer",
+    venue: "Frontiers in Marine Science 11, 1508825",
+    doi: "10.3389/fmars.2024.1508825"
+  },
+  {
+    year: 2024,
+    published: "2024-08-30",
     type: "journal",
     title: "Assessment of machine learning algorithms for land cover classification in a complex mountainous landscape",
     authors: "G Amin, I Imtiaz, E Haroon, N Saqib, MI Shahzad, <b>Nazeer, M.</b>",
@@ -241,14 +272,16 @@ var PUBLICATIONS = [
   },
   {
     year: 2024,
+    published: "2024-08-26",
     type: "journal",
-    title: "Impact of urban spatial factors on NO2 concentration based on different socio-economic restriction scenarios in US cities",
-    authors: "M Waqas, <b>Nazeer, M.</b>, MS Wong, W Shaolin, L Hon, J Heo",
-    venue: "Atmospheric Environment 316, 120191",
-    doi: "10.1016/j.atmosenv.2023.120191"
+    title: "Improved method for cropland extraction of seasonal crops from multi-sensor satellite data",
+    authors: "D Raza, H Shu, <b>Nazeer, M.</b>, H Aslam, S Mirza, X Xiao, A Sardar, H Aeman",
+    venue: "International Journal of Remote Sensing 45 (18), 6249-6284",
+    doi: "10.1080/01431161.2024.2388864"
   },
   {
     year: 2024,
+    published: "2024-07-01",
     type: "journal",
     title: "Improved fusion model for generating hourly fine scale land surface temperature data under all-weather condition",
     authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, R Zhu, J Yang, PW Chan",
@@ -257,11 +290,21 @@ var PUBLICATIONS = [
   },
   {
     year: 2024,
+    published: "2024-02-01",
     type: "journal",
-    title: "Improved method for cropland extraction of seasonal crops from multi-sensor satellite data",
-    authors: "D Raza, H Shu, <b>Nazeer, M.</b>, H Aslam, S Mirza, X Xiao, A Sardar, H Aeman",
-    venue: "International Journal of Remote Sensing 45 (18), 6249-6284",
-    doi: "10.1080/01431161.2024.2388864"
+    title: "A novel algorithm for full-coverage daily aerosol optical depth retrievals using machine learning-based reconstruction technique",
+    authors: "X Yu, MS Wong, <b>Nazeer, M.</b>, Z Li, CYT Kwok",
+    venue: "Atmospheric Environment 318, 120216",
+    doi: "10.1016/j.atmosenv.2023.120216"
+  },
+  {
+    year: 2024,
+    published: "2024-01-01",
+    type: "journal",
+    title: "Impact of urban spatial factors on NO2 concentration based on different socio-economic restriction scenarios in US cities",
+    authors: "M Waqas, <b>Nazeer, M.</b>, MS Wong, W Shaolin, L Hon, J Heo",
+    venue: "Atmospheric Environment 316, 120191",
+    doi: "10.1016/j.atmosenv.2023.120191"
   },
   {
     year: 2024,
@@ -271,23 +314,8 @@ var PUBLICATIONS = [
     venue: "PolyU Research Student Conference (PRSC 2024), Hong Kong"
   },
   {
-    year: 2024,
-    type: "journal",
-    title: "Urban tree health assessment using multifaceted remote sensing datasets: A case study in Hong Kong",
-    authors: "<b>Nazeer, M.</b>, MS Wong, X Yu, CYT Kwok, Q Peng, YS Dai",
-    venue: "Remote Sensing Applications: Society and Environment 36, 101347",
-    doi: "10.1016/j.rsase.2024.101347"
-  },
-  {
     year: 2023,
-    type: "journal",
-    title: "A novel three-band macroalgae detection index (TMI) for aquatic environments",
-    authors: "<b>Nazeer, M.</b>, MMM Alsahli, JE Nichol, J Pan, W Wu, M Bilal, U Saeed",
-    venue: "International Journal of Remote Sensing 44 (7), 2359-2381",
-    doi: "10.1080/01431161.2023.2202339"
-  },
-  {
-    year: 2023,
+    published: "2023-12-01",
     type: "journal",
     title: "Delineation of groundwater potential zones with Analytic Hierarchy process based geospatial modelling approach in metropolitan expanse",
     authors: "M Khushi, D Raza, M Kamran, <b>Nazeer, M.</b>, A Ahmad, SU Khan, I Younas",
@@ -296,14 +324,7 @@ var PUBLICATIONS = [
   },
   {
     year: 2023,
-    type: "journal",
-    title: "Integrating physical index and self-organizing mapping for aerosol dust detection (PISOM) over Himawari-8 AHI satellite images",
-    authors: "J Li, MS Wong, <b>Nazeer, M.</b>",
-    venue: "Atmospheric Environment 309, 119921",
-    doi: "10.1016/j.atmosenv.2023.119921"
-  },
-  {
-    year: 2023,
+    published: "2023-10-19",
     type: "journal",
     title: "LIDAR-based forest biomass remote sensing: A review of metrics, methods, and assessment criteria for the selection of allometric equations",
     authors: "AA Borsah, <b>Nazeer, M.</b>, MS Wong",
@@ -312,6 +333,16 @@ var PUBLICATIONS = [
   },
   {
     year: 2023,
+    published: "2023-09-01",
+    type: "journal",
+    title: "Integrating physical index and self-organizing mapping for aerosol dust detection (PISOM) over Himawari-8 AHI satellite images",
+    authors: "J Li, MS Wong, <b>Nazeer, M.</b>",
+    venue: "Atmospheric Environment 309, 119921",
+    doi: "10.1016/j.atmosenv.2023.119921"
+  },
+  {
+    year: 2023,
+    published: "2023-05-01",
     type: "journal",
     title: "Monitoring the sea surface microlayer (SML) on sentinel images",
     authors: "JE Nichol, AS Antonarakis, <b>Nazeer, M.</b>",
@@ -319,31 +350,17 @@ var PUBLICATIONS = [
     doi: "10.1016/j.scitotenv.2023.162218"
   },
   {
-    year: 2022,
+    year: 2023,
+    published: "2023-04-23",
     type: "journal",
-    title: "AEROsol generic classification using a novel Satellite remote sensing Approach (AEROSA)",
-    authors: "M Bilal, MA Ali, JE Nichol, MP Bleiweiss, G de Leeuw, A Mhawish, Y Shi, ...",
-    venue: "Frontiers in Environmental Science 10, 981522",
-    doi: "10.3389/fenvs.2022.981522"
+    title: "A novel three-band macroalgae detection index (TMI) for aquatic environments",
+    authors: "<b>Nazeer, M.</b>, MMM Alsahli, JE Nichol, J Pan, W Wu, M Bilal, U Saeed",
+    venue: "International Journal of Remote Sensing 44 (7), 2359-2381",
+    doi: "10.1080/01431161.2023.2202339"
   },
   {
     year: 2022,
-    type: "journal",
-    title: "Assessing the spatial distribution and impacts of recent oil spill along the Western Coast of Karachi, Pakistan",
-    authors: "G Amin, MI Shahzad, <b>Nazeer, M.</b>, I Zia, S Jaweria, I Mehmood",
-    venue: "Geocarto International 37 (17), 4911-4931",
-    doi: "10.1080/10106049.2021.1899307"
-  },
-  {
-    year: 2022,
-    type: "journal",
-    title: "Integration of surface reflectance and aerosol retrieval algorithms for multi-resolution aerosol optical depth retrievals over urban areas",
-    authors: "M Bilal, A Mhawish, MA Ali, JE Nichol, G Leeuw, KM Khedher, U Mazhar, ...",
-    venue: "Remote Sensing 14 (2), 373",
-    doi: "10.3390/rs14020373"
-  },
-  {
-    year: 2022,
+    published: "2022-12-22",
     type: "journal",
     title: "Long-term variability of atmospheric visual range (1980-2020) over diverse topography of Pakistan",
     authors: "S Javed, MI Shahzad, S Abbas, <b>Nazeer, M.</b>",
@@ -352,6 +369,25 @@ var PUBLICATIONS = [
   },
   {
     year: 2022,
+    published: "2022-08-26",
+    type: "journal",
+    title: "AEROsol generic classification using a novel Satellite remote sensing Approach (AEROSA)",
+    authors: "M Bilal, MA Ali, JE Nichol, MP Bleiweiss, G de Leeuw, A Mhawish, Y Shi, ...",
+    venue: "Frontiers in Environmental Science 10, 981522",
+    doi: "10.3389/fenvs.2022.981522"
+  },
+  {
+    year: 2022,
+    published: "2022-04-01",
+    type: "chapter",
+    title: "The geographic, geological, and oceanographic setting of the Indus river-an update",
+    authors: "A Inam, PD Clift, L Giosan, A Alizai, S Kidwai, MI Shahzad, I Zia, <b>Nazeer, M.</b>, ...",
+    venue: "Large Rivers: Geomorphology and Management, Second Edition, 488-520",
+    doi: "10.1002/9781119412632.ch17"
+  },
+  {
+    year: 2022,
+    published: "2022-01-31",
     type: "journal",
     title: "Modeling Secchi disk depth over the north arabian gulf waters using MODIS and MERIS images",
     authors: "MMM Alsahli, <b>Nazeer, M.</b>",
@@ -360,14 +396,25 @@ var PUBLICATIONS = [
   },
   {
     year: 2022,
-    type: "chapter",
-    title: "The geographic, geological, and oceanographic setting of the Indus river-an update",
-    authors: "A Inam, PD Clift, L Giosan, A Alizai, S Kidwai, MI Shahzad, I Zia, <b>Nazeer, M.</b>, ...",
-    venue: "Large Rivers: Geomorphology and Management, Second Edition, 488-520",
-    doi: "10.1002/9781119412632.ch17"
+    published: "2022-01-13",
+    type: "journal",
+    title: "Integration of surface reflectance and aerosol retrieval algorithms for multi-resolution aerosol optical depth retrievals over urban areas",
+    authors: "M Bilal, A Mhawish, MA Ali, JE Nichol, G Leeuw, KM Khedher, U Mazhar, ...",
+    venue: "Remote Sensing 14 (2), 373",
+    doi: "10.3390/rs14020373"
+  },
+  {
+    year: 2022,
+    published: "2021-03-22",
+    type: "journal",
+    title: "Assessing the spatial distribution and impacts of recent oil spill along the Western Coast of Karachi, Pakistan",
+    authors: "G Amin, MI Shahzad, <b>Nazeer, M.</b>, I Zia, S Jaweria, I Mehmood",
+    venue: "Geocarto International 37 (17), 4911-4931",
+    doi: "10.1080/10106049.2021.1899307"
   },
   {
     year: 2021,
+    published: "2021-10-01",
     type: "journal",
     title: "Air pollution scenario over Pakistan: Characterization and ranking of extremely polluted cities using long-term concentrations of aerosols and trace gases",
     authors: "M Bilal, A Mhawish, JE Nichol, Z Qiu, <b>Nazeer, M.</b>, MA Ali, G de Leeuw, ...",
@@ -376,6 +423,52 @@ var PUBLICATIONS = [
   },
   {
     year: 2021,
+    published: "2021-10-01",
+    type: "journal",
+    title: "Spatiotemporal variability of secchi depths of the North Arabian Gulf over the last two decades",
+    authors: "MMM Alsahli, <b>Nazeer, M.</b>",
+    venue: "Estuarine, Coastal and Shelf Science 260, 107487",
+    doi: "10.1016/j.ecss.2021.107487"
+  },
+  {
+    year: 2021,
+    published: "2021-05-18",
+    type: "journal",
+    title: "Uncertainty in aqua-modis aerosol retrieval algorithms during covid-19 lockdown",
+    authors: "M Bilal, Z Qiu, JE Nichol, A Mhawish, MA Ali, KM Khedher, G de Leeuw, ...",
+    venue: "IEEE Geoscience and Remote Sensing Letters 19, 1-5",
+    doi: "10.1109/LGRS.2021.3077189"
+  },
+  {
+    year: 2021,
+    published: "2021-04-07",
+    type: "chapter",
+    title: "Urban Pollution",
+    authors: "JE Nichol, M Bilal, <b>Nazeer, M.</b>, MS Wong",
+    venue: "Urban Informatics, 243-258",
+    doi: "10.1007/978-981-15-8983-6_14"
+  },
+  {
+    year: 2021,
+    published: "2021-03-08",
+    type: "journal",
+    title: "Remote Sensing of Narrowing Barrier Islands along the Coast of Pakistan over Past 30 Years",
+    authors: "S Kanwal, X Ding, M Sajjad, <b>Nazeer, M.</b>, I Zia",
+    venue: "Journal of Marine Science and Engineering 9 (3), 295",
+    doi: "10.3390/jmse9030295"
+  },
+  {
+    year: 2021,
+    published: "2021-02-01",
+    type: "journal",
+    title: "Evaluation of atmospheric correction methods for low to high resolutions satellite remote sensing data",
+    authors: "<b>Nazeer, M.</b>, CO Ilori, M Bilal, JE Nichol, W Wu, Z Qiu, BK Gayene",
+    venue: "Atmospheric Research 249, 105308",
+    doi: "10.1016/j.atmosres.2020.105308"
+  },
+  {
+    year: 2021,
+    published: "2019-09-09",
     type: "journal",
     title: "Estimation of surface deformation due to Pasni earthquake using RADAR interferometry",
     authors: "M Ali, MI Shahzad, <b>Nazeer, M.</b>, I Mahmood, I Zia",
@@ -385,60 +478,13 @@ var PUBLICATIONS = [
   {
     year: 2021,
     type: "journal",
-    title: "Evaluation of atmospheric correction methods for low to high resolutions satellite remote sensing data",
-    authors: "<b>Nazeer, M.</b>, CO Ilori, M Bilal, JE Nichol, W Wu, Z Qiu, BK Gayene",
-    venue: "Atmospheric Research 249, 105308",
-    doi: "10.1016/j.atmosres.2020.105308"
-  },
-  {
-    year: 2021,
-    type: "journal",
-    title: "Remote Sensing of Narrowing Barrier Islands along the Coast of Pakistan over Past 30 Years",
-    authors: "S Kanwal, X Ding, M Sajjad, <b>Nazeer, M.</b>, I Zia",
-    venue: "Journal of Marine Science and Engineering 9 (3), 295",
-    doi: "10.3390/jmse9030295"
-  },
-  {
-    year: 2021,
-    type: "journal",
     title: "Role of mechanics and its branches in the field of civil eingineering technology",
     authors: "SN Abbas, M Ghafoor, <b>Nazeer, M.</b>, S Ali, S Faisal",
     venue: "Science International Lahore 33 (4), 297-300"
   },
   {
-    year: 2021,
-    type: "journal",
-    title: "Spatiotemporal variability of secchi depths of the North Arabian Gulf over the last two decades",
-    authors: "MMM Alsahli, <b>Nazeer, M.</b>",
-    venue: "Estuarine, Coastal and Shelf Science 260, 107487",
-    doi: "10.1016/j.ecss.2021.107487"
-  },
-  {
-    year: 2021,
-    type: "journal",
-    title: "Uncertainty in aqua-modis aerosol retrieval algorithms during covid-19 lockdown",
-    authors: "M Bilal, Z Qiu, JE Nichol, A Mhawish, MA Ali, KM Khedher, G de Leeuw, ...",
-    venue: "IEEE Geoscience and Remote Sensing Letters 19, 1-5",
-    doi: "10.1109/LGRS.2021.3077189"
-  },
-  {
-    year: 2021,
-    type: "chapter",
-    title: "Urban Pollution",
-    authors: "JE Nichol, M Bilal, <b>Nazeer, M.</b>, MS Wong",
-    venue: "Urban Informatics, 243-258",
-    doi: "10.1007/978-981-15-8983-6_14"
-  },
-  {
     year: 2020,
-    type: "journal",
-    title: "Aerosol optical properties and contribution to differentiate haze and haze-free weather in Wuhan City",
-    authors: "M Zhang, J Liu, M Bilal, C Zhang, <b>Nazeer, M.</b>, L Atique, G Han, W Gong",
-    venue: "Atmosphere 11 (4), 322",
-    doi: "10.3390/atmos11040322"
-  },
-  {
-    year: 2020,
+    published: "2020-12-23",
     type: "journal",
     title: "Assessment the influence of climate and human activities in vegetation degradation using GIS and remote sensing techniques",
     authors: "AE Jahelnabi, W Wu, AD Boloorani, HM Salem, <b>Nazeer, M.</b>, SM Fadoul, ...",
@@ -447,6 +493,7 @@ var PUBLICATIONS = [
   },
   {
     year: 2020,
+    published: "2020-07-16",
     type: "journal",
     title: "Climatic characteristics and modeling evaluation of pan evapotranspiration over Henan Province, China",
     authors: "M Zhang, B Su, <b>Nazeer, M.</b>, M Bilal, P Qi, G Han",
@@ -455,19 +502,30 @@ var PUBLICATIONS = [
   },
   {
     year: 2020,
-    type: "journal",
-    title: "Coastline vulnerability assessment through landsat and cubesats in a coastal mega city",
-    authors: "<b>Nazeer, M.</b>, M Waqas, MI Shahzad, I Zia, W Wu",
-    venue: "Remote Sensing 12 (5), 749",
-    doi: "10.3390/rs12050749"
-  },
-  {
-    year: 2020,
+    published: "2020-06-15",
     type: "journal",
     title: "First experiences with the Landsat-8 aquatic reflectance product: evaluation of the regional and ocean color algorithms in a coastal environment",
     authors: "<b>Nazeer, M.</b>, M Bilal, JE Nichol, W Wu, MMM Alsahli, MI Shahzad, BK Gayen",
     venue: "Remote Sensing 12 (12), 1938",
     doi: "10.3390/rs12121938"
+  },
+  {
+    year: 2020,
+    published: "2020-03-27",
+    type: "journal",
+    title: "Aerosol optical properties and contribution to differentiate haze and haze-free weather in Wuhan City",
+    authors: "M Zhang, J Liu, M Bilal, C Zhang, <b>Nazeer, M.</b>, L Atique, G Han, W Gong",
+    venue: "Atmosphere 11 (4), 322",
+    doi: "10.3390/atmos11040322"
+  },
+  {
+    year: 2020,
+    published: "2020-02-25",
+    type: "journal",
+    title: "Coastline vulnerability assessment through landsat and cubesats in a coastal mega city",
+    authors: "<b>Nazeer, M.</b>, M Waqas, MI Shahzad, I Zia, W Wu",
+    venue: "Remote Sensing 12 (5), 749",
+    doi: "10.3390/rs12050749"
   },
   {
     year: 2020,
@@ -478,22 +536,7 @@ var PUBLICATIONS = [
   },
   {
     year: 2019,
-    type: "journal",
-    title: "A simplified and robust surface reflectance estimation method (SREM) for use over diverse land surfaces using multi-sensor data",
-    authors: "M Bilal, <b>Nazeer, M.</b>, JE Nichol, MP Bleiweiss, Z Qiu, E Jäkel, JR Campbell, ...",
-    venue: "Remote Sensing 11 (11), 1344",
-    doi: "10.3390/rs11111344"
-  },
-  {
-    year: 2019,
-    type: "journal",
-    title: "Agricultural intensification and damages to human health in relation to agrochemicals: Application of artificial intelligence",
-    authors: "E Elahi, C Weijun, H Zhang, <b>Nazeer, M.</b>",
-    venue: "Land use policy 83, 461-474",
-    doi: "10.1016/j.landusepol.2019.02.023"
-  },
-  {
-    year: 2019,
+    published: "2019-08-27",
     type: "journal",
     title: "Characteristics of Fine Particulate Matter (PM2.5) over Urban, Suburban, and Rural Areas of Hong Kong",
     authors: "M Bilal, JE Nichol, <b>Nazeer, M.</b>, Y Shi, L Wang, KR Kumar, HC Ho, ...",
@@ -502,6 +545,25 @@ var PUBLICATIONS = [
   },
   {
     year: 2019,
+    published: "2019-06-04",
+    type: "journal",
+    title: "A simplified and robust surface reflectance estimation method (SREM) for use over diverse land surfaces using multi-sensor data",
+    authors: "M Bilal, <b>Nazeer, M.</b>, JE Nichol, MP Bleiweiss, Z Qiu, E Jäkel, JR Campbell, ...",
+    venue: "Remote Sensing 11 (11), 1344",
+    doi: "10.3390/rs11111344"
+  },
+  {
+    year: 2019,
+    published: "2019-04-01",
+    type: "journal",
+    title: "Agricultural intensification and damages to human health in relation to agrochemicals: Application of artificial intelligence",
+    authors: "E Elahi, C Weijun, H Zhang, <b>Nazeer, M.</b>",
+    venue: "Land use policy 83, 461-474",
+    doi: "10.1016/j.landusepol.2019.02.023"
+  },
+  {
+    year: 2019,
+    published: "2019-03-13",
     type: "journal",
     title: "Comparison of machine learning algorithms for retrieval of water quality indicators in case-II waters: A case study of Hong Kong",
     authors: "S Hafeez, MS Wong, HC Ho, <b>Nazeer, M.</b>, J Nichol, S Abbas, D Tang, ...",
@@ -510,11 +572,21 @@ var PUBLICATIONS = [
   },
   {
     year: 2019,
+    published: "2019-02-27",
     type: "journal",
     title: "Evaluation of terra-MODIS C6 and C6. 1 aerosol products against Beijing, XiangHe, and Xinglong AERONET sites in China during 2004-2014",
     authors: "M Bilal, <b>Nazeer, M.</b>, J Nichol, Z Qiu, L Wang, MP Bleiweiss, X Shen, ...",
     venue: "Remote Sensing 11 (5), 486",
     doi: "10.3390/rs11050486"
+  },
+  {
+    year: 2019,
+    published: "2019-02-20",
+    type: "journal",
+    title: "Spatial and temporal variability of open-ocean barrier islands along the Indus Delta region",
+    authors: "M Waqas, <b>Nazeer, M.</b>, MI Shahzad, I Zia",
+    venue: "Remote Sensing 11 (4), 437",
+    doi: "10.3390/rs11040437"
   },
   {
     year: 2019,
@@ -524,12 +596,49 @@ var PUBLICATIONS = [
     venue: "3rd Asian Conference on Science, Technology and Medicine, Dubai"
   },
   {
-    year: 2019,
+    year: 2018,
+    published: "2018-08-01",
     type: "journal",
-    title: "Spatial and temporal variability of open-ocean barrier islands along the Indus Delta region",
-    authors: "M Waqas, <b>Nazeer, M.</b>, MI Shahzad, I Zia",
-    venue: "Remote Sensing 11 (4), 437",
-    doi: "10.3390/rs11040437"
+    title: "Assessment of aerosol optical properties using remote sensing over highly urbanised twin cities of Pakistan",
+    authors: "M Awais, MI Shahzad, <b>Nazeer, M.</b>, I Mahmood, S Mehmood, MF Iqbal, ...",
+    venue: "Journal of Atmospheric and Solar-Terrestrial Physics 173, 37-49",
+    doi: "10.1016/j.jastp.2018.04.008"
+  },
+  {
+    year: 2018,
+    published: "2018-03-19",
+    type: "journal",
+    title: "Global validation of MODIS C6 and C6. 1 merged aerosol products over diverse vegetated surfaces",
+    authors: "M Bilal, <b>Nazeer, M.</b>, Z Qiu, X Ding, J Wei",
+    venue: "Remote Sensing 10 (3), 475",
+    doi: "10.3390/rs10030475"
+  },
+  {
+    year: 2018,
+    published: "2018-03-15",
+    type: "journal",
+    title: "A new MODIS C6 Dark Target and Deep Blue merged aerosol product on a 3 km spatial grid",
+    authors: "M Bilal, Z Qiu, JR Campbell, SN Spak, X Shen, <b>Nazeer, M.</b>",
+    venue: "Remote Sensing 10 (3), 463",
+    doi: "10.3390/rs10030463"
+  },
+  {
+    year: 2018,
+    published: "2018-03-15",
+    type: "journal",
+    title: "Evaluation of ordinary least square (OLS) and geographically weighted regression (GWR) for water quality monitoring: A case study for the estimation of salinity",
+    authors: "<b>Nazeer, M.</b>, M Bilal",
+    venue: "Journal of Ocean University of China 17 (2), 305-310",
+    doi: "10.1007/s11802-018-3380-6"
+  },
+  {
+    year: 2018,
+    published: "2018-03-01",
+    type: "journal",
+    title: "Empirical estimation of suspended solids concentration in the Indus Delta Region using Landsat-7 ETM+ imagery",
+    authors: "MI Shahzad, M Meraj, <b>Nazeer, M.</b>, I Zia, A Inam, K Mehmood, H Zafar",
+    venue: "Journal of environmental management 209, 254-261",
+    doi: "10.1016/j.jenvman.2017.12.070"
   },
   {
     year: 2018,
@@ -540,50 +649,10 @@ var PUBLICATIONS = [
   },
   {
     year: 2018,
-    type: "journal",
-    title: "A new MODIS C6 Dark Target and Deep Blue merged aerosol product on a 3 km spatial grid",
-    authors: "M Bilal, Z Qiu, JR Campbell, SN Spak, X Shen, <b>Nazeer, M.</b>",
-    venue: "Remote Sensing 10 (3), 463",
-    doi: "10.3390/rs10030463"
-  },
-  {
-    year: 2018,
-    type: "journal",
-    title: "Assessment of aerosol optical properties using remote sensing over highly urbanised twin cities of Pakistan",
-    authors: "M Awais, MI Shahzad, <b>Nazeer, M.</b>, I Mahmood, S Mehmood, MF Iqbal, ...",
-    venue: "Journal of Atmospheric and Solar-Terrestrial Physics 173, 37-49",
-    doi: "10.1016/j.jastp.2018.04.008"
-  },
-  {
-    year: 2018,
-    type: "journal",
-    title: "Empirical estimation of suspended solids concentration in the Indus Delta Region using Landsat-7 ETM+ imagery",
-    authors: "MI Shahzad, M Meraj, <b>Nazeer, M.</b>, I Zia, A Inam, K Mehmood, H Zafar",
-    venue: "Journal of environmental management 209, 254-261",
-    doi: "10.1016/j.jenvman.2017.12.070"
-  },
-  {
-    year: 2018,
     type: "conference",
     title: "Estimation of surface deformation due to Pasni earthquake using SAR interferometry",
     authors: "M Ali, MI Shahzad, <b>Nazeer, M.</b>, JH Kazmi",
     venue: "The International Archives of the Photogrammetry, Remote Sensing and Spatial …"
-  },
-  {
-    year: 2018,
-    type: "journal",
-    title: "Evaluation of ordinary least square (OLS) and geographically weighted regression (GWR) for water quality monitoring: A case study for the estimation of salinity",
-    authors: "<b>Nazeer, M.</b>, M Bilal",
-    venue: "Journal of Ocean University of China 17 (2), 305-310",
-    doi: "10.1007/s11802-018-3380-6"
-  },
-  {
-    year: 2018,
-    type: "journal",
-    title: "Global validation of MODIS C6 and C6. 1 merged aerosol products over diverse vegetated surfaces",
-    authors: "M Bilal, <b>Nazeer, M.</b>, Z Qiu, X Ding, J Wei",
-    venue: "Remote Sensing 10 (3), 475",
-    doi: "10.3390/rs10030475"
   },
   {
     year: 2018,
@@ -594,11 +663,30 @@ var PUBLICATIONS = [
   },
   {
     year: 2017,
+    published: "2017-11-15",
+    type: "conference",
+    title: "Evaluation of empirical and machine learning algorithms for estimation of coastal water quality parameters",
+    authors: "<b>Nazeer, M.</b>, M Bilal, MMM Alsahli, MI Shahzad, A Waqas",
+    venue: "ISPRS International Journal of Geo-Information 6 (11), 360",
+    doi: "10.3390/ijgi6110360"
+  },
+  {
+    year: 2017,
+    published: "2017-07-01",
     type: "journal",
     title: "A new approach for the estimation of phytoplankton cell counts associated with algal blooms",
     authors: "<b>Nazeer, M.</b>, MS Wong, JE Nichol",
     venue: "Science of the Total Environment 590, 125-138",
     doi: "10.1016/j.scitotenv.2017.02.182"
+  },
+  {
+    year: 2017,
+    published: "2017-04-01",
+    type: "journal",
+    title: "Validation of MODIS and VIIRS derived aerosol optical depth over complex coastal waters",
+    authors: "M Bilal, <b>Nazeer, M.</b>, JE Nichol",
+    venue: "Atmospheric Research 186, 43-50",
+    doi: "10.1016/j.atmosres.2016.11.009"
   },
   {
     year: 2017,
@@ -608,36 +696,22 @@ var PUBLICATIONS = [
     venue: "2nd Conference of Digital Belt and Road (DBAR 2017) / RSATSA 2017, Hong Kong"
   },
   {
-    year: 2017,
-    type: "conference",
-    title: "Evaluation of empirical and machine learning algorithms for estimation of coastal water quality parameters",
-    authors: "<b>Nazeer, M.</b>, M Bilal, MMM Alsahli, MI Shahzad, A Waqas",
-    venue: "ISPRS International Journal of Geo-Information 6 (11), 360",
-    doi: "10.3390/ijgi6110360"
-  },
-  {
-    year: 2017,
-    type: "journal",
-    title: "Validation of MODIS and VIIRS derived aerosol optical depth over complex coastal waters",
-    authors: "M Bilal, <b>Nazeer, M.</b>, JE Nichol",
-    venue: "Atmospheric Research 186, 43-50",
-    doi: "10.1016/j.atmosres.2016.11.009"
-  },
-  {
     year: 2016,
-    type: "journal",
-    title: "Development and application of a remote sensing-based Chlorophyll-a concentration prediction model for complex coastal waters of Hong Kong",
-    authors: "<b>Nazeer, M.</b>, JE Nichol",
-    venue: "Journal of Hydrology 532, 80-89",
-    doi: "10.1016/j.jhydrol.2015.11.037"
-  },
-  {
-    year: 2016,
+    published: "2016-10-01",
     type: "journal",
     title: "Improved water quality retrieval by identifying optically unique water classes",
     authors: "<b>Nazeer, M.</b>, JE Nichol",
     venue: "Journal of Hydrology 541, 1119-1132",
     doi: "10.1016/j.jhydrol.2016.08.020"
+  },
+  {
+    year: 2016,
+    published: "2016-01-01",
+    type: "journal",
+    title: "Development and application of a remote sensing-based Chlorophyll-a concentration prediction model for complex coastal waters of Hong Kong",
+    authors: "<b>Nazeer, M.</b>, JE Nichol",
+    venue: "Journal of Hydrology 532, 80-89",
+    doi: "10.1016/j.jhydrol.2015.11.037"
   },
   {
     year: 2016,
@@ -655,14 +729,7 @@ var PUBLICATIONS = [
   },
   {
     year: 2015,
-    type: "journal",
-    title: "Combining Landsat TM/ETM+ and HJ-1 A/B CCD Sensors for Monitoring Coastal Water Quality in Hong Kong",
-    authors: "<b>Nazeer, M.</b>, JE Nichol",
-    venue: "IEEE Geoscience and Remote Sensing Letters 12 (9)",
-    doi: "10.1109/LGRS.2015.2436899"
-  },
-  {
-    year: 2015,
+    published: "2015-10-01",
     type: "journal",
     title: "Landsat ETM+ Secchi Disc Transparency (SDT) retrievals for Rawal Lake, Pakistan",
     authors: "MJ Butt, <b>Nazeer, M.</b>",
@@ -671,6 +738,16 @@ var PUBLICATIONS = [
   },
   {
     year: 2015,
+    published: "2015-09-01",
+    type: "journal",
+    title: "Combining Landsat TM/ETM+ and HJ-1 A/B CCD Sensors for Monitoring Coastal Water Quality in Hong Kong",
+    authors: "<b>Nazeer, M.</b>, JE Nichol",
+    venue: "IEEE Geoscience and Remote Sensing Letters 12 (9)",
+    doi: "10.1109/LGRS.2015.2436899"
+  },
+  {
+    year: 2015,
+    published: "2015-03-01",
     type: "conference",
     title: "Modeling of Chlorophyll-a concentration for the coastal waters of Hong Kong",
     authors: "<b>Nazeer, M.</b>, JE Nichol",
@@ -686,6 +763,24 @@ var PUBLICATIONS = [
   },
   {
     year: 2014,
+    published: "2014-08-29",
+    type: "journal",
+    title: "Evaluation of atmospheric correction models and Landsat surface reflectance product in an urban coastal environment",
+    authors: "<b>Nazeer, M.</b>, JE Nichol, Y Yung",
+    venue: "International Journal of Remote Sensing 35 (16), 6271-6291",
+    doi: "10.1080/01431161.2014.951742"
+  },
+  {
+    year: 2014,
+    published: "2014-06-01",
+    type: "conference",
+    title: "Selection of atmospheric correction method and estimation of Chlorophyll-a (Chl-a) in coastal waters of Hong Kong",
+    authors: "<b>Nazeer, M.</b>, JE Nichol",
+    venue: "2014 third international workshop on earth observation and remote sensing …",
+    doi: "10.1109/EORSA.2014.6927916"
+  },
+  {
+    year: 2014,
     type: "conference",
     title: "Characterisation of coastal waters of Hong Kong using collocated satellite and in situ datasets for routine water quality monitoring",
     authors: "<b>Nazeer, M.</b>, JE Nichol",
@@ -697,22 +792,6 @@ var PUBLICATIONS = [
     title: "Coastal Water Chlorophyll-a Estimation",
     authors: "<b>Nazeer, M.</b>, JE Nichol, S Yu",
     venue: "Ocean Optics XXII, Portland Maine USA"
-  },
-  {
-    year: 2014,
-    type: "journal",
-    title: "Evaluation of atmospheric correction models and Landsat surface reflectance product in an urban coastal environment",
-    authors: "<b>Nazeer, M.</b>, JE Nichol, Y Yung",
-    venue: "International Journal of Remote Sensing 35 (16), 6271-6291",
-    doi: "10.1080/01431161.2014.951742"
-  },
-  {
-    year: 2014,
-    type: "conference",
-    title: "Selection of atmospheric correction method and estimation of Chlorophyll-a (Chl-a) in coastal waters of Hong Kong",
-    authors: "<b>Nazeer, M.</b>, JE Nichol",
-    venue: "2014 third international workshop on earth observation and remote sensing …",
-    doi: "10.1109/EORSA.2014.6927916"
   },
   {
     year: 2009,

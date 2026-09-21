@@ -327,6 +327,14 @@
     return bits.join("");
   }
 
+  function pubDateKey(value) {
+    var d = String(value || "");
+    if (/^\d{4}-\d{2}-\d{2}$/.test(d)) return d;
+    if (/^\d{4}-\d{2}$/.test(d)) return d + "-01";
+    if (/^\d{4}$/.test(d)) return d + "-01-01";
+    return "";
+  }
+
   function renderPubs() {
     var listEl = document.getElementById("pubList");
     var countEl = document.getElementById("pubCount");
@@ -347,6 +355,11 @@
 
     shown.sort(function (a, b) {
       if (b.year !== a.year) return b.year - a.year;
+      var da = pubDateKey(a.published);
+      var db = pubDateKey(b.published);
+      if (da && db && da !== db) return da < db ? 1 : -1;
+      if (da && !db) return -1;
+      if (!da && db) return 1;
       return (a.title || "").localeCompare(b.title || "");
     });
 
