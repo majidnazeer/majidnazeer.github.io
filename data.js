@@ -790,19 +790,19 @@ var DATASETS = [
 var EDUCATION = [
   {
     degree: "Doctor of Philosophy",
-    years: "2012-2016",
+    years: "Aug 2012 - Mar 2016",
     place: "The Hong Kong Polytechnic University, Hong Kong",
     note: "Dissertation: Water quality monitoring in Hong Kong using remote sensing"
   },
   {
-    degree: "Master of Philosophy",
-    years: "2008-2010",
+    degree: "Master of Science",
+    years: "Sep 2008 - Apr 2010",
     place: "COMSATS University Islamabad, Pakistan",
     note: "Thesis: Environmental study of Rawal Lake using satellite and Secchi Disc data"
   },
   {
     degree: "Bachelor of Science (Hons) in Space Science",
-    years: "2004-2008",
+    years: "Sep 2004 - Aug 2008",
     place: "University of the Punjab, Lahore, Pakistan",
     note: "FYP: Application of remote sensing in the field of glaciology in Pakistan"
   }
