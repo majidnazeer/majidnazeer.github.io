@@ -1132,9 +1132,12 @@ a.pub__role:hover {
 }
 .fund-summary p {
   margin: 0;
-  color: var(--muted);
+  color: #000;
   font-size: .98rem;
   line-height: 1.6;
+}
+[data-theme="dark"] .fund-summary p {
+  color: var(--text);
 }
 .fund-totals {
   list-style: none;
