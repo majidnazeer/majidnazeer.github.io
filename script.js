@@ -355,6 +355,9 @@
 
     shown.sort(function (a, b) {
       if (b.year !== a.year) return b.year - a.year;
+      var oa = typeof a.order === "number" ? a.order : 999;
+      var ob = typeof b.order === "number" ? b.order : 999;
+      if (oa !== ob) return oa - ob;
       var da = pubDateKey(a.published);
       var db = pubDateKey(b.published);
       if (da && db && da !== db) return da < db ? 1 : -1;
