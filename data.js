@@ -800,7 +800,8 @@ var EDUCATION = [
     degree: "Doctor of Philosophy",
     years: "Aug 2012 - Mar 2016",
     place: "The Hong Kong Polytechnic University, Hong Kong",
-    note: "Dissertation: Water quality monitoring in Hong Kong using remote sensing"
+    note: "Dissertation: Water quality monitoring in Hong Kong using remote sensing",
+    url: "https://theses.lib.polyu.edu.hk/handle/200/8371"
   },
   {
     degree: "Master of Science",

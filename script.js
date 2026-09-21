@@ -596,12 +596,22 @@
     });
   }
 
-  function recordHtml(title, when, org, note) {
+  function recordHtml(title, when, org, note, url) {
+    var noteHtml = "";
+    if (note) {
+      if (url) {
+        var safeUrl = String(url).replace(/"/g, "");
+        noteHtml = '<p class="record__note"><a class="record__link" href="' + safeUrl +
+          '" target="_blank" rel="noopener noreferrer">' + esc(note) + '</a></p>';
+      } else {
+        noteHtml = '<p class="record__note">' + esc(note) + '</p>';
+      }
+    }
     return '<li class="record">' +
       (when ? '<span class="record__when">' + esc(when) + '</span>' : '') +
       '<p class="record__title">' + esc(title) + '</p>' +
       (org ? '<p class="record__org">' + esc(org) + '</p>' : '') +
-      (note ? '<p class="record__note">' + esc(note) + '</p>' : '') +
+      noteHtml +
     '</li>';
   }
 
@@ -616,8 +626,9 @@
     var aboutEdu = document.getElementById("aboutEducation");
     if (aboutEdu && typeof EDUCATION !== "undefined") {
       aboutEdu.innerHTML = EDUCATION.map(function (e) {
-        return recordHtml(e.degree, e.years, e.place, e.note);
+        return recordHtml(e.degree, e.years, e.place, e.note, e.url);
       }).join("");
+      enhanceExternalLinks(aboutEdu);
     }
 
     var aboutTeach = document.getElementById("aboutTeaching");

@@ -1868,6 +1868,15 @@ a.pub__role:hover {
   max-width: 38rem;
 }
 .record__note { margin-top: .2rem; font-size: .9rem; }
+.record__link {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.record__link:hover {
+  opacity: 1;
+  color: var(--accent);
+}
 
 .people-group { margin-bottom: 2.25rem; }
 .people-group:last-child { margin-bottom: 0; }
