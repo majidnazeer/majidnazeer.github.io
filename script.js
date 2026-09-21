@@ -1229,10 +1229,8 @@
     }
 
     function grantBlurb(g) {
-      var bits = [];
-      if (g.amount) bits.push("Project Total: " + g.amount + ".");
-      bits.push(g.title);
-      return bits.join(" ");
+      if (!g.amount) return "";
+      return "Funding Amount: " + g.amount + ".";
     }
 
     function allFundedProjects() {
