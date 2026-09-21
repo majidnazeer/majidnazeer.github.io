@@ -812,32 +812,32 @@ var POSITIONS = [
   {
     role: "Research Assistant Professor",
     org: "Department of Land Surveying and Geospatial Science, The Hong Kong Polytechnic University",
-    years: "12/2022-present"
+    years: "Dec 2022 - present"
   },
   {
     role: "Senior Research Analyst",
     org: "Urban Sector Planning and Management Services Unit (Pvt.) Ltd, Lahore, Pakistan",
-    years: "04/2022-12/2022"
+    years: "Apr 2022 - Dec 2022"
   },
   {
     role: "Associate Professor",
     org: "Key Lab of Digital Land and Resources, East China University of Technology, Nanchang, China",
-    years: "08/2019-10/2021"
+    years: "Aug 2019 - Oct 2021"
   },
   {
     role: "Assistant Professor",
     org: "Department of Meteorology, COMSATS University Islamabad, Pakistan",
-    years: "04/2017-07/2019"
+    years: "Apr 2017 - Jul 2019"
   },
   {
     role: "Postdoctoral Fellow / Research Associate",
     org: "Department of Land Surveying and Geospatial Science, The Hong Kong Polytechnic University",
-    years: "06/2016-03/2017"
+    years: "Jun 2016 - Mar 2017"
   },
   {
     role: "Lecturer",
     org: "Department of Meteorology, King Abdulaziz University, Jeddah, Saudi Arabia",
-    years: "12/2011-07/2012"
+    years: "Dec 2011 - Jul 2012"
   }
 ];
 
