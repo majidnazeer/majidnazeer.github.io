@@ -30,6 +30,22 @@
     applyTheme(currentTheme());
   }
 
+  /* External http(s) links open in a new tab; leave internal/mailto alone. */
+  function enhanceExternalLinks(scope) {
+    var rootEl = scope && scope.querySelectorAll ? scope : document;
+    var links = rootEl.querySelectorAll("a[href]");
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      var href = a.getAttribute("href") || "";
+      if (!/^https?:\/\//i.test(href)) continue;
+      a.setAttribute("target", "_blank");
+      var rel = (a.getAttribute("rel") || "").trim();
+      if (rel.indexOf("noopener") === -1) rel = (rel + " noopener").trim();
+      if (rel.indexOf("noreferrer") === -1) rel = (rel + " noreferrer").trim();
+      a.setAttribute("rel", rel);
+    }
+  }
+
   /* =======================================================
      FOOTER YEAR
      ======================================================= */
@@ -72,7 +88,7 @@
             '</span>' +
             '<span class="profile-sidebar__item-body">' +
               '<span class="profile-sidebar__label">ORCID</span>' +
-              '<a href="https://orcid.org/0000-0002-7631-1599" rel="noopener">0000-0002-7631-1599</a>' +
+              '<a href="https://orcid.org/0000-0002-7631-1599" target="_blank" rel="noopener noreferrer">0000-0002-7631-1599</a>' +
             '</span>' +
           '</li>' +
           '<li class="profile-sidebar__item">' +
@@ -89,7 +105,7 @@
               '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4.2 9h2.6v.2c0 1.55 2.3 2.85 5.2 2.85s5.2-1.3 5.2-2.85V9h2.6L12 3.2zm0 10.1c-2.45 0-4.55-.75-5.5-1.85v2.35c0 1.55 2.45 2.85 5.5 2.85s5.5-1.3 5.5-2.85v-2.35c-.95 1.1-3.05 1.85-5.5 1.85z"/></svg>' +
             '</span>' +
             '<span class="profile-sidebar__item-body">' +
-              '<a href="https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ" rel="noopener">Google Scholar</a>' +
+              '<a href="https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>' +
             '</span>' +
           '</li>' +
           '<li class="profile-sidebar__item">' +
@@ -97,7 +113,7 @@
               '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7.5" r="2.2"/><circle cx="7.2" cy="15.5" r="2.2"/><circle cx="16.8" cy="15.5" r="2.2"/><path d="M10.2 9.2 8.5 13.5M13.8 9.2l1.7 4.3M9.4 15.5h5.2"/></svg>' +
             '</span>' +
             '<span class="profile-sidebar__item-body">' +
-              '<a href="https://www.webofscience.com/wos/author/record/631583" rel="noopener">Web of Science</a>' +
+              '<a href="https://www.webofscience.com/wos/author/record/631583" target="_blank" rel="noopener noreferrer">Web of Science</a>' +
             '</span>' +
           '</li>' +
           '<li class="profile-sidebar__item">' +
@@ -105,7 +121,7 @@
               '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>' +
             '</span>' +
             '<span class="profile-sidebar__item-body">' +
-              '<a href="https://www.linkedin.com/in/majid-nazeer-29897914" rel="noopener">LinkedIn</a>' +
+              '<a href="https://www.linkedin.com/in/majid-nazeer-29897914" target="_blank" rel="noopener noreferrer">LinkedIn</a>' +
             '</span>' +
           '</li>' +
         '</ul>' +
@@ -113,6 +129,7 @@
   }
 
   injectProfileSidebar();
+  enhanceExternalLinks();
 
   /* =======================================================
      LIVE CITATION METRICS (OpenAlex - Scholar has no public API)
@@ -387,6 +404,7 @@
         ? shown.length + " outputs"
         : shown.length + " shown";
     }
+    enhanceExternalLinks(listEl);
   }
 
   var searchEl = document.getElementById("pubSearch");
@@ -503,7 +521,7 @@
         : '<svg class="resource__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>';
 
       return '<li class="resource-card" style="--delay:' + (i * 60) + 'ms">' +
-        '<a class="resource-card__link" href="' + item.url + '" rel="noopener">' +
+        '<a class="resource-card__link" href="' + item.url + '" target="_blank" rel="noopener noreferrer">' +
           icon +
           '<div class="resource-card__body">' +
             '<h3 class="resource-card__title">' + item.title + '</h3>' +
@@ -514,6 +532,7 @@
         '</a>' +
       '</li>';
     }).join("");
+    enhanceExternalLinks(el);
   }
 
   if (page === "codes") {
@@ -1248,5 +1267,7 @@
       });
     }
   }
+
+  enhanceExternalLinks();
 
 })();
