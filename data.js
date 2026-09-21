@@ -1182,14 +1182,14 @@ var SERVICE_HIGHLIGHTS = [
     years: "2026-present",
     title: "Guest Editor",
     note: "Remote Sensing",
-    issue: "Special Issue: Next-Generation Earth Observation for Inland and Coastal Ecosystems: Integrating Satellites, UAVs, and AI for Water Quality and Sustainability",
+    issue: "Next-Generation Earth Observation for Inland and Coastal Ecosystems: Integrating Satellites, UAVs, and AI for Water Quality and Sustainability",
     url: "https://www.mdpi.com/journal/remotesensing/special_issues/6ODUDW2GB6"
   },
   {
     years: "2025-present",
     title: "Guest Editor",
     note: "Remote Sensing and Climate",
-    issue: "Special Issue: Exploring the Urban Heat Island and Its Mechanisms Based on Satellite and AI",
+    issue: "Exploring the Urban Heat Island and Its Mechanisms Based on Satellite and AI",
     url: "https://www.mdpi.com/journal/remotesensing/special_issues/F7X2K95B94"
   },
   { years: "2023-2024", title: "Guest Editor", note: "Coastal and estuarine hydrodynamic variability special topic, Frontiers in Marine Science" },

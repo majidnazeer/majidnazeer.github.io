@@ -907,7 +907,8 @@
       if (typeof SERVICE_HIGHLIGHTS !== "undefined") {
         SERVICE_HIGHLIGHTS.forEach(function (s) {
           var split = splitReviewVenue(s.note || "");
-          var issueTitle = s.issue || "";
+          var issueName = s.issue || "";
+          var issueTitle = issueName ? ("Special Issue: " + issueName) : "";
           items.push({
             key: "reviewing",
             tag: "Assessing and reviewing",
@@ -919,7 +920,7 @@
             role: issueTitle ? s.title : "",
             summary: issueTitle ? "" : split.summary,
             url: s.url || "",
-            linkText: issueTitle || "",
+            linkText: issueName || "",
             startYear: parseServiceYear(s.years),
             endYear: parseServiceEndYear(s.years),
             ongoing: isServiceOngoing(s.years)
