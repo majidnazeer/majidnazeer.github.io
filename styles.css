@@ -536,6 +536,8 @@ a:hover { opacity: .75; }
 }
 .about__bio p { margin: 0; color: var(--text); }
 .about__bio strong { font-weight: 600; }
+.about__bio i,
+.about__bio cite { font-style: italic; }
 .about__bio a { color: var(--accent-deep); }
 
 .stats {
