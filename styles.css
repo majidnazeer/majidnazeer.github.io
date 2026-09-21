@@ -993,14 +993,6 @@ a:hover { opacity: .75; }
   background: var(--accent);
 }
 
-.pub__role--first-author {
-  background: #0e8fd4;
-}
-
-[data-theme="dark"] .pub__role--first-author {
-  background: #29B7FB;
-}
-
 .pub__role--speaker {
   background: #1578b8;
 }

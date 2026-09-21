@@ -278,10 +278,6 @@
       return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
     }
 
-    if (has("first-author") || p.firstAuthor === true || isFirst) {
-      roles.push("first-author");
-    }
-
     if (
       has("corresponding") ||
       p.corresponding === true ||
@@ -295,7 +291,6 @@
   }
 
   var roleLabels = {
-    "first-author": "First author",
     corresponding: "Corresponding author",
     speaker: "Speaker"
   };
