@@ -4,18 +4,18 @@
    ========================================================= */
 
 :root {
-  /* Coastal academic - one accent family, not a rainbow */
-  --bg: #f4f6f5;
+  /* Portfolio accent */
+  --bg: #f3f7fa;
   --surface: #ffffff;
-  --text: #15201e;
-  --muted: #5a6865;
-  --border: #d5ddd9;
-  --ink: #0f1a18;
-  --soft: #e8efec;
-  --accent: #0f6b63;
-  --accent-soft: #d8ebe8;
-  --accent-deep: #0a4f49;
-  --wash: #e7f0ed;
+  --text: #152028;
+  --muted: #5a6870;
+  --border: #d0dde6;
+  --ink: #0f1a22;
+  --soft: #e8f0f5;
+  --accent: #29B7FB;
+  --accent-soft: #d9f0fd;
+  --accent-deep: #0e8fd4;
+  --wash: #e6f4fc;
   --head: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
   --body: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: "Segoe UI", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -25,17 +25,17 @@
 }
 
 [data-theme="dark"] {
-  --bg: #101614;
-  --surface: #18201e;
-  --text: #e8efec;
-  --muted: #9aaba6;
-  --border: #2a3532;
-  --ink: #e8efec;
-  --soft: #1c2623;
-  --accent: #5ebfb4;
-  --accent-soft: #1a3330;
-  --accent-deep: #8fd4cc;
-  --wash: #141c1a;
+  --bg: #0f151a;
+  --surface: #172028;
+  --text: #e8eef2;
+  --muted: #9aabb6;
+  --border: #2a353e;
+  --ink: #e8eef2;
+  --soft: #1c262e;
+  --accent: #29B7FB;
+  --accent-soft: #123348;
+  --accent-deep: #7dd4fc;
+  --wash: #121920;
   color-scheme: dark;
 }
 
@@ -992,19 +992,19 @@ a:hover { opacity: .75; }
 }
 
 .pub__role--first-author {
-  background: #2f4a6b;
+  background: #0e8fd4;
 }
 
 [data-theme="dark"] .pub__role--first-author {
-  background: #7a9bc4;
+  background: #29B7FB;
 }
 
 .pub__role--speaker {
-  background: #9a5b1a;
+  background: #1578b8;
 }
 
 [data-theme="dark"] .pub__role--speaker {
-  background: #c4843a;
+  background: #5ec8fc;
 }
 
 a.pub__role {
@@ -1018,19 +1018,20 @@ a.pub__role:hover {
 }
 
 .pub__role--code {
-  background: #3a4f6a;
+  background: #0a6fa8;
 }
 
 [data-theme="dark"] .pub__role--code {
-  background: #6a8ab0;
+  background: #4db8f0;
 }
 
 .pub__role--dataset {
-  background: #5a4a2e;
+  background: #085a8a;
 }
 
 [data-theme="dark"] .pub__role--dataset {
-  background: #b89a5a;
+  background: #7dd4fc;
+  color: #0f151a;
 }
 
 #pubTypeChips {
@@ -1409,13 +1410,13 @@ a.pub__role:hover {
   opacity: .72;
 }
 .gcard--teal .gcard__wash {
-  background: linear-gradient(135deg, #0a4f49 10%, #0f6b63 55%, #3db8ae 100%);
+  background: linear-gradient(135deg, #0e8fd4 10%, #29B7FB 55%, #7dd4fc 100%);
 }
 .gcard--moss .gcard__wash {
-  background: linear-gradient(135deg, #2f5530 5%, #0f6b63 50%, #7a9e4a 100%);
+  background: linear-gradient(135deg, #0a6fa8 5%, #29B7FB 50%, #5ec8fc 100%);
 }
 .gcard--slate .gcard__wash {
-  background: linear-gradient(135deg, #2a4a55 0%, #0f6b63 55%, #c4894a 100%);
+  background: linear-gradient(135deg, #085a8a 0%, #29B7FB 55%, #9adefc 100%);
 }
 
 .gcard__body {
