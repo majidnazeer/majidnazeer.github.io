@@ -1566,9 +1566,23 @@ a.pub__role:hover {
 }
 
 .resource-card--has-sub {
+  display: block;
+}
+
+.resource-card__shell {
   display: flex;
   flex-direction: column;
-  gap: .45rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.resource-card__shell:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--text) 8%, transparent);
 }
 
 @keyframes fadeUp {
@@ -1591,13 +1605,21 @@ a.pub__role:hover {
 }
 .resource-card--has-sub .resource-card__link {
   height: auto;
-  flex: 1 1 auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 .resource-card__link:hover {
   opacity: 1;
   border-color: var(--ink);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px color-mix(in srgb, var(--text) 8%, transparent);
+}
+.resource-card--has-sub .resource-card__link:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+  background: color-mix(in srgb, var(--accent-soft) 28%, var(--surface));
 }
 
 .resource__icon {
@@ -1638,31 +1660,53 @@ a.pub__role:hover {
 }
 
 .resource-card__sub {
+  position: relative;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto auto 1fr auto;
   align-items: center;
-  gap: .85rem;
-  padding: .85rem 1.1rem;
-  margin-left: .65rem;
-  background: color-mix(in srgb, var(--accent-soft) 55%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  gap: .75rem;
+  margin: 0 .85rem .85rem 1.85rem;
+  padding: .8rem 1rem;
+  background: color-mix(in srgb, var(--accent-soft) 70%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--border));
   border-radius: 4px;
   text-decoration: none;
   color: inherit;
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
 }
 .resource-card__sub:hover {
   opacity: 1;
   border-color: var(--accent);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 12%, transparent);
+  background: color-mix(in srgb, var(--accent-soft) 90%, var(--surface));
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.resource-card__sub-rail {
+  position: absolute;
+  left: -1.05rem;
+  top: -0.85rem;
+  bottom: 50%;
+  width: .7rem;
+  border-left: 2px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-bottom: 2px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-bottom-left-radius: 6px;
+  pointer-events: none;
 }
 .resource-card__sub-mark {
-  width: .55rem;
-  height: .55rem;
+  width: .5rem;
+  height: .5rem;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.resource-card__sub-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: .15rem;
 }
 .resource-card__sub-title {
   display: block;

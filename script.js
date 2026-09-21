@@ -524,8 +524,10 @@
       if (viz && viz.url) {
         vizHtml =
           '<a class="resource-card__sub" href="' + viz.url + '" target="_blank" rel="noopener noreferrer">' +
+            '<span class="resource-card__sub-rail" aria-hidden="true"></span>' +
             '<span class="resource-card__sub-mark" aria-hidden="true"></span>' +
             '<div class="resource-card__sub-body">' +
+              '<span class="resource-card__sub-label">Related</span>' +
               '<span class="resource-card__sub-title">' + (viz.title || "Data visualization") + '</span>' +
               (viz.meta ? '<span class="resource-card__sub-meta">' + viz.meta + '</span>' : '') +
               (viz.desc ? '<p class="resource-card__sub-desc">' + viz.desc + '</p>' : '') +
@@ -534,9 +536,7 @@
           '</a>';
       }
 
-      return '<li class="resource-card' + (vizHtml ? ' resource-card--has-sub' : '') + '"' +
-        (item.id ? ' id="dataset-' + item.id + '"' : '') +
-        ' style="--delay:' + (i * 60) + 'ms">' +
+      var mainLink =
         '<a class="resource-card__link" href="' + item.url + '" target="_blank" rel="noopener noreferrer">' +
           icon +
           '<div class="resource-card__body">' +
@@ -545,8 +545,14 @@
             (item.desc ? '<p class="resource-card__desc">' + item.desc + '</p>' : '') +
           '</div>' +
           '<span class="resource-card__arrow" aria-hidden="true">→</span>' +
-        '</a>' +
-        vizHtml +
+        '</a>';
+
+      return '<li class="resource-card' + (vizHtml ? ' resource-card--has-sub' : '') + '"' +
+        (item.id ? ' id="dataset-' + item.id + '"' : '') +
+        ' style="--delay:' + (i * 60) + 'ms">' +
+        (vizHtml
+          ? '<div class="resource-card__shell">' + mainLink + vizHtml + '</div>'
+          : mainLink) +
       '</li>';
     }).join("");
     enhanceExternalLinks(el);
