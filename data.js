@@ -403,7 +403,7 @@ var PUBLICATIONS = [
     type: "journal",
     title: "Role of mechanics and its branches in the field of civil eingineering technology",
     authors: "SN Abbas, M Ghafoor, <b>Nazeer, M.</b>, S Ali, S Faisal",
-    venue: ""
+    venue: "Science International Lahore 33 (4), 297-300"
   },
   {
     year: 2021,
