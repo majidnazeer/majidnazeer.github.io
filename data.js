@@ -1177,12 +1177,20 @@ var PEOPLE = {
 };
 
 var SERVICE_HIGHLIGHTS = [
-  { years: "2025-present", title: "Section Editor", note: "Earth and Environmental Science, Kuwait Journal of Science" },
-  { years: "2026-present", title: "Guest Editor", note: "Special issue on next-generation Earth observation for inland and coastal ecosystems, Remote Sensing" },
+  { years: "2025-present", title: "Section Editor", note: "Earth and Environmental Science Section, Kuwait Journal of Science" },
+  {
+    years: "2026-present",
+    title: "Guest Editor",
+    note: "Remote Sensing",
+    issue: "Special Issue: Next-Generation Earth Observation for Inland and Coastal Ecosystems: Integrating Satellites, UAVs, and AI for Water Quality and Sustainability",
+    url: "https://www.mdpi.com/journal/remotesensing/special_issues/6ODUDW2GB6"
+  },
   {
     years: "2025-present",
     title: "Guest Editor",
-    note: "Urban heat island special issues in Remote Sensing and Climate"
+    note: "Remote Sensing and Climate",
+    issue: "Special Issue: Exploring the Urban Heat Island and Its Mechanisms Based on Satellite and AI",
+    url: "https://www.mdpi.com/journal/remotesensing/special_issues/F7X2K95B94"
   },
   { years: "2023-2024", title: "Guest Editor", note: "Coastal and estuarine hydrodynamic variability special topic, Frontiers in Marine Science" },
   { years: "2020-2021", title: "Guest Editor", note: "Remote sensing advancements in sustaining coastal zones, Journal of Marine Science and Engineering" },

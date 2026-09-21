@@ -907,14 +907,19 @@
       if (typeof SERVICE_HIGHLIGHTS !== "undefined") {
         SERVICE_HIGHLIGHTS.forEach(function (s) {
           var split = splitReviewVenue(s.note || "");
+          var issueTitle = s.issue || "";
           items.push({
             key: "reviewing",
             tag: "Assessing and reviewing",
-            title: s.title,
+            title: issueTitle || s.title,
             years: s.years,
-            venues: split.venues,
-            role: "",
-            summary: split.summary,
+            venues: issueTitle
+              ? (s.note ? [s.note] : [])
+              : split.venues,
+            role: issueTitle ? s.title : "",
+            summary: issueTitle ? "" : split.summary,
+            url: s.url || "",
+            linkText: issueTitle || "",
             startYear: parseServiceYear(s.years),
             endYear: parseServiceEndYear(s.years),
             ongoing: isServiceOngoing(s.years)
