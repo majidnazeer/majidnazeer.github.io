@@ -739,6 +739,14 @@ var ACTIVITY = [
   { year: 2026, count: 13 }
 ];
 
+/* Google Scholar profile metrics - "All" column (lifetime), not "Since 2021".
+   Update from https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ when needed. */
+var SCHOLAR_METRICS = {
+  citations: 2635,
+  hIndex: 27,
+  i10Index: 42
+};
+
 var CODES = [];
 
 var DATASETS = [

@@ -132,12 +132,9 @@
   enhanceExternalLinks();
 
   /* =======================================================
-     LIVE CITATION METRICS (OpenAlex - Scholar has no public API)
+     CITATION METRICS - Google Scholar "All" column (not Since 2021)
+     Scholar has no public API; figures live in data.js and are shown as-is.
      ======================================================= */
-
-  function formatCount(n) {
-    return Number(n).toLocaleString("en-US");
-  }
 
   function loadLiveMetrics() {
     var cit = document.getElementById("statCitations");
@@ -145,24 +142,22 @@
     var i10 = document.getElementById("statI10");
     if (!cit || !h || !i10) return;
 
-    /* h-index and i10 stay on Google Scholar figures (OpenAlex often differs). */
-    h.textContent = h.getAttribute("data-fallback") || "27";
-    i10.textContent = i10.getAttribute("data-fallback") || "41";
-
-    var url =
-      "https://api.openalex.org/authors/orcid:0000-0002-7631-1599" +
-      "?mailto=majid.nazeer@connect.polyu.hk";
-
-    fetch(url)
-      .then(function (res) {
-        if (!res.ok) throw new Error("OpenAlex " + res.status);
-        return res.json();
-      })
-      .then(function (data) {
-        var citations = data.cited_by_count;
-        if (citations != null) cit.textContent = formatCount(citations);
-      })
-      .catch(function () { /* keep fallback figures in HTML */ });
+    var m = typeof SCHOLAR_METRICS !== "undefined" ? SCHOLAR_METRICS : null;
+    if (m && m.citations != null) {
+      cit.textContent = Number(m.citations).toLocaleString("en-US");
+    } else {
+      cit.textContent = cit.getAttribute("data-fallback") || cit.textContent;
+    }
+    if (m && m.hIndex != null) {
+      h.textContent = String(m.hIndex);
+    } else {
+      h.textContent = h.getAttribute("data-fallback") || "27";
+    }
+    if (m && m.i10Index != null) {
+      i10.textContent = String(m.i10Index);
+    } else {
+      i10.textContent = i10.getAttribute("data-fallback") || "42";
+    }
   }
 
   if (page === "home") loadLiveMetrics();
