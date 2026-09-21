@@ -1193,10 +1193,8 @@ var DEPT_SERVICE = [
   { years: "2023-present", title: "Member, PhD Student Recruitment Interview Panel", note: "Department of LSGS, PolyU" },
   { years: "2023-present", title: "Member, Research Staff Recruitment Interview Panel", note: "Department of LSGS, PolyU" },
   { years: "2023-present", title: "Moderator, MSc and BSc Final-Year Project Evaluation Panels", note: "Department of LSGS, PolyU" },
-  { years: "2025", title: "Departmental Representative, PolyU Info Day", note: "The Hong Kong Polytechnic University" },
-  { years: "2024", title: "Departmental Representative, PolyU Info Day", note: "The Hong Kong Polytechnic University" },
-  { years: "2024", title: "Departmental Representative, International Research Summer School consultation", note: "Department of LSGS, PolyU" },
-  { years: "2023", title: "Departmental Representative, International Research Summer School consultation", note: "PolyU" },
+  { years: "2023-present", title: "Departmental Representative, PolyU Info Day", note: "The Hong Kong Polytechnic University" },
+  { years: "2023-2024", title: "Departmental Representative, International Research Summer School consultation", note: "Department of LSGS, PolyU" },
   { years: "2017-2019", title: "Member, Departmental Advisory Committee", note: "Department of Meteorology, COMSATS University Islamabad" },
   { years: "2017-2019", title: "Member, Departmental Security Committee", note: "Department of Meteorology, COMSATS University Islamabad" }
 ];

@@ -804,14 +804,33 @@
     }
 
     function classifyDeptItem(s) {
-      var t = String(s.title || "").toLowerCase();
-      if (/representative|moderator/.test(t)) {
-        return { key: "leadership", tag: "Leadership", role: s.title.replace(/,.*/, "").trim() };
+      var raw = String(s.title || "").trim();
+      var parts = raw.split(/,\s*/);
+      var role = "";
+      var title = raw;
+      if (parts.length >= 2) {
+        role = parts[0].trim();
+        title = parts.slice(1).join(", ").trim();
       }
-      if (/member/.test(t)) {
-        return { key: "departmental", tag: "Departmental service", role: "Member" };
+
+      var roleKey = role.toLowerCase();
+      if (/representative|moderator/.test(roleKey) || /representative|moderator/.test(raw.toLowerCase())) {
+        return {
+          key: "leadership",
+          tag: "Leadership",
+          role: role || "Departmental Representative",
+          title: title
+        };
       }
-      return { key: "departmental", tag: "Departmental service", role: "" };
+      if (/^member$/i.test(role) || /\bmember\b/i.test(raw)) {
+        return {
+          key: "departmental",
+          tag: "Departmental service",
+          role: role || "Member",
+          title: title
+        };
+      }
+      return { key: "departmental", tag: "Departmental service", role: role, title: title };
     }
 
     function splitReviewVenue(note) {
@@ -873,7 +892,7 @@
           items.push({
             key: c.key,
             tag: c.tag,
-            title: s.title,
+            title: c.title || s.title,
             years: s.years,
             venues: s.note ? [s.note] : [],
             role: c.role,
