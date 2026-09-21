@@ -307,6 +307,25 @@
     }).join("");
   }
 
+  function datasetAnchorId(datasetUrl) {
+    var target = String(datasetUrl || "").toLowerCase().replace(/\/$/, "");
+    if (!target || typeof DATASETS === "undefined") return "";
+    var zenodo = target.match(/zenodo(?:\.org\/records\/|\.)(\d+)/);
+    for (var i = 0; i < DATASETS.length; i++) {
+      var d = DATASETS[i];
+      if (!d || !d.id) continue;
+      var u = String(d.url || "").toLowerCase().replace(/\/$/, "");
+      if (u && (u === target || target.indexOf(u) !== -1 || u.indexOf(target) !== -1)) {
+        return "dataset-" + d.id;
+      }
+      if (zenodo) {
+        var dz = u.match(/zenodo(?:\.org\/records\/|\.)(\d+)/);
+        if (dz && dz[1] === zenodo[1]) return "dataset-" + d.id;
+      }
+    }
+    return "";
+  }
+
   function resourceLinkBadgesHtml(p) {
     var bits = [];
     if (p.code) {
@@ -315,13 +334,15 @@
       );
     }
     if (p.dataset) {
+      var datasetHash = datasetAnchorId(p.dataset) || "datasets";
       bits.push(
-        '<a class="pub__role pub__role--dataset" href="data-code.html#datasets">Dataset</a>'
+        '<a class="pub__role pub__role--dataset" href="data-code.html#' + datasetHash + '">Dataset</a>'
       );
     }
     if (p.viz) {
+      var vizHash = datasetAnchorId(p.dataset) || "datasets";
       bits.push(
-        '<a class="pub__role pub__role--viz" href="data-code.html#datasets">Data visualization</a>'
+        '<a class="pub__role pub__role--viz" href="data-code.html#' + vizHash + '">Data visualization</a>'
       );
     }
     return bits.join("");
@@ -662,7 +683,7 @@
     }
   }
 
-  function activateTab(root, id) {
+  function activateTab(root, id, hashOverride) {
     var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-tab]"));
     var panels = Array.prototype.slice.call(root.querySelectorAll("[data-panel]"));
     if (!tabs.length) return;
@@ -686,18 +707,54 @@
       else panel.setAttribute("hidden", "");
     });
 
+    var nextHash = hashOverride || target;
     if (history.replaceState) {
-      history.replaceState(null, "", "#" + target);
+      history.replaceState(null, "", "#" + nextHash);
     } else {
-      location.hash = target;
+      location.hash = nextHash;
     }
+  }
+
+  function flashResourceCard(id) {
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove("is-flash");
+    void el.offsetWidth;
+    el.classList.add("is-flash");
+    try {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (e) {
+      el.scrollIntoView(true);
+    }
+    window.setTimeout(function () {
+      el.classList.remove("is-flash");
+    }, 2800);
+  }
+
+  function resolveTabFromHash(hash) {
+    var h = String(hash || "").replace(/^#/, "");
+    if (!h) return { tab: "", focusId: "" };
+    if (h.indexOf("dataset-") === 0) return { tab: "datasets", focusId: h };
+    if (h.indexOf("code-") === 0) return { tab: "codes", focusId: h };
+    return { tab: h, focusId: "" };
   }
 
   function initPanelTabs(root) {
     if (!root) return;
     var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-tab]"));
-    var fromHash = (location.hash || "").replace(/^#/, "");
-    activateTab(root, fromHash);
+
+    function applyHash(rawHash) {
+      var resolved = resolveTabFromHash(rawHash);
+      activateTab(root, resolved.tab, resolved.focusId || resolved.tab);
+      if (resolved.focusId) {
+        window.setTimeout(function () {
+          flashResourceCard(resolved.focusId);
+        }, 60);
+      }
+    }
+
+    applyHash(location.hash);
 
     root.addEventListener("click", function (e) {
       var tab = e.target.closest("[data-tab]");
@@ -722,7 +779,7 @@
     });
 
     window.addEventListener("hashchange", function () {
-      activateTab(root, (location.hash || "").replace(/^#/, ""));
+      applyHash(location.hash);
     });
   }
 

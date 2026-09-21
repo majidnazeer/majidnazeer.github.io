@@ -953,24 +953,28 @@ var DATASETS = [
     }
   },
   {
+    id: "cropspecpk",
     title: "CROPSPECPK - Spectral Library for Seasonal Crops",
     url: "https://doi.org/10.5281/zenodo.13372659",
     format: "Zenodo  -  Data archive",
     desc: "Ground-based reflectance spectra for major seasonal crops in Pakistan (BMC Plant Biology)."
   },
   {
+    id: "coastal-water-quality",
     title: "Data-Driven Modelling of Coastal Water Quality Dynamics",
     url: "https://doi.org/10.5281/zenodo.21040636",
     format: "Zenodo  -  CSV",
     desc: "Regional coastal water-quality tables for Hong Kong waters (Frontiers in Marine Science)."
   },
   {
+    id: "mangrove-biomass-lidar",
     title: "LiDAR-Calibrated Landsat Mapping of Subtropical Mangrove Biomass",
     url: "https://doi.org/10.5281/zenodo.21802136",
     format: "Zenodo  -  2026",
     desc: "Dataset deposit by Mahmood, Nazeer, Wong & Abbas for subtropical mangrove biomass mapping."
   },
   {
+    id: "sitac-reflectance",
     title: "Average surface color reflectance after atmospheric correction (SiTAC)",
     url: "https://doi.org/10.1594/PANGAEA.870922",
     format: "PANGAEA  -  2017",

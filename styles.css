@@ -1595,6 +1595,32 @@ a.pub__role:hover {
   animation-delay: var(--delay, 0ms);
 }
 
+.resource-card.is-flash > .resource-card__link,
+.resource-card.is-flash .resource-card__shell {
+  animation: resourceFlash 2.8s ease;
+}
+
+@keyframes resourceFlash {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+    border-color: var(--border);
+  }
+  12%,
+  38%,
+  64% {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 55%, transparent),
+      0 0 0 8px color-mix(in srgb, var(--accent) 18%, transparent);
+    border-color: var(--accent);
+  }
+  25%,
+  51%,
+  78% {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 70%, var(--border));
+  }
+}
+
 .resource-card--has-sub {
   display: block;
 }
@@ -2128,6 +2154,12 @@ a.pub__role:hover {
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: .01ms !important; }
   .resource-card { animation: none; }
+  .resource-card.is-flash > .resource-card__link,
+  .resource-card.is-flash .resource-card__shell {
+    animation: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent);
+  }
   .activity__fill { animation: none; }
   .subtabs__panel { animation: none; }
 }
