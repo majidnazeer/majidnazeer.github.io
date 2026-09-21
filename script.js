@@ -1085,10 +1085,6 @@
       var f = String(funder || "").toLowerCase();
       if (key === "teaching") return "Teaching project";
       if (/large equipment|equipment fund/.test(f)) return "Equipment grant";
-      if (/seed funding|preliminary research|research institute|risud|state key laboratory|carbon neutrality funding|polyu$|the hong kong polytechnic university/.test(f) &&
-          !/research grants council|collaborative research fund|nsfc|national natural|countryside|environment and ecology|otto poon|kuwait|ugc|university grants/.test(f)) {
-        return "Internal research grant";
-      }
       return "Grant";
     }
 
