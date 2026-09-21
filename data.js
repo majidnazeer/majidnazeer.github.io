@@ -1419,7 +1419,14 @@ var ENGAGEMENT = [
     url: "https://www.afcd.gov.hk/english/conservation/Con_hkbsap/bsap_resources_references/bsap_resources_references.html",
     linkText: "Hong Kong Nature-based Solutions Guidelines"
   },
-  { years: "2023", title: "Collaborator - Real-time coastal water quality monitoring platform", note: "Environmental Protection Department (EPD), Hong Kong" },
+  {
+    years: "2023",
+    title: "Collaborator - Real-time coastal water quality monitoring platform",
+    note: "Environmental Protection Department (EPD), Hong Kong",
+    credit: "Acknowledge by: Legislative council of Hong Kong",
+    creditUrl: "https://www.legco.gov.hk/yr2023/english/panels/ea/papers/ea20230227cb1-131-5-e.pdf",
+    creditLinkText: "Legislative council of Hong Kong"
+  },
   { years: "2022", title: "Collaborator - Urban master planning geospatial support", note: "The Urban Unit, Government of Punjab, Pakistan" },
   { years: "2017-2019", title: "Research collaborator - Agricultural residue burning and regional smog", note: "Food and Agriculture Organization (FAO) of the United Nations, Pakistan" },
   { years: "2010-2011", title: "GIS and remote sensing assistant - Forest conservation monitoring", note: "WWF-Pakistan, Murree Forests Division" }

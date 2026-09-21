@@ -983,6 +983,9 @@
             summary: "",
             url: e.url || "",
             linkText: e.linkText || "",
+            credit: e.credit || "",
+            creditUrl: e.creditUrl || "",
+            creditLinkText: e.creditLinkText || "",
             startYear: parseServiceYear(e.years),
             endYear: parseServiceEndYear(e.years),
             ongoing: isServiceOngoing(e.years)
@@ -1049,6 +1052,17 @@
             '" target="_blank" rel="noopener noreferrer">' + esc(s.linkText) + "</a>";
           titleHtml = esc(s.title).split(esc(s.linkText)).join(linked);
         }
+        var creditHtml = "";
+        if (s.credit) {
+          var creditText = esc(s.credit);
+          if (s.creditUrl && s.creditLinkText && String(s.credit).indexOf(s.creditLinkText) !== -1) {
+            var creditSafe = String(s.creditUrl).replace(/"/g, "");
+            var creditLink = '<a class="fund-card__credit-link" href="' + creditSafe +
+              '" target="_blank" rel="noopener noreferrer">' + esc(s.creditLinkText) + "</a>";
+            creditText = esc(s.credit).split(esc(s.creditLinkText)).join(creditLink);
+          }
+          creditHtml = '<p class="fund-card__credit">' + creditText + "</p>";
+        }
         return '<li class="fund-card">' +
           '<div class="fund-card__top">' +
             '<p class="fund-card__tag">' + esc(s.tag) + "</p>" +
@@ -1056,6 +1070,7 @@
           "</div>" +
           '<h3 class="fund-card__title">' + titleHtml + "</h3>" +
           (s.role && s.role !== s.title ? '<p class="fund-card__role"><span>' + esc(s.role) + "</span></p>" : "") +
+          creditHtml +
           venueHtml +
           (showSummary ? (
             '<div class="fund-card__expand">' +

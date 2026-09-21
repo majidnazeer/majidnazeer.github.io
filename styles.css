@@ -1285,6 +1285,24 @@ a.pub__role:hover {
   color: var(--text);
   line-height: 1.4;
 }
+.fund-card__role:has(+ .fund-card__credit) {
+  margin-bottom: .2rem;
+}
+.fund-card__credit {
+  margin: 0 0 .75rem;
+  font-size: .88rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.fund-card__credit-link {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.fund-card__credit-link:hover {
+  opacity: 1;
+  color: var(--accent);
+}
 .fund-card__people-icon {
   width: 1.15rem;
   height: 1.15rem;
