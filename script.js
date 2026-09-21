@@ -803,6 +803,31 @@
       return parseInt(m[m.length - 1], 10);
     }
 
+    function classifyEngagementItem(e) {
+      var raw = String(e.title || "").trim();
+      var rolePatterns = [
+        /^expert\s+reviewer\s*\/\s*contributor\b/i,
+        /^research\s+collaborator\b/i,
+        /^collaborator\b/i,
+        /^gis and remote sensing assistant\b/i
+      ];
+      for (var i = 0; i < rolePatterns.length; i++) {
+        var m = raw.match(rolePatterns[i]);
+        if (!m) continue;
+        var role = m[0].replace(/\s+/g, " ").trim();
+        var rest = raw.slice(m[0].length).replace(/^[\s:\-–—]+/, "").trim();
+        if (/^expert\s+reviewer/i.test(role)) {
+          role = "Expert reviewer / contributor";
+        } else if (/^research\s+collaborator/i.test(role)) {
+          role = "Research collaborator";
+        } else if (/^collaborator/i.test(role)) {
+          role = "Collaborator";
+        }
+        return { role: role, title: rest || raw };
+      }
+      return { role: "", title: raw };
+    }
+
     function classifyDeptItem(s) {
       var raw = String(s.title || "").trim();
       var parts = raw.split(/,\s*/);
@@ -947,13 +972,14 @@
 
       if (typeof ENGAGEMENT !== "undefined") {
         ENGAGEMENT.forEach(function (e) {
+          var c = classifyEngagementItem(e);
           items.push({
             key: "engagement",
             tag: "Engagement",
-            title: e.title,
+            title: c.title,
             years: e.years,
             venues: e.note ? [e.note] : [],
-            role: "",
+            role: c.role,
             summary: "",
             url: e.url || "",
             linkText: e.linkText || "",
