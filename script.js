@@ -278,13 +278,16 @@
       return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
     }
 
-    if (
-      has("corresponding") ||
-      p.corresponding === true ||
-      isFirst ||
-      (isStudentWork && nazeerIdx === 1)
-    ) {
-      roles.push("corresponding");
+    /* Corresponding: opt-out with corresponding:false; auto for first-author / student-second. */
+    if (p.corresponding !== false) {
+      if (
+        has("corresponding") ||
+        p.corresponding === true ||
+        isFirst ||
+        (isStudentWork && nazeerIdx === 1)
+      ) {
+        roles.push("corresponding");
+      }
     }
 
     return roles.filter(function (r, i) { return roles.indexOf(r) === i; });
