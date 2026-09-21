@@ -319,6 +319,11 @@
         '<a class="pub__role pub__role--dataset" href="data-code.html#datasets">Dataset</a>'
       );
     }
+    if (p.viz) {
+      bits.push(
+        '<a class="pub__role pub__role--viz" href="data-code.html#datasets">Data visualization</a>'
+      );
+    }
     return bits.join("");
   }
 
@@ -336,7 +341,7 @@
       if (!q) return true;
       var roles = pubRoleList(p);
       var roleText = roles.concat(roles.map(function (r) { return roleLabels[r] || ""; })).join(" ");
-      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roleText + " " + (p.code || "") + " " + (p.dataset || "")).toLowerCase();
+      var hay = (p.title + " " + stripTags(p.authors) + " " + stripTags(p.venue || "") + " " + (p.doi || "") + " " + p.year + " " + t + " " + roleText + " " + (p.code || "") + " " + (p.dataset || "") + (p.viz ? " data visualization viz" : "")).toLowerCase();
       return hay.indexOf(q) !== -1;
     });
 
@@ -514,8 +519,24 @@
       var icon = type === "code"
         ? '<svg class="resource__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.57 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.28 5.69.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.22 0 .32.21.68.8.57A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>'
         : '<svg class="resource__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>';
+      var viz = item.viz;
+      var vizHtml = "";
+      if (viz && viz.url) {
+        vizHtml =
+          '<a class="resource-card__sub" href="' + viz.url + '" target="_blank" rel="noopener noreferrer">' +
+            '<span class="resource-card__sub-mark" aria-hidden="true"></span>' +
+            '<div class="resource-card__sub-body">' +
+              '<span class="resource-card__sub-title">' + (viz.title || "Data visualization") + '</span>' +
+              (viz.meta ? '<span class="resource-card__sub-meta">' + viz.meta + '</span>' : '') +
+              (viz.desc ? '<p class="resource-card__sub-desc">' + viz.desc + '</p>' : '') +
+            '</div>' +
+            '<span class="resource-card__arrow" aria-hidden="true">→</span>' +
+          '</a>';
+      }
 
-      return '<li class="resource-card" style="--delay:' + (i * 60) + 'ms">' +
+      return '<li class="resource-card' + (vizHtml ? ' resource-card--has-sub' : '') + '"' +
+        (item.id ? ' id="dataset-' + item.id + '"' : '') +
+        ' style="--delay:' + (i * 60) + 'ms">' +
         '<a class="resource-card__link" href="' + item.url + '" target="_blank" rel="noopener noreferrer">' +
           icon +
           '<div class="resource-card__body">' +
@@ -525,6 +546,7 @@
           '</div>' +
           '<span class="resource-card__arrow" aria-hidden="true">→</span>' +
         '</a>' +
+        vizHtml +
       '</li>';
     }).join("");
     enhanceExternalLinks(el);

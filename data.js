@@ -41,7 +41,8 @@ var PUBLICATIONS = [
     authors: "T Sattar, <b>Nazeer, M.</b>, MS Wong, JE Nichol, X Zhu",
     venue: "Science of Remote Sensing, 100362",
     doi: "10.1016/j.srs.2025.100362",
-    dataset: "https://zenodo.org/records/22818840"
+    dataset: "https://zenodo.org/records/22818840",
+    viz: true
   },
   {
     year: 2026,
@@ -751,10 +752,17 @@ var CODES = [];
 
 var DATASETS = [
   {
+    id: "mangrove-hyperspectral",
     title: "Hyperspectral Data for Mangrove Species of Hong Kong",
     url: "https://zenodo.org/records/22818840",
     format: "Zenodo  -  XLSX",
-    desc: "Specim IQ and NEO HySpex reflectance library for Hong Kong mangroves (Science of Remote Sensing)."
+    desc: "Specim IQ and NEO HySpex reflectance library for Hong Kong mangroves (Science of Remote Sensing).",
+    viz: {
+      title: "Data visualization",
+      url: "https://public.tableau.com/app/profile/majid.nazeer/vizzes",
+      meta: "Tableau Public",
+      desc: "Interactive Tableau views for the Hong Kong mangrove hyperspectral library."
+    }
   },
   {
     title: "CROPSPECPK - Spectral Library for Seasonal Crops",

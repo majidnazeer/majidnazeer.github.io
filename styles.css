@@ -1034,6 +1034,15 @@ a.pub__role:hover {
   color: #0f151a;
 }
 
+.pub__role--viz {
+  background: #0c7cbc;
+}
+
+[data-theme="dark"] .pub__role--viz {
+  background: #38bdf8;
+  color: #0f151a;
+}
+
 #pubTypeChips {
   margin: 0 0 1.1rem;
 }
@@ -1554,6 +1563,12 @@ a.pub__role:hover {
   animation-delay: var(--delay, 0ms);
 }
 
+.resource-card--has-sub {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1571,6 +1586,10 @@ a.pub__role:hover {
   text-decoration: none;
   color: inherit;
   height: 100%;
+}
+.resource-card--has-sub .resource-card__link {
+  height: auto;
+  flex: 1 1 auto;
 }
 .resource-card__link:hover {
   opacity: 1;
@@ -1610,9 +1629,59 @@ a.pub__role:hover {
   color: var(--muted);
   transition: transform .2s ease, color .2s ease;
 }
-.resource-card__link:hover .resource-card__arrow {
+.resource-card__link:hover .resource-card__arrow,
+.resource-card__sub:hover .resource-card__arrow {
   transform: translateX(3px);
   color: var(--text);
+}
+
+.resource-card__sub {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .85rem;
+  padding: .85rem 1.1rem;
+  margin-left: .65rem;
+  background: color-mix(in srgb, var(--accent-soft) 55%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.resource-card__sub:hover {
+  opacity: 1;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.resource-card__sub-mark {
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.resource-card__sub-title {
+  display: block;
+  font-family: var(--head);
+  font-size: .98rem;
+  font-weight: 500;
+  color: var(--accent-deep);
+}
+.resource-card__sub-meta {
+  display: block;
+  margin-top: .1rem;
+  font-family: var(--mono);
+  font-size: .68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.resource-card__sub-desc {
+  margin: .25rem 0 0;
+  font-size: .85rem;
+  color: var(--muted);
 }
 
 .empty-state {
