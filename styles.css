@@ -1247,6 +1247,15 @@ a.pub__role:hover {
   line-height: 1.3;
   color: var(--ink);
 }
+.fund-card__title-link {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.fund-card__title-link:hover {
+  opacity: 1;
+  color: var(--accent);
+}
 .fund-card__meta {
   margin: 0 0 .65rem;
   font-size: .92rem;

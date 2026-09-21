@@ -1406,7 +1406,13 @@ var EXTERNAL_EXAMS = [
 ];
 
 var ENGAGEMENT = [
-  { years: "2025", title: "Expert reviewer / contributor - Hong Kong Nature-based Solutions Guidelines", note: "Civil Engineering and Development Department (CEDD), Hong Kong" },
+  {
+    years: "2025",
+    title: "Expert reviewer / contributor - Hong Kong Nature-based Solutions Guidelines",
+    note: "Civil Engineering and Development Department (CEDD), Hong Kong",
+    url: "https://www.afcd.gov.hk/english/conservation/Con_hkbsap/bsap_resources_references/bsap_resources_references.html",
+    linkText: "Hong Kong Nature-based Solutions Guidelines"
+  },
   { years: "2023", title: "Collaborator - real-time coastal water quality monitoring platform", note: "Environmental Protection Department (EPD), Hong Kong" },
   { years: "2022", title: "Collaborator - urban master planning geospatial support", note: "The Urban Unit, Government of Punjab, Pakistan" },
   { years: "2017-2019", title: "Research collaborator - agricultural residue burning and regional smog", note: "Food and Agriculture Organization (FAO) of the United Nations, Pakistan" },

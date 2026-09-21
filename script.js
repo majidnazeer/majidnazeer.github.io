@@ -930,6 +930,8 @@
             venues: e.note ? [e.note] : [],
             role: "",
             summary: "",
+            url: e.url || "",
+            linkText: e.linkText || "",
             startYear: parseServiceYear(e.years),
             endYear: parseServiceEndYear(e.years),
             ongoing: isServiceOngoing(e.years)
@@ -989,12 +991,19 @@
         var venueHtml = venues.map(function (v) {
           return '<p class="fund-card__venue">' + esc(v) + "</p>";
         }).join("");
+        var titleHtml = esc(s.title);
+        if (s.url && s.linkText && String(s.title).indexOf(s.linkText) !== -1) {
+          var safeUrl = String(s.url).replace(/"/g, "");
+          var linked = '<a class="fund-card__title-link" href="' + safeUrl +
+            '" target="_blank" rel="noopener noreferrer">' + esc(s.linkText) + "</a>";
+          titleHtml = esc(s.title).split(esc(s.linkText)).join(linked);
+        }
         return '<li class="fund-card">' +
           '<div class="fund-card__top">' +
             '<p class="fund-card__tag">' + esc(s.tag) + "</p>" +
             '<p class="fund-card__when">' + esc(s.years) + "</p>" +
           "</div>" +
-          '<h3 class="fund-card__title">' + esc(s.title) + "</h3>" +
+          '<h3 class="fund-card__title">' + titleHtml + "</h3>" +
           (s.role && s.role !== s.title ? '<p class="fund-card__role"><span>' + esc(s.role) + "</span></p>" : "") +
           venueHtml +
           (showSummary ? (
@@ -1006,6 +1015,7 @@
         "</li>";
       }).join("");
       revealExpandToggles(root);
+      enhanceExternalLinks(root);
     }
 
     renderServiceList();
