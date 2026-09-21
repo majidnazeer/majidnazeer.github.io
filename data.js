@@ -125,7 +125,7 @@ var PUBLICATIONS = [
     type: "journal",
     title: "Advanced point cloud completion for urban trees: A novel approach using enhanced SnowflakeNet",
     authors: "L Xindi, J Li, <b>Nazeer, M.</b>, MS Wong",
-    venue: "Urban Forestry &amp;amp; Urban Greening, 129107",
+    venue: "Urban Forestry &amp; Urban Greening",
     doi: "10.1016/j.ufug.2025.129107"
   },
   {
@@ -163,7 +163,7 @@ var PUBLICATIONS = [
     type: "journal",
     title: "Evaluation of agriculture land transformations with socio-economic influences on wheat demand and supply for food sustainability",
     authors: "D Raza, H Shu, M Ehsan, H Fan, K Abdelrahman, H Aslam, A Quddoos, ...",
-    venue: "Cogent Food &amp;amp; Agriculture 11 (1), 2448597",
+    venue: "Cogent Food &amp; Agriculture 11 (1), 2448597",
     doi: "10.1080/23311932.2024.2448597"
   },
   {
