@@ -1058,28 +1058,34 @@ var MEMBERSHIPS = [
 
 var AWARDS = [
   {
-    year: "2019",
+    year: "Sep 2019",
     title: "Top Peer Reviewer Awards",
     org: "Web of Science (Clarivate Analytics)",
     note: "Recognised among the top 1% of peer reviewers in Cross-field and Geosciences."
   },
   {
-    year: "2018",
+    year: "Mar 2019",
     title: "Remote Sensing Outstanding Reviewer Award",
     org: "MDPI Remote Sensing",
     note: "Outstanding peer-review contributions to the journal."
   },
   {
-    year: "2018",
+    year: "Sep 2018",
     title: "Publons Peer Review Award",
     org: "Publons / Web of Science",
     note: "Top 1% of peer reviewers in Environment/Ecology, Geosciences, and Earth and Planetary Sciences."
   },
   {
-    year: "2017",
+    year: "Sep 2017",
     title: "Publons Peer Review Award",
     org: "Publons / Web of Science",
     note: "Top 1% of peer reviewers in Environmental Science."
+  },
+  {
+    year: "Sep 2017",
+    title: "Publons Peer Review Award — Journal of Water",
+    org: "Publons / Web of Science (Clarivate Analytics)",
+    note: "Recognised as the 3rd most prolific contributing peer reviewer on Publons for the journal Water."
   },
   {
     year: "Mar - Apr 2015",
@@ -1112,7 +1118,7 @@ var AWARDS = [
     note: ""
   },
   {
-    year: "2012 - 2015",
+    year: "Aug 2012 - Jul 2015",
     title: "International Postgraduate Scholarship for PhD Studies",
     org: "The Hong Kong Polytechnic University, Hong Kong SAR, China",
     note: ""
