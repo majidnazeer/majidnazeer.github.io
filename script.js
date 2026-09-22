@@ -997,12 +997,12 @@
           items.push({
             key: "reviewing",
             tag: "Assessing and reviewing",
-            title: issueTitle || s.title,
+            title: s.title,
             years: s.years,
             venues: issueTitle
               ? (s.note ? [s.note] : [])
               : split.venues,
-            role: issueTitle ? s.title : "",
+            role: issueTitle || "",
             summary: issueTitle ? "" : split.summary,
             url: s.url || "",
             linkText: issueName || "",
@@ -1033,13 +1033,14 @@
       if (typeof ENGAGEMENT !== "undefined") {
         ENGAGEMENT.forEach(function (e) {
           var c = classifyEngagementItem(e);
+          var isExpert = /^expert\s+reviewer/i.test(c.role || "");
           items.push({
             key: "engagement",
             tag: "Engagement",
-            title: c.title,
+            title: isExpert ? c.role : (c.title || e.title),
             years: e.years,
             venues: e.note ? [e.note] : [],
-            role: c.role,
+            role: isExpert ? c.title : c.role,
             summary: "",
             url: e.url || "",
             linkText: e.linkText || "",
@@ -1106,11 +1107,17 @@
           return '<p class="fund-card__venue">' + esc(v) + "</p>";
         }).join("");
         var titleHtml = esc(s.title);
-        if (s.url && s.linkText && String(s.title).indexOf(s.linkText) !== -1) {
+        var roleHtml = s.role && s.role !== s.title ? esc(s.role) : "";
+        if (s.url && s.linkText) {
           var safeUrl = String(s.url).replace(/"/g, "");
           var linked = '<a class="fund-card__title-link" href="' + safeUrl +
             '" target="_blank" rel="noopener noreferrer">' + esc(s.linkText) + "</a>";
-          titleHtml = esc(s.title).split(esc(s.linkText)).join(linked);
+          if (String(s.title).indexOf(s.linkText) !== -1) {
+            titleHtml = esc(s.title).split(esc(s.linkText)).join(linked);
+          }
+          if (roleHtml && String(s.role).indexOf(s.linkText) !== -1) {
+            roleHtml = esc(s.role).split(esc(s.linkText)).join(linked);
+          }
         }
         var creditHtml = "";
         if (s.credit) {
@@ -1129,7 +1136,7 @@
             '<p class="fund-card__when">' + esc(s.years) + "</p>" +
           "</div>" +
           '<h3 class="fund-card__title">' + titleHtml + "</h3>" +
-          (s.role && s.role !== s.title ? '<p class="fund-card__role"><span>' + esc(s.role) + "</span></p>" : "") +
+          (roleHtml ? '<p class="fund-card__role"><span>' + roleHtml + "</span></p>" : "") +
           creditHtml +
           venueHtml +
           (showSummary ? (
