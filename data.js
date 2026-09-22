@@ -1036,22 +1036,22 @@ var MEMBERSHIPS = [
   {
     role: "Early Career member",
     org: "The Oceanography Society",
-    years: "2013-present",
+    years: "Dec 2013 - present",
     code: "TOS",
     note: "International society for ocean science and coastal research."
   },
   {
     role: "Member",
     org: "Pacific GIS and Remote Sensing Council",
-    years: "2024-present",
+    years: "Sep 2024 - present",
     code: "PGRS",
     note: "Regional network for GIS and Earth observation practice across the Pacific."
   },
   {
     role: "Community Member",
-    org: "Hawaiʻi Geographic Information Coordinating Council",
-    years: "2025-present",
-    code: "HGICC",
+    org: "Hawaiʻi Geographic Information Coordinating Council (HIGICC)",
+    years: "Feb 2025 - present",
+    code: "HIGICC",
     note: "Statewide geospatial community for coordination and open geographic data."
   }
 ];
