@@ -676,7 +676,12 @@
     var aboutTeachGrant = document.getElementById("aboutTeachingGrant");
     if (aboutTeachGrant && typeof GRANTS_TEACHING !== "undefined") {
       aboutTeachGrant.innerHTML = GRANTS_TEACHING.map(function (g) {
-        return recordHtml(g.title, g.years, g.funder + (g.amount ? " - " + g.amount : ""), g.role);
+        return recordHtml(
+          g.title,
+          g.years,
+          g.amount ? ("Funding amount: " + g.amount) : (g.funder || ""),
+          g.role
+        );
       }).join("");
     }
   }
@@ -1225,10 +1230,10 @@
       if (/^principal investigator$/i.test(r.trim()) || (key === "pi" && !/co-/i.test(r))) {
         return "Principal Investigator";
       }
-      if (/co-investigator/i.test(r) || key === "coi" || key === "teaching") {
-        return "Co-Investigator";
-      }
+      if (/team member/i.test(r)) return "Team Member";
+      if (/co-investigator/i.test(r) || key === "coi") return "Co-Investigator";
       if (/key|member|researcher/i.test(r) || key === "key") return "Key team member";
+      if (key === "teaching") return r || "Team Member";
       return r || "Investigator";
     }
 
