@@ -8,7 +8,7 @@
 <link rel="icon" href="assets/favicon.svg?v=themeblue" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png?v=themeblue" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=themeblue">
-<link rel="stylesheet" href="styles.css?v=photo4">
+<link rel="stylesheet" href="styles.css?v=fieldnote1">
 <script>
   (function () {
     try {
@@ -64,30 +64,22 @@
 
     <div class="subtabs" data-tabs>
       <div class="subtabs__bar" role="tablist" aria-label="Data and code type">
-        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-codes" aria-selected="true" aria-controls="panel-codes" data-tab="codes">Codes</button>
-        <button type="button" class="subtabs__tab" role="tab" id="tab-datasets" aria-selected="false" aria-controls="panel-datasets" data-tab="datasets" tabindex="-1">Datasets</button>
+        <button type="button" class="subtabs__tab is-active" role="tab" id="tab-datasets" aria-selected="true" aria-controls="panel-datasets" data-tab="datasets">Datasets</button>
+        <button type="button" class="subtabs__tab" role="tab" id="tab-codes" aria-selected="false" aria-controls="panel-codes" data-tab="codes" tabindex="-1">Codes</button>
       </div>
 
       <div class="subtabs__panels">
-        <section class="subtabs__panel is-active" role="tabpanel" id="panel-codes" aria-labelledby="tab-codes" data-panel="codes">
-          <header class="panel-head">
-            <h2 class="panel-head__title">Codes</h2>
-            <p class="panel-head__lead">Software and analysis scripts.</p>
-          </header>
-          <ul class="resource-grid" id="codeList"></ul>
-          <div class="empty-state" id="codeEmpty">
-            <p>No repositories listed yet.</p>
-          </div>
-        </section>
-
-        <section class="subtabs__panel" role="tabpanel" id="panel-datasets" aria-labelledby="tab-datasets" data-panel="datasets" hidden>
-          <header class="panel-head">
-            <h2 class="panel-head__title">Datasets</h2>
-            <p class="panel-head__lead">Spectral libraries and research data products.</p>
-          </header>
+        <section class="subtabs__panel is-active" role="tabpanel" id="panel-datasets" aria-labelledby="tab-datasets" data-panel="datasets">
           <ul class="resource-grid" id="datasetList"></ul>
           <div class="empty-state" id="datasetEmpty">
             <p>No datasets listed yet.</p>
+          </div>
+        </section>
+
+        <section class="subtabs__panel" role="tabpanel" id="panel-codes" aria-labelledby="tab-codes" data-panel="codes" hidden>
+          <ul class="resource-grid" id="codeList"></ul>
+          <div class="empty-state" id="codeEmpty">
+            <p>No repositories listed yet.</p>
           </div>
         </section>
       </div>
@@ -143,7 +135,7 @@
   </div>
 </footer>
 
-<script src="data.js?v=photo4"></script>
-<script src="script.js?v=photo4"></script>
+<script src="data.js?v=fieldnote1"></script>
+<script src="script.js?v=fieldnote1"></script>
 </body>
 </html>

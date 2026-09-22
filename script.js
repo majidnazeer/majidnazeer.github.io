@@ -639,15 +639,23 @@
         noteHtml = '<p class="record__note"><a class="record__link" href="' + safeUrl +
           '" target="_blank" rel="noopener noreferrer">' + esc(note) + '</a></p>';
       } else {
-        noteHtml = '<p class="record__note">' + esc(note) + '</p>';
+        noteHtml = '<p class="record__note">' + richText(note) + '</p>';
       }
     }
     return '<li class="record">' +
       (when ? '<span class="record__when">' + esc(when) + '</span>' : '') +
       '<p class="record__title">' + esc(title) + '</p>' +
-      (org ? '<p class="record__org">' + esc(org) + '</p>' : '') +
+      (org ? '<p class="record__org">' + richText(org) + '</p>' : '') +
       noteHtml +
     '</li>';
+  }
+
+  function richText(text) {
+    return esc(String(text || ""))
+      .replace(/&lt;i&gt;/g, "<i>")
+      .replace(/&lt;\/i&gt;/g, "</i>")
+      .replace(/&lt;em&gt;/g, "<em>")
+      .replace(/&lt;\/em&gt;/g, "</em>");
   }
 
   if (page === "home" || page === "supervision") {

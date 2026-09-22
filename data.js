@@ -1436,7 +1436,7 @@ var ENGAGEMENT = [
 var FIELD_LEADERSHIP = [
   { years: "2025-present", title: "Team Lead - Blue Carbon Ecosystem Surveys", note: "Multidisciplinary field data collection across Hong Kong and the Greater Bay Area in support of blue carbon research." },
   { years: "2023-2025", title: "Field Survey Coordinator - Carbon Sequestration in Hong Kong Vegetation", note: "Planned and led forest surveys for a UGC-funded project, covering vegetation, soil, LiDAR, hyperspectral and ecological measurements." },
-  { years: "2014", title: "Marine environmental monitoring - research vessel campaigns", note: "Six months of marine monitoring with the Hong Kong EPD aboard Dr Catherine Lam, collecting coastal water quality, surface reflectance and aerosol optical data." },
+  { years: "2014", title: "Marine environmental monitoring - research vessel campaigns", note: "Six months of marine monitoring aboard the Hong Kong EPD vessel <i>Dr Catherine Lam</i>, collecting coastal water quality, surface reflectance and aerosol optical data." },
   { years: "2009-2010", title: "Water quality researcher - Rawal Lake, Pakistan", note: "Field assessments of Secchi depth, chlorophyll-a and total phosphorus." }
 ];
 
