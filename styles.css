@@ -506,9 +506,6 @@ a:hover { opacity: .75; }
   background: transparent;
   border: none;
 }
-#focus .about-block__title {
-  color: var(--text);
-}
 .focus-tags li {
   margin: 0;
   padding: .42rem .85rem;
