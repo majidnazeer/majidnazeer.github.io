@@ -988,7 +988,7 @@ var EDUCATION = [
     degree: "Bachelor of Science (Hons) in Space Science",
     years: "Sep 2004 - Aug 2008",
     place: "University of the Punjab, Lahore, Pakistan",
-    note: "FYP: Application of remote sensing in the field of glaciology in Pakistan"
+    note: "Application of remote sensing in the field of glaciology in Pakistan"
   }
 ];
 
