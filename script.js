@@ -403,10 +403,10 @@
           parts.push('<i class="pub__venue-name">' + venue + "</i>");
         }
         if (p.doi) {
-          var doiSafe = String(p.doi).replace(/"/g, "");
+          var doiSafe = String(p.doi).replace(/"/g, "").replace(/^https?:\/\/doi\.org\//i, "");
           parts.push(
             '<a class="pub__doi" href="https://doi.org/' + doiSafe +
-            '" target="_blank" rel="noopener noreferrer">doi:' + doiSafe + "</a>"
+            '" target="_blank" rel="noopener noreferrer">https://doi.org/' + doiSafe + "</a>"
           );
         }
         var meta = parts.join(" - ");

@@ -53,6 +53,7 @@ var PUBLICATIONS = [
     order: 106,
     published: "2026-07-01",
     type: "journal",
+    corresponding: true,
     title: "Tracking functional shifts in fishpond wetlands of Hong Kong&#39;s Deep Bay and their implications for conservation planning",
     authors: "S Abbas, X Ding, N Habib, <b>Nazeer, M.</b>, JE Nichol, MU Mahmood",
     venue: "Ecological Indicators 188, 115051",
@@ -113,6 +114,7 @@ var PUBLICATIONS = [
     order: 112,
     published: "2026-02-20",
     type: "journal",
+    corresponding: true,
     title: "Development of a spectral library (CROPSPECPK) for major crops through spectroscopy modeling and in-situ spectrometer data",
     authors: "D Raza, H Shu, H Aslam, <b>Nazeer, M.</b>, H Fan, JE Nichol, RW Aslam, ...",
     venue: "BMC Plant Biology 26 (1), 561",
@@ -124,6 +126,7 @@ var PUBLICATIONS = [
     order: 113,
     published: "2026-02-26",
     type: "journal",
+    corresponding: false,
     title: "Diurnal Air-Surface Temperature Dynamics in Hong Kong: An Analysis Across Land Use and Climate Zones",
     authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, J Yang, PW Chan",
     venue: "International Journal of Climatology 46 (6), e70297",
@@ -156,6 +159,7 @@ var PUBLICATIONS = [
     order: 151,
     published: "2026-07-04",
     type: "conference",
+    speaker: true,
     title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH4) and Carbon Dioxide (CO2) Dynamics in the Greater Bay Area",
     authors: "M Umar, <b>Nazeer, M.</b>, MS Wong",
     venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto"
@@ -165,6 +169,7 @@ var PUBLICATIONS = [
     order: 152,
     published: "2026-07-04",
     type: "conference",
+    speaker: true,
     title: "Integrating Spectral Indices with Terrestrial Laser Scanner for Biomass Estimation in Hong Kong Mangroves",
     authors: "MU Mahmood, <b>Nazeer, M.</b>, MS Wong",
     venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto"
@@ -204,6 +209,7 @@ var PUBLICATIONS = [
     order: 104,
     published: "2025-09-01",
     type: "journal",
+    corresponding: false,
     title: "Individual tree above-ground biomass estimation by integrating LiDAR and machine learning",
     authors: "YT Choi, <b>Nazeer, M.</b>, MS Wong, JE Nichol, SY Leu, J Wu, APK Tai",
     venue: "Trees, Forests and People 21, 100955",
@@ -302,6 +308,7 @@ var PUBLICATIONS = [
     order: 500,
     published: "2024-11-09",
     type: "journal",
+    corresponding: false,
     title: "An improved machine learning-based model for prediction of diurnal and spatially continuous near surface air temperature",
     authors: "IA Adeniran, <b>Nazeer, M.</b>, MS Wong, PW Chan",
     venue: "Scientific reports 14 (1), 27342",
@@ -430,7 +437,7 @@ var PUBLICATIONS = [
     doi: "10.3389/fenvs.2022.981522"
   },
   {
-    year: 2022,
+    year: 2021,
     order: 500,
     published: "2021-03-22",
     type: "journal",
@@ -490,7 +497,7 @@ var PUBLICATIONS = [
     doi: "10.1016/j.rse.2021.112617"
   },
   {
-    year: 2021,
+    year: 2019,
     order: 500,
     published: "2019-09-09",
     type: "journal",
@@ -535,7 +542,7 @@ var PUBLICATIONS = [
     order: 500,
     published: "2021-05-18",
     type: "journal",
-    title: "Uncertainty in aqua-modis aerosol retrieval algorithms during covid-19 lockdown",
+    title: "Uncertainty in Aqua-MODIS Aerosol Retrieval Algorithms During COVID-19 Lockdown",
     authors: "M Bilal, Z Qiu, JE Nichol, A Mhawish, MA Ali, KM Khedher, G de Leeuw, ...",
     venue: "IEEE Geoscience and Remote Sensing Letters 19, 1-5",
     doi: "10.1109/LGRS.2021.3077189"
@@ -647,7 +654,7 @@ var PUBLICATIONS = [
     order: 500,
     published: "2019-02-27",
     type: "journal",
-    title: "Evaluation of terra-MODIS C6 and C6. 1 aerosol products against Beijing, XiangHe, and Xinglong AERONET sites in China during 2004-2014",
+    title: "Evaluation of Terra-MODIS C6 and C6.1 Aerosol Products against Beijing, XiangHe, and Xinglong AERONET Sites in China during 2004-2014",
     authors: "M Bilal, <b>Nazeer, M.</b>, J Nichol, Z Qiu, L Wang, MP Bleiweiss, X Shen, ...",
     venue: "Remote Sensing 11 (5), 486",
     doi: "10.3390/rs11050486"
@@ -675,7 +682,7 @@ var PUBLICATIONS = [
     order: 500,
     published: "2018-03-15",
     type: "journal",
-    title: "A new MODIS C6 Dark Target and Deep Blue merged aerosol product on a 3 km spatial grid",
+    title: "A New MODIS C6 Dark Target and Deep Blue Merged Aerosol Product on a 3 km Spatial Grid",
     authors: "M Bilal, Z Qiu, JR Campbell, SN Spak, X Shen, <b>Nazeer, M.</b>",
     venue: "Remote Sensing 10 (3), 463",
     doi: "10.3390/rs10030463"
@@ -683,16 +690,9 @@ var PUBLICATIONS = [
   {
     year: 2018,
     order: 500,
-    type: "journal",
-    title: "A New Modis C6 Dark Target and Deep Blue Merged Aerosol Product on a 3 km Spatial Grid",
-    authors: "JR Campbell, M Bilal, Z Qiu, SN Spak, X Shen, <b>Nazeer, M.</b>",
-    venue: ""
-  },
-  {
-    year: 2018,
-    order: 500,
     published: "2018-08-01",
     type: "journal",
+    corresponding: true,
     title: "Assessment of aerosol optical properties using remote sensing over highly urbanised twin cities of Pakistan",
     authors: "M Awais, MI Shahzad, <b>Nazeer, M.</b>, I Mahmood, S Mehmood, MF Iqbal, ...",
     venue: "Journal of Atmospheric and Solar-Terrestrial Physics 173, 37-49",
@@ -769,9 +769,9 @@ var PUBLICATIONS = [
     year: 2017,
     order: 500,
     published: "2017-11-15",
-    type: "conference",
-    title: "Evaluation of empirical and machine learning algorithms for estimation of coastal water quality parameters",
-    authors: "<b>Nazeer, M.</b>, M Bilal, MMM Alsahli, MI Shahzad, A Waqas",
+    type: "journal",
+    title: "Evaluation of Empirical and Machine Learning Algorithms for Estimation of Coastal Water Quality Parameters",
+    authors: "<b>Nazeer, M.</b>, M Bilal, MM Alsahli, MI Shahzad, A Waqas",
     venue: "ISPRS International Journal of Geo-Information 6 (11), 360",
     doi: "10.3390/ijgi6110360"
   },
