@@ -1434,4 +1434,348 @@ var FIELD_LEADERSHIP = [
   { years: "2009-2010", title: "Water quality researcher - Rawal Lake, Pakistan", note: "Field assessments of Secchi depth, chlorophyll-a and total phosphorus." }
 ];
 
-var FIELD_SURVEYS = [];
+var FIELD_SURVEYS = [
+  {
+    image: "assets/field/field-08-IMG_5326.jpg",
+    title: "Blue carbon field survey",
+    place: "Hong Kong coastal wetland",
+    year: "Feb 2025",
+    caption: "Field team lead during mangrove and wetland surveys."
+  },
+  {
+    image: "assets/field/field-22-IMG_5406.jpg",
+    title: "Mangrove field campaign",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Ground-truthing with mobile mapping equipment in mangrove stands."
+  },
+  {
+    image: "assets/field/field-10-IMG_5337.jpg",
+    title: "GNSS and vegetation survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Backpack GNSS for precise geolocation of field plots."
+  },
+  {
+    image: "assets/field/field-14-IMG_5362.jpg",
+    title: "Vegetation health sampling",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Inspecting mangrove leaves during ground surveys."
+  },
+  {
+    image: "assets/field/field-19-IMG_5394.jpg",
+    title: "Wetland access survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Navigating muddy mangrove terrain for plot measurements."
+  },
+  {
+    image: "assets/field/field-09-IMG_5333.jpg",
+    title: "Mobile LiDAR survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Backpack LiDAR for 3D structure of coastal vegetation."
+  },
+  {
+    image: "assets/field/field-12-IMG_5349.jpg",
+    title: "LiDAR in mangroves",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Dense mangrove canopy scanning with backpack sensors."
+  },
+  {
+    image: "assets/field/field-25-IMG_5471.jpg",
+    title: "Spectral photography",
+    place: "Hong Kong",
+    year: "Mar 2025",
+    caption: "Tripod-mounted imaging for vegetation reflectance."
+  },
+  {
+    image: "assets/field/field-26-IMG_5499.jpg",
+    title: "Coastal vegetation imaging",
+    place: "Hong Kong",
+    year: "Mar 2025",
+    caption: "Field camera setup among mangrove shrubs."
+  },
+  {
+    image: "assets/field/field-30-IMG_5659.jpg",
+    title: "Hillslope sensor survey",
+    place: "Hong Kong",
+    year: "Apr 2025",
+    caption: "Hyperspectral / multispectral measurements on vegetated slopes."
+  },
+  {
+    image: "assets/field/field-28-IMG_5627.jpg",
+    title: "Forest GNSS survey",
+    place: "Hong Kong",
+    year: "Apr 2025",
+    caption: "Backpack GNSS receiver in dense woodland."
+  },
+  {
+    image: "assets/field/field-40-IMG_6173.jpg",
+    title: "Tree sensor deployment",
+    place: "Hong Kong",
+    year: "Nov 2025",
+    caption: "Installing measurement sensors on mangrove stems."
+  },
+  {
+    image: "assets/field/field-42-IMG_6210.jpg",
+    title: "Plot demarcation",
+    place: "Hong Kong",
+    year: "Dec 2025",
+    caption: "Laying survey lines for mangrove plot measurements."
+  },
+  {
+    image: "assets/field/field-04-IMG_0975.jpg",
+    title: "UAV field campaign",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Team preparing an enterprise drone for coastal mapping."
+  },
+  {
+    image: "assets/field/field-02-IMG_069.jpg",
+    title: "GNSS base survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "RTK/GNSS pole setup during UAV and ground campaigns."
+  },
+  {
+    image: "assets/field/field-01-IMG_061.jpg",
+    title: "Field campaign briefing",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Directing equipment setup at a survey site."
+  },
+  {
+    image: "assets/field/field-03-IMG_0972.jpg",
+    title: "UAV mission planning",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Flight planner with RTK status during survey missions."
+  },
+  {
+    image: "assets/field/field-05-IMG_0997.jpg",
+    title: "UAV on helipad",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Survey drone staged with reflectance calibration panel."
+  },
+  {
+    image: "assets/field/field-06-IMG_20250224_115901.jpg",
+    title: "Mangrove pneumatophores",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Ground view of mangrove roots and muddy substrate."
+  },
+  {
+    image: "assets/field/field-07-IMG_20250224_120556.jpg",
+    title: "Mangrove pneumatophores",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Ground view of mangrove roots and muddy substrate."
+  },
+  {
+    image: "assets/field/field-11-IMG_5346.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-13-IMG_5350.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-15-IMG_5369.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-16-IMG_5373.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-17-IMG_5386.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-18-IMG_5387.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-20-IMG_5397.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-21-IMG_5403.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-23-IMG_5408.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-24-IMG_5411.jpg",
+    title: "Coastal wetland survey",
+    place: "Hong Kong",
+    year: "Feb 2025",
+    caption: "Blue carbon and mangrove field observations."
+  },
+  {
+    image: "assets/field/field-27-IMG_5504.jpg",
+    title: "Vegetation field survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Ground measurements for remote-sensing validation."
+  },
+  {
+    image: "assets/field/field-29-IMG_5637.jpg",
+    title: "Vegetation field survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Ground measurements for remote-sensing validation."
+  },
+  {
+    image: "assets/field/field-31-IMG_5817.jpg",
+    title: "Vegetation field survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Ground measurements for remote-sensing validation."
+  },
+  {
+    image: "assets/field/field-32-IMG_5950.jpg",
+    title: "Field instrumentation",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Sensors and instruments used during coastal surveys."
+  },
+  {
+    image: "assets/field/field-33-IMG_5970.jpg",
+    title: "Field instrumentation",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Sensors and instruments used during coastal surveys."
+  },
+  {
+    image: "assets/field/field-34-IMG_5978.jpg",
+    title: "Field instrumentation",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Sensors and instruments used during coastal surveys."
+  },
+  {
+    image: "assets/field/field-35-IMG_5990.jpg",
+    title: "Field instrumentation",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Sensors and instruments used during coastal surveys."
+  },
+  {
+    image: "assets/field/field-36-IMG_6005.jpg",
+    title: "Field instrumentation",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Sensors and instruments used during coastal surveys."
+  },
+  {
+    image: "assets/field/field-37-IMG_6007.jpg",
+    title: "Field instrumentation",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Sensors and instruments used during coastal surveys."
+  },
+  {
+    image: "assets/field/field-38-IMG_6073.jpg",
+    title: "Survey UAV",
+    place: "Hong Kong",
+    year: "Nov 2025",
+    caption: "Enterprise drone with specialised remote-sensing payload."
+  },
+  {
+    image: "assets/field/field-39-IMG_6141.jpg",
+    title: "UAV payload detail",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Close view of airborne sensing equipment."
+  },
+  {
+    image: "assets/field/field-41-IMG_6182.jpg",
+    title: "Mangrove plot survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Plot-based measurements in mangrove stands."
+  },
+  {
+    image: "assets/field/field-43-IMG_6350.jpg",
+    title: "Mangrove plot survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Plot-based measurements in mangrove stands."
+  },
+  {
+    image: "assets/field/field-44-IMG_6356.jpg",
+    title: "Mangrove plot survey",
+    place: "Hong Kong",
+    year: "2025",
+    caption: "Plot-based measurements in mangrove stands."
+  },
+  {
+    image: "assets/field/field-45-WhatsApp_Image_2026-06-24_at_11_02_41_AM.jpg",
+    title: "Leaf scanning lab",
+    place: "PolyU",
+    year: "Jun 2026",
+    caption: "High-throughput leaf imaging for vegetation traits."
+  },
+  {
+    image: "assets/field/field-46-WhatsApp_Image_2026-06-24_at_2_51_19_PM.jpg",
+    title: "Leaf scanning lab",
+    place: "PolyU",
+    year: "Jun 2026",
+    caption: "High-throughput leaf imaging for vegetation traits."
+  },
+  {
+    image: "assets/field/field-47-WhatsApp_Image_2026-06-24_at_2_51_24_PM.jpg",
+    title: "Leaf scanning lab",
+    place: "PolyU",
+    year: "Jun 2026",
+    caption: "High-throughput leaf imaging for vegetation traits."
+  },
+  {
+    image: "assets/field/field-48-WhatsApp_Image_2026-06-24_at_2_51_35_PM.jpg",
+    title: "Leaf scanning lab",
+    place: "PolyU",
+    year: "Jun 2026",
+    caption: "High-throughput leaf imaging for vegetation traits."
+  },
+  {
+    image: "assets/field/field-49-WhatsApp_Image_2026-06-24_at_2_52_04_PM.jpg",
+    title: "Leaf scanning lab",
+    place: "PolyU",
+    year: "Jun 2026",
+    caption: "High-throughput leaf imaging for vegetation traits."
+  },
+];

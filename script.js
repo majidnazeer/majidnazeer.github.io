@@ -1382,18 +1382,50 @@
         if (fieldEmpty) fieldEmpty.hidden = false;
       } else {
         if (fieldEmpty) fieldEmpty.hidden = true;
-        gallery.innerHTML = surveys.map(function (s) {
-          return '<figure class="gallery-card">' +
-            '<div class="gallery-card__media">' +
-              '<img src="' + esc(s.image) + '" alt="' + esc(s.title || "Field survey") + '" loading="lazy">' +
-            '</div>' +
+        gallery.innerHTML = surveys.map(function (s, idx) {
+          var featured = idx < 6 ? " gallery-card--featured" : "";
+          return '<figure class="gallery-card' + featured + '">' +
+            '<button type="button" class="gallery-card__media" data-gallery-src="' + esc(s.image) + '" data-gallery-alt="' + esc(s.title || "Field survey") + '" aria-label="Open photo: ' + esc(s.title || "Field survey") + '">' +
+              '<img src="' + esc(s.image) + '" alt="' + esc(s.title || "Field survey") + '" loading="lazy" decoding="async" width="1100" height="825">' +
+            '</button>' +
             '<figcaption class="gallery-card__meta">' +
               '<p class="gallery-card__title">' + esc(s.title) + '</p>' +
-              '<p class="gallery-card__place">' + esc([s.place, s.year].filter(Boolean).join(" - ")) + '</p>' +
+              '<p class="gallery-card__place">' + esc([s.place, s.year].filter(Boolean).join(" · ")) + '</p>' +
               (s.caption ? '<p class="gallery-card__caption">' + esc(s.caption) + '</p>' : '') +
             '</figcaption>' +
           '</figure>';
         }).join("");
+
+        if (!document.getElementById("galleryLightbox")) {
+          var lb = document.createElement("div");
+          lb.id = "galleryLightbox";
+          lb.className = "gallery-lb";
+          lb.hidden = true;
+          lb.innerHTML = '<button type="button" class="gallery-lb__close" aria-label="Close">Close</button><img class="gallery-lb__img" alt="">';
+          document.body.appendChild(lb);
+          lb.addEventListener("click", function (e) {
+            if (e.target === lb || e.target.classList.contains("gallery-lb__close")) {
+              lb.hidden = true;
+              document.body.classList.remove("gallery-lb-open");
+            }
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !lb.hidden) {
+              lb.hidden = true;
+              document.body.classList.remove("gallery-lb-open");
+            }
+          });
+        }
+        gallery.querySelectorAll("[data-gallery-src]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var box = document.getElementById("galleryLightbox");
+            var img = box.querySelector(".gallery-lb__img");
+            img.src = btn.getAttribute("data-gallery-src");
+            img.alt = btn.getAttribute("data-gallery-alt") || "";
+            box.hidden = false;
+            document.body.classList.add("gallery-lb-open");
+          });
+        });
       }
     }
   }

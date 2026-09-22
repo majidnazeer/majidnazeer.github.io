@@ -2,3 +2,11 @@ _dois_raw.txt
 *.tmp
 .DS_Store
 Thumbs.db
+
+# Heavy camera originals — site serves optimized copies in assets/field/
+assets/Field_Photos/
+_field_preview/
+_field_manifest.json
+_field_surveys.js
+_optimize_field.py
+_build_gallery.py

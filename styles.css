@@ -1523,20 +1523,33 @@ a.pub__role:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem 1.1rem;
 }
 .gallery-card {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: .65rem;
+  gap: .55rem;
+}
+.gallery-card--featured:nth-child(1) {
+  grid-column: 1 / -1;
+}
+.gallery-card--featured:nth-child(1) .gallery-card__media {
+  aspect-ratio: 16 / 9;
+  max-height: 420px;
 }
 .gallery-card__media {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--soft);
   border: 1px solid var(--border);
+  padding: 0;
+  cursor: zoom-in;
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: inherit;
 }
 .gallery-card__media img {
   width: 100%;
@@ -1549,28 +1562,63 @@ a.pub__role:hover {
 .gallery-card__meta {
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: .15rem;
 }
 .gallery-card__title {
   margin: 0;
-  font-size: 1rem;
+  font-size: .95rem;
   font-weight: 600;
   color: var(--text);
 }
 .gallery-card__place {
   margin: 0;
-  font-size: .82rem;
+  font-size: .78rem;
   color: var(--muted);
 }
 .gallery-card__caption {
-  margin: .15rem 0 0;
-  font-size: .9rem;
+  margin: .1rem 0 0;
+  font-size: .84rem;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
-@media (max-width: 700px) {
+.gallery-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(10, 14, 20, .88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.gallery-lb[hidden] { display: none !important; }
+.gallery-lb__img {
+  max-width: min(1100px, 100%);
+  max-height: calc(100vh - 3rem);
+  object-fit: contain;
+  border-radius: 2px;
+}
+.gallery-lb__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid rgba(255,255,255,.35);
+  background: transparent;
+  color: #fff;
+  padding: .4rem .75rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: .85rem;
+}
+body.gallery-lb-open { overflow: hidden; }
+
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
   .gallery { grid-template-columns: 1fr; }
+  .gallery-card--featured:nth-child(1) { grid-column: auto; }
 }
 
 .resource-grid {
