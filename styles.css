@@ -506,13 +506,16 @@ a:hover { opacity: .75; }
   background: transparent;
   border: none;
 }
+#focus .about-block__title {
+  color: var(--text);
+}
 .focus-tags li {
   margin: 0;
   padding: .42rem .85rem;
   font-size: .9rem;
   font-weight: 500;
   line-height: 1.35;
-  color: var(--accent-deep);
+  color: var(--text);
   background: var(--accent-soft);
   border: none;
   border-radius: 999px;
