@@ -1269,7 +1269,7 @@ var GRANTS_COI = [
     role: "Co-Investigator"
   },
   {
-    years: "2026-2028",
+    years: "Jan 2026 - Dec 2027",
     title: "Remote Sensing-Driven Assessment of Vegetation Health and Land Stability for Enhancing Climate Resilience in Coastal Urban Landscapes",
     funder: "State Key Laboratory of Climate Resilience for Coastal Cities (SKL-CRCC), PolyU",
     amount: "HK$158,680",
