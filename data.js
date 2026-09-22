@@ -1381,13 +1381,13 @@ var TALKS = [
 ];
 
 var TEACHING = [
-  { years: "2023 - present", title: "Subject Leader - LSGI3321A Remote Sensing", note: "Higher Diploma and BSc programmes, Department of Land Surveying and Geospatial Science, PolyU, Hong Kong" },
+  { years: "2023 - present", title: "Subject Leader - LSGI3321A Remote Sensing", note: "Higher Diploma and BSc programmes, Department of Land Surveying and Geospatial Science, PolyU, Hong Kong SAR, China" },
   { years: "2018", title: "Instructor - HIS622 Geographical Information Systems for Health Informatics", note: "Department of Health Informatics, COMSATS University Islamabad, Pakistan" },
   { years: "2018", title: "Instructor - MET735 Advanced Geo-Statistical Analysis", note: "Department of Meteorology, COMSATS University Islamabad, Pakistan" },
   { years: "2018 - 2019", title: "Instructor - MET604 Geo-Statistical Analysis", note: "Department of Meteorology, COMSATS University Islamabad, Pakistan" },
   { years: "2017 - 2018", title: "Instructor - MET602 Advanced GIS", note: "Department of Meteorology, COMSATS University Islamabad, Pakistan" },
-  { years: "2017", title: "Teaching Assistant - LSGI3332A Photogrammetry and Remote Sensing", note: "Department of Land Surveying and Geospatial Science, PolyU, Hong Kong" },
-  { years: "2016", title: "Teaching Assistant - LSGI4221A Geostatistics and Exploratory Data Analysis", note: "Department of Land Surveying and Geospatial Science, PolyU, Hong Kong" }
+  { years: "2017", title: "Teaching Assistant - LSGI3332A Photogrammetry and Remote Sensing", note: "Department of Land Surveying and Geospatial Science, PolyU, Hong Kong SAR, China" },
+  { years: "2016", title: "Teaching Assistant - LSGI4221A Geostatistics and Exploratory Data Analysis", note: "Department of Land Surveying and Geospatial Science, PolyU, Hong Kong SAR, China" }
 ];
 
 var EXTERNAL_EXAMS = [
