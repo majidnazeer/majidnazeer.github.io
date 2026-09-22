@@ -1159,7 +1159,7 @@ var PEOPLE = {
     { years: "2024-2025", role: "Supervisor", topic: "Remote sensing for water quality monitoring in Hong Kong coastal areas" }
   ],
   staff: [
-    { years: "2023-2024", role: "Research Assistant", topic: "Spectral Library for Vegetation Species (SLIVES) over Hong Kong" }
+    { years: "Mar 2023 - Feb 2027", role: "Research Assistant", topic: "Spectral Library for Vegetation Species (SLIVES) over Hong Kong" }
   ]
 };
 
@@ -1196,7 +1196,7 @@ var DEPT_SERVICE = [
 
 var GRANTS_PI = [
   {
-    years: "Jan 2025 - 2027",
+    years: "Jan 2025 - Dec 2027",
     title: "Harnessing the potential of Blue Carbon Ecosystems over the Guangdong-Hong Kong-Macao Greater Bay Area (GBA)",
     funder: "General Research Fund, Research Grants Council of Hong Kong",
     amount: "HK$1,134,931",
@@ -1213,56 +1213,56 @@ var GRANTS_PI = [
 
 var GRANTS_COI = [
   {
-    years: "2027-2030",
+    years: "Jan 2027 - Dec 2030",
     title: "Monitoring and Early Warning of Forest-Concealed Landslides Using MTInSAR Technology",
     funder: "National Natural Science Foundation of China (NSFC)",
     amount: "CNY 660,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026-2029",
+    years: "Oct 2026 - Sep 2029",
     title: "Mapping morphological and hydrological baseline conditions of Sha Lo Tung water resources using remote sensing technologies",
     funder: "Countryside Conservation Funding Scheme, Environment and Ecology Bureau of Hong Kong",
     amount: "HK$2,999,000",
     role: "Co-Principal Investigator"
   },
   {
-    years: "2026-2028",
+    years: "Nov 2026 - Oct 2028",
     title: "Decadal Reconstruction of Hong Kong Urban-Forest Canopy-Height Using Satellite Imagery",
     funder: "Research Institute for Land and Space (RILS), PolyU",
     amount: "HK$299,900",
     role: "Co-Investigator"
   },
   {
-    years: "2026-2028",
+    years: "Oct 2026 - Sep 2028",
     title: "Unlocking the Past: Super-Resolution and Land Cover Analysis of Historical Aerial Photographs for Automated Map Updating and Geospatial Archive Modernization",
     funder: "Research Institute for Land and Space (RILS), PolyU",
     amount: "HK$680,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026-2028",
+    years: "Jun 2026 - May 2028",
     title: "Geospatial Technologies and Artificial Intelligence for Tree Survey and Assessment",
     funder: "Research Institute for Land and Space (RILS), PolyU",
     amount: "HK$195,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026-2028",
+    years: "Jun 2026 - May 2028",
     title: "Simulation-Based Assessment of Urban Air Mobility Noise in High-Density Cities",
     funder: "Seed Funding for Major Grants, PolyU",
     amount: "HK$200,000",
     role: "Co-Investigator"
   },
   {
-    years: "Apr 2026 - 2028",
+    years: "Apr 2026 - Mar 2028",
     title: "From Data to Credits: Smart Monitoring and Economic Optimization for Carbon Neutrality at PolyU",
     funder: "Carbon Neutrality Funding Scheme, PolyU",
     amount: "HK$1,912,000",
     role: "Co-Investigator"
   },
   {
-    years: "2026-2028",
+    years: "Mar 2026 - Feb 2028",
     title: "Qualification of Aerosol-Type-Dependent Effects on Land Surface Temperature",
     funder: "Preliminary research for General Research Fund projects, PolyU",
     amount: "HK$150,000",
@@ -1276,28 +1276,28 @@ var GRANTS_COI = [
     role: "Co-Investigator"
   },
   {
-    years: "2026-2027",
+    years: "Jan 2026 - Dec 2027",
     title: "Advancing Urban Air Mobility: Scalable Solutions through Aerodynamic Analysis and Network Optimization in Dense Urban Environments",
     funder: "Research Institute for Land and Space (RILS), PolyU",
     amount: "HK$300,000",
     role: "Co-Investigator"
   },
   {
-    years: "Sep 2025 - 2027",
+    years: "Sep 2025 - Aug 2027",
     title: "Next Generation of AI-embedded Remote Sensing Technology for Detecting Building Facet Leakage",
     funder: "Research Institute for Sustainable Urban Development (RISUD), PolyU",
     amount: "HK$1,252,000",
     role: "Co-Investigator"
   },
   {
-    years: "Mar 2025 - 2027",
+    years: "Mar 2025 - Dec 2027",
     title: "Nature-Based Solutions for Urban Infrastructure Resilience and Water Disaster Management",
     funder: "Otto Poon Charitable Foundation, Hong Kong",
     amount: "HK$1,440,000",
     role: "Co-Investigator"
   },
   {
-    years: "Dec 2024 - 2026",
+    years: "Dec 2025 - Nov 2026",
     title: "An optimized 'walk+wait+ride' public transport route planning",
     funder: "Research Institute for Land and Space (RILS), PolyU",
     amount: "HK$300,000",
@@ -1311,7 +1311,7 @@ var GRANTS_COI = [
     role: "Co-Investigator"
   },
   {
-    years: "Nov 2023 - 2025",
+    years: "Dec 2023 - Nov 2025",
     title: "Quantifying the tree healthiness and carbon stock using Mobile Mapping System (MMS)",
     funder: "Research Institute for Sustainable Urban Development (RISUD), PolyU",
     amount: "HK$1,366,046",
@@ -1328,14 +1328,14 @@ var GRANTS_COI = [
 
 var GRANTS_KEY = [
   {
-    years: "2022-2025",
+    years: "Jun 2022 - Jun 2025",
     title: "Study of Carbon Sequestration in Hong Kong's Vegetation: from Present to Future Prediction under Climate Change",
     funder: "Collaborative Research Fund, Research Grants Council of Hong Kong",
     amount: "HK$4,949,639",
     role: "Key team member / researcher"
   },
   {
-    years: "2021-2024",
+    years: "Dec 2021 - May 2024",
     title: "Study of Water Quality Parameters in Hong Kong: From Present to Future Prediction under the Government Development Schemes",
     funder: "Research Institute for Land and Space (RILS), PolyU",
     amount: "HK$1,100,000",
@@ -1345,7 +1345,7 @@ var GRANTS_KEY = [
 
 var GRANTS_TEACHING = [
   {
-    years: "Nov 2023 - 2026",
+    years: "Nov 2023 - Jun 2026",
     title: "Revolutionizing Higher Education through Innovative and Emerging Technologies in Flipped Learning",
     funder: "Fund for Innovative Technology-in-Education, University Grants Committee of Hong Kong",
     amount: "HK$2,000,000",
