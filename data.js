@@ -1075,51 +1075,51 @@ var AWARDS = [
     note: "Top 1% of peer reviewers in Environmental Science."
   },
   {
-    year: "2015",
+    year: "Mar - Apr 2015",
     title: "Travel Grant Award",
-    org: "ESA & Swiss Space Center - JURSE 2015, Lausanne",
+    org: "ESA & Swiss Space Center - JURSE 2015, Lausanne, Switzerland",
     note: ""
   },
   {
-    year: "2014",
+    year: "Nov 2014",
+    title: "Travel Grant Award",
+    org: "ISNET / SUPARCO / IST - ICS 2014, Islamabad, Pakistan",
+    note: ""
+  },
+  {
+    year: "Oct 2014",
+    title: "Travel Grant",
+    org: "NASA / The Oceanography Society - Ocean Optics XXII, Portland, Maine, USA",
+    note: ""
+  },
+  {
+    year: "Jun 2014",
     title: "Best Student Paper Award",
     org: "EORSA 2014, Changsha, China",
     note: ""
   },
   {
-    year: "2014",
+    year: "Sep 2013",
     title: "Travel Grant",
-    org: "NASA / The Oceanography Society - Ocean Optics XXII, Portland, USA",
+    org: "ISNET - Space Applications for Disaster Risk Reduction and Management, Tehran, Iran",
     note: ""
   },
   {
-    year: "2014",
-    title: "Travel Grant Award",
-    org: "ISNET / SUPARCO / IST - ICS 2014, Islamabad",
-    note: ""
-  },
-  {
-    year: "2013",
-    title: "Travel Grant",
-    org: "ISNET - Space Applications for Disaster Risk Reduction, Tehran",
-    note: ""
-  },
-  {
-    year: "2012-2015",
+    year: "2012 - 2015",
     title: "International Postgraduate Scholarship for PhD Studies",
-    org: "The Hong Kong Polytechnic University",
+    org: "The Hong Kong Polytechnic University, Hong Kong SAR, China",
     note: ""
   },
   {
-    year: "2009",
+    year: "Oct 2009",
     title: "Travel Grant",
     org: "COMSATS University Islamabad - Global Conference on Microbial Contaminants in Drinking Water, Singapore",
     note: ""
   },
   {
-    year: "2008-2010",
+    year: "2008 - 2010",
     title: "Scholarship for Masters Studies",
-    org: "COMSATS University Islamabad",
+    org: "COMSATS University Islamabad, Islamabad, Pakistan",
     note: "Merit-based scholarship."
   }
 ];
@@ -1355,29 +1355,29 @@ var GRANTS_TEACHING = [
 
 
 var TALKS = [
-  { years: "2026", type: "organised", title: "Blue Health Watch: Remote Sensing for Monitoring Water Quality and Climate-Sensitive Disease Risks", venue: "LSGS Research Seminar (organiser & moderator), PolyU", note: "Guest speaker: Prof. Kalum Udagepola" },
-  { years: "2026", type: "conference", title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH₄) and Carbon Dioxide (CO₂) Dynamics in the Greater Bay Area", venue: "XXV ISPRS Congress & 47th Canadian Remote Sensing Symposium, Toronto" },
-  { years: "2026", type: "invited", title: "Rethinking Blue Carbon in Human-Dominated Coastal Landscapes", venue: "Invited research seminar, School of Earth and Planetary Sciences, Curtin University, Perth" },
-  { years: "2025", type: "keynote", title: "From a Simple Disc to the Digital Cosmos: A Journey in Environmental Sensing", venue: "Invited keynote, IEEE FIT 2025, Islamabad" },
-  { years: "2025", type: "conference", title: "Linking Coastal Water Quality to Blue Carbon Ecosystems Health: A Case Study from Hong Kong", venue: "IEEE FIT 2025, Islamabad" },
-  { years: "2025", type: "conference", title: "Assessing the Impact of Climate Change on Land Use Patterns in the Greater Bay Area of China: A Scenario-Based Approach for 2035", venue: "IGARSS 2025, Brisbane" },
-  { years: "2025", type: "invited", title: "Nature-Based Solutions for Sustainable Urban Development and Ecological Conservation", venue: "Sustainable Urban Development and Ecological Conservation Workshop, Mai Po Nature Reserve, Hong Kong" },
-  { years: "2025", type: "invited", title: "Urban Tree Health Monitoring Using Hyperspectral Remote Sensing", venue: "Research Saloon: Smart Environment and Smart Economy, SCRI, PolyU" },
-  { years: "2023", type: "chair", title: "Advancing Knowledge and Methods for the Preservation of Asian Blue Carbon Ecosystems", venue: "Session co-chair, 3rd Workshop of Asian Young Geographers" },
-  { years: "2023", type: "invited", title: "Feasibility Study on Identifying Tree Species and Monitoring Tree Health Condition Using Hyperspectral Technology", venue: "Civil Engineering and Development Department (CEDD), Hong Kong" },
-  { years: "2023", type: "invited", title: "Pilot Study on the Use of Multispectral Images and 3D LiDAR Models in Monitoring Old and Valuable Trees and Stonewall Trees", venue: "Greening, Landscape and Tree Management Section, Development Bureau, Hong Kong" },
-  { years: "2023", type: "invited", title: "Pilot Monitoring System (PMS)", venue: "Environmental Protection Department (EPD), Hong Kong" },
-  { years: "2018", type: "invited", title: "The Integration of Geographical Information Systems (GIS) in Health", venue: "Invited lecturer, Health Services Academy, Islamabad" },
-  { years: "2017", type: "invited", title: "Role of Atmospheric Correction in Coastal Water Quality Parameters Estimation", venue: "Invited speaker, COMSATS University Islamabad" },
-  { years: "2017", type: "invited", title: "Water Quality Monitoring Using Remote Sensing", venue: "Sino-Canadian International Forum on Water and Environmental Safety, Nankai University, Tianjin" },
-  { years: "2016", type: "invited", title: "Selection of Atmospheric Correction Method and Retrieval of Coastal Water Quality Parameters", venue: "Invited speaker, Institute of Space Technology, Islamabad" },
-  { years: "2016", type: "invited", title: "Application of Remote Sensing for Water Quality Monitoring", venue: "Invited speaker, University of the Punjab, Lahore" },
-  { years: "2016", type: "invited", title: "Estimation of Chlorophyll-a with Landsat TM/ETM+ Sensors", venue: "Hong Kong Society for Remote Sensing Seminar, PolyU" },
-  { years: "2015", type: "conference", title: "Modeling of Chlorophyll-a Concentration for the Coastal Waters of Hong Kong", venue: "JURSE 2015, Lausanne" },
-  { years: "2014", type: "conference", title: "Characterisation of Coastal Waters of Hong Kong Using Collocated Satellite and In Situ Datasets for Routine Water Quality Monitoring", venue: "International Conference on Space 2014, Islamabad" },
-  { years: "2014", type: "conference", title: "Estimation of Chlorophyll-a for Coastal Waters of Hong Kong by Characterizing Optically Different Water Types", venue: "Ocean Optics XXII, Portland, Maine" },
-  { years: "2014", type: "conference", title: "Selection of Atmospheric Correction Method and Estimation of Chlorophyll-a (Chl-a) in Coastal Waters of Hong Kong", venue: "EORSA 2014, Changsha" },
-  { years: "2009", type: "conference", title: "Water Quality Assessment of Rawal Lake Using Satellite Remote Sensing Techniques", venue: "Global Conference on Microbial Contaminants in Drinking Water, Singapore" }
+  { years: "Oct 2025", type: "organised", title: "Blue Health Watch: Remote Sensing for Monitoring Water Quality and Climate-Sensitive Disease Risks", venue: "LSGS Research Seminar (organiser & moderator), PolyU, Hong Kong SAR, China", note: "Guest speaker: Prof. Kalum Udagepola, Brisbane, Australia" },
+  { years: "Jul 2026", type: "conference", title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH4) and Carbon Dioxide (CO2) Dynamics in the Greater Bay Area", venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto, Canada" },
+  { years: "May 2026", type: "invited", title: "Rethinking Blue Carbon in Human-Dominated Coastal Landscapes", venue: "Invited research seminar, School of Earth and Planetary Sciences, Curtin University, Perth, Australia" },
+  { years: "Dec 2025", type: "keynote", title: "From a Simple Disc to the Digital Cosmos: A Journey in Environmental Sensing", venue: "Invited keynote, IEEE FIT 2025, Islamabad, Pakistan" },
+  { years: "Dec 2025", type: "conference", title: "Linking Coastal Water Quality to Blue Carbon Ecosystems Health: A Case Study from Hong Kong", venue: "IEEE FIT 2025, Islamabad, Pakistan" },
+  { years: "Aug 2025", type: "conference", title: "Assessing the Impact of Climate Change on Land Use Patterns in the Greater Bay Area of China: A Scenario-Based Approach for 2035", venue: "IGARSS 2025, Brisbane, Australia" },
+  { years: "Apr 2025", type: "invited", title: "Nature-Based Solutions for Sustainable Urban Development and Ecological Conservation", venue: "Sustainable Urban Development and Ecological Conservation Workshop, Mai Po Nature Reserve, Hong Kong SAR, China" },
+  { years: "Mar 2025", type: "invited", title: "Urban Tree Health Monitoring Using Hyperspectral Remote Sensing", venue: "Research Saloon: Smart Environment and Smart Economy, SCRI, PolyU, Hong Kong SAR, China" },
+  { years: "Dec 2023", type: "chair", title: "Advancing Knowledge and Methods for the Preservation of Asian Blue Carbon Ecosystems", venue: "Session co-chair, 3rd Workshop of Asian Young Geographers" },
+  { years: "Aug 2023", type: "invited", title: "Feasibility Study on Identifying Tree Species and Monitoring Tree Health Condition Using Hyperspectral Technology", venue: "Civil Engineering and Development Department (CEDD), Hong Kong SAR, China" },
+  { years: "Jun 2023", type: "invited", title: "Pilot Study on the Use of Multispectral Images and 3D LiDAR Models in Monitoring Old and Valuable Trees and Stonewall Trees", venue: "Greening, Landscape and Tree Management Section, Development Bureau, Hong Kong SAR, China" },
+  { years: "Mar 2023", type: "invited", title: "Pilot Monitoring System (PMS)", venue: "Environmental Protection Department (EPD), Hong Kong SAR, China" },
+  { years: "Dec 2018", type: "invited", title: "The Integration of Geographical Information Systems (GIS) in Health", venue: "Invited lecturer, Health Services Academy, Islamabad, Pakistan" },
+  { years: "Nov 2017", type: "invited", title: "Role of Atmospheric Correction in Coastal Water Quality Parameters Estimation", venue: "Invited speaker, COMSATS University Islamabad, Islamabad, Pakistan" },
+  { years: "Feb 2017", type: "invited", title: "Water Quality Monitoring Using Remote Sensing", venue: "Sino-Canadian International Forum on Water and Environmental Safety, Nankai University, Tianjin, China" },
+  { years: "May 2016", type: "invited", title: "Selection of Atmospheric Correction Method and Retrieval of Coastal Water Quality Parameters", venue: "Invited speaker, Institute of Space Technology, Islamabad, Pakistan" },
+  { years: "May 2016", type: "invited", title: "Application of Remote Sensing for Water Quality Monitoring", venue: "Invited speaker, University of the Punjab, Lahore, Pakistan" },
+  { years: "Feb 2016", type: "invited", title: "Estimation of Chlorophyll-a with Landsat TM/ETM+ Sensors", venue: "Hong Kong Society for Remote Sensing Seminar, PolyU, Hong Kong SAR, China" },
+  { years: "Mar - Apr 2015", type: "conference", title: "Modeling of Chlorophyll-a Concentration for the Coastal Waters of Hong Kong", venue: "JURSE 2015, Lausanne, Switzerland" },
+  { years: "Nov 2014", type: "conference", title: "Characterisation of Coastal Waters of Hong Kong Using Collocated Satellite and In Situ Datasets for Routine Water Quality Monitoring", venue: "International Conference on Space 2014, Islamabad, Pakistan" },
+  { years: "Oct 2014", type: "conference", title: "Estimation of Chlorophyll-a for Coastal Waters of Hong Kong by Characterizing Optically Different Water Types", venue: "Ocean Optics XXII, Portland, Maine, USA" },
+  { years: "Jun 2014", type: "conference", title: "Selection of Atmospheric Correction Method and Estimation of Chlorophyll-a (Chl-a) in Coastal Waters of Hong Kong", venue: "EORSA 2014, Changsha, China" },
+  { years: "Oct 2009", type: "conference", title: "Water Quality Assessment of Rawal Lake Using Satellite Remote Sensing Techniques", venue: "Global Conference on Microbial Contaminants in Drinking Water, Singapore" }
 ];
 
 var TEACHING = [
