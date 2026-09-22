@@ -1027,6 +1027,13 @@ var POSITIONS = [
 
 var MEMBERSHIPS = [
   {
+    role: "Member",
+    org: "Second ISDE-YSIN Committee",
+    years: "Jan 2027 - Dec 2029",
+    code: "ISDE-YSIN",
+    note: "International Society for Digital Earth – Young Scientist Innovation Network (ISDE-YSIN)"
+  },
+  {
     role: "Early Career member",
     org: "The Oceanography Society",
     years: "2013-present",
