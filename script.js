@@ -76,7 +76,7 @@
     mount.innerHTML =
       '<div class="profile-sidebar__card">' +
         '<figure class="profile-sidebar__photo">' +
-          '<img src="assets/majid-nazeer-2026.jpg" alt="Portrait of Dr Majid Nazeer" width="280" height="280" loading="eager">' +
+          '<img src="assets/majid-nazeer.jpg" alt="Portrait of Dr Majid Nazeer" width="280" height="280" loading="eager">' +
         '</figure>' +
         '<p class="profile-sidebar__eyebrow">Research Assistant Professor</p>' +
         '<h2 class="profile-sidebar__name">Majid Nazeer</h2>' +
