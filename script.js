@@ -1221,10 +1221,14 @@
 
     function roleShort(role, key) {
       var r = String(role || "");
-      if (/principal investigator/i.test(r) || key === "pi") return "PI";
-      if (/co-investigator|co-principal/i.test(r) || key === "coi") return "Co-I";
-      if (/key|member|researcher/i.test(r) || key === "key") return "Key member";
-      if (key === "teaching") return "Co-I";
+      if (/co-principal/i.test(r)) return "Co-Principal Investigator";
+      if (/^principal investigator$/i.test(r.trim()) || (key === "pi" && !/co-/i.test(r))) {
+        return "Principal Investigator";
+      }
+      if (/co-investigator/i.test(r) || key === "coi" || key === "teaching") {
+        return "Co-Investigator";
+      }
+      if (/key|member|researcher/i.test(r) || key === "key") return "Key team member";
       return r || "Investigator";
     }
 
