@@ -994,14 +994,15 @@
           var split = splitReviewVenue(s.note || "");
           var issueName = s.issue || "";
           var issueTitle = issueName ? ("Special Issue: " + issueName) : "";
+          var issueVenues = split.venues.length
+            ? split.venues
+            : (s.note ? [s.note] : []);
           items.push({
             key: "reviewing",
             tag: "Assessing and reviewing",
             title: s.title,
             years: s.years,
-            venues: issueTitle
-              ? (s.note ? [s.note] : [])
-              : split.venues,
+            venues: issueTitle ? issueVenues : split.venues,
             role: issueTitle || "",
             summary: issueTitle ? "" : split.summary,
             url: s.url || "",
