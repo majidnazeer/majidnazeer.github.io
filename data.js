@@ -1118,7 +1118,7 @@ var AWARDS = [
     note: ""
   },
   {
-    year: "Aug 2012 - Jul 2015",
+    year: "Aug 2012 - Aug 2015",
     title: "International Postgraduate Scholarship for PhD Studies",
     org: "The Hong Kong Polytechnic University, Hong Kong SAR, China",
     note: ""
