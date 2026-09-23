@@ -228,7 +228,8 @@
   var typeLabels = {
     journal: "Journal",
     chapter: "Book chapter",
-    conference: "Conference"
+    conference: "Conference",
+    report: "Technical report"
   };
 
   /* Surnames / tokens for supervised students (known student first authors). */
@@ -407,6 +408,12 @@
           parts.push(
             '<a class="pub__doi" href="https://doi.org/' + doiSafe +
             '" target="_blank" rel="noopener noreferrer">https://doi.org/' + doiSafe + "</a>"
+          );
+        } else if (p.url) {
+          var linkSafe = String(p.url).replace(/"/g, "");
+          parts.push(
+            '<a class="pub__doi" href="' + linkSafe +
+            '" target="_blank" rel="noopener noreferrer">View report</a>'
           );
         }
         var meta = parts.join(" - ");
