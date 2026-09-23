@@ -890,7 +890,7 @@ var PUBLICATIONS = [
     title: "Pre and Post Flood GIS Based Ecological Assessment of Kharo Chann, Thatta District",
     authors: "F Laghari, HU Rehman, I Ashraf, K Gill, <b>Nazeer, M.</b>, N Shahzad, U Saeed",
     venue: "GIS Laboratory, World Wide Fund for Nature (WWF) – Pakistan",
-    url: "https://www.researchgate.net/publication/265553959_Pre_and_Post_Flood_GIS_Based_Ecological_Assessment_of_Kharo_Chann_Thatta_District"
+    doi: "10.13140/2.1.5155.2649"
   },
   {
     year: 2009,
