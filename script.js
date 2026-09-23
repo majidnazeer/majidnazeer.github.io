@@ -413,7 +413,7 @@
           var linkSafe = String(p.url).replace(/"/g, "");
           parts.push(
             '<a class="pub__doi" href="' + linkSafe +
-            '" target="_blank" rel="noopener noreferrer">View report</a>'
+            '" target="_blank" rel="noopener noreferrer">' + esc(linkSafe) + "</a>"
           );
         }
         var meta = parts.join(" - ");
