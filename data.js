@@ -2,6 +2,16 @@
 var PUBLICATIONS = [
   {
     year: 2026,
+    order: 100,
+    published: "2026-10-21",
+    type: "conference",
+    speaker: true,
+    title: "Mangrove species and leaf condition through hyperspectral imaging",
+    authors: "<b>Nazeer, M.</b>",
+    venue: "Invited talk, CGIS Talk Series: Hyperspectral Earth Observation (international webinar), Centre for Geographical Information System, University of the Punjab, Lahore, Pakistan"
+  },
+  {
+    year: 2026,
     order: 101,
     published: "2026-08-25",
     type: "journal",
@@ -141,7 +151,7 @@ var PUBLICATIONS = [
     authors: "T Sattar, <b>Nazeer, M.</b>, MS Wong, JE Nichol, X Zhu",
     venue: "Science of Remote Sensing, 100362",
     doi: "10.1016/j.srs.2025.100362",
-    dataset: "https://zenodo.org/records/22818840",
+    dataset: "https://doi.org/10.5281/zenodo.22827229",
     viz: true
   },
   {
@@ -934,7 +944,7 @@ var DATASETS = [
   {
     id: "mangrove-hyperspectral",
     title: "Hyperspectral Data for Mangrove Species of Hong Kong",
-    url: "https://zenodo.org/records/22818840",
+    url: "https://doi.org/10.5281/zenodo.22827229",
     format: "Zenodo  -  XLSX",
     desc: "Specim IQ and NEO HySpex reflectance library for Hong Kong mangroves (Science of Remote Sensing).",
     viz: {
@@ -1186,6 +1196,17 @@ var PEOPLE = {
 };
 
 var SERVICE_HIGHLIGHTS = [
+  {
+    years: "2027-2029",
+    title: "Committee Member, International Society for Digital Earth - Young Scientist Innovation Network (ISDE-YSIN) (Term: 2027 – 2029)",
+    key: "leadership",
+    tag: "Leadership",
+    pin: true,
+    points: [
+      "Inducted at The 4th Youth Innovation Forum on Digital Earth (Xuzhou, China).",
+      "Collaborating on strategic networking initiatives and outreach programs to expand the global young scientist community."
+    ]
+  },
   { years: "2025-present", title: "Section Editor", note: "Earth and Environmental Science Section, Kuwait Journal of Science" },
   {
     years: "2026-present",

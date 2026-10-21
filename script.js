@@ -1006,6 +1006,23 @@
 
       if (typeof SERVICE_HIGHLIGHTS !== "undefined") {
         SERVICE_HIGHLIGHTS.forEach(function (s) {
+          if (s.points && s.points.length) {
+            items.push({
+              key: s.key || "leadership",
+              tag: s.tag || "Leadership",
+              title: s.title,
+              years: s.years,
+              venues: [],
+              role: "",
+              summary: "",
+              points: s.points,
+              pin: !!s.pin,
+              startYear: parseServiceYear(s.years),
+              endYear: parseServiceEndYear(s.years),
+              ongoing: isServiceOngoing(s.years)
+            });
+            return;
+          }
           var split = splitReviewVenue(s.note || "");
           var issueName = s.issue || "";
           var issueTitle = issueName ? ("Special Issue: " + issueName) : "";
@@ -1087,11 +1104,12 @@
       var items = allServiceItems().filter(function (s) {
         if (serviceFilter !== "all" && s.key !== serviceFilter) return false;
         if (!q) return true;
-        var hay = (s.title + " " + (s.venues || []).join(" ") + " " + s.tag + " " + s.role + " " + s.summary).toLowerCase();
+        var hay = (s.title + " " + (s.venues || []).join(" ") + " " + (s.points || []).join(" ") + " " + s.tag + " " + s.role + " " + s.summary).toLowerCase();
         return hay.indexOf(q) !== -1;
       });
 
       items.sort(function (a, b) {
+        if (!!a.pin !== !!b.pin) return a.pin ? -1 : 1;
         if (serviceSort === "oldest") {
           return a.endYear - b.endYear ||
             a.startYear - b.startYear ||
@@ -1155,6 +1173,11 @@
           (roleHtml ? '<p class="fund-card__role"><span>' + roleHtml + "</span></p>" : "") +
           creditHtml +
           venueHtml +
+          (s.points && s.points.length
+            ? '<ul class="fund-card__points">' + s.points.map(function (pt) {
+                return "<li>" + esc(pt) + "</li>";
+              }).join("") + "</ul>"
+            : "") +
           (showSummary ? (
             '<div class="fund-card__expand">' +
               '<p class="fund-card__blurb" id="' + id + '">' + esc(s.summary) + "</p>" +

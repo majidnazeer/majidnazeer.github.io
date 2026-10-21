@@ -1254,6 +1254,16 @@ a.pub__role:hover {
   color: var(--muted);
   line-height: 1.45;
 }
+.fund-card__points {
+  margin: .45rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--text);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.fund-card__points li {
+  margin: .25rem 0;
+}
 .fund-card__venue {
   margin: 0 0 .2rem;
   font-size: .98rem;
