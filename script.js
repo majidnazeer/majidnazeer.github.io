@@ -1013,7 +1013,7 @@
               title: s.title,
               years: s.years,
               venues: [],
-              role: "",
+              role: s.role || "",
               summary: "",
               points: s.points,
               pin: !!s.pin,

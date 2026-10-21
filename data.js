@@ -1198,7 +1198,8 @@ var PEOPLE = {
 var SERVICE_HIGHLIGHTS = [
   {
     years: "2027-2029",
-    title: "Committee Member, International Society for Digital Earth - Young Scientist Innovation Network (ISDE-YSIN) (Term: 2027 – 2029)",
+    title: "Committee Member",
+    role: "International Society for Digital Earth - Young Scientist Innovation Network (ISDE-YSIN) (Term: 2027 – 2029)",
     key: "leadership",
     tag: "Leadership",
     pin: true,
