@@ -1016,6 +1016,8 @@
               role: s.role || "",
               summary: "",
               points: s.points,
+              url: s.url || "",
+              linkText: s.linkText || "",
               pin: !!s.pin,
               startYear: parseServiceYear(s.years),
               endYear: parseServiceEndYear(s.years),
