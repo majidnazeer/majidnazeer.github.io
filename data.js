@@ -933,9 +933,9 @@ var ACTIVITY = [
 /* Google Scholar profile metrics - "All" column (lifetime), not "Since 2021".
    Update from https://scholar.google.com.hk/citations?user=uDGLThoAAAAJ when needed. */
 var SCHOLAR_METRICS = {
-  citations: 2635,
+  citations: 2704,
   hIndex: 27,
-  i10Index: 42
+  i10Index: 43
 };
 
 var CODES = [];
