@@ -2,16 +2,6 @@
 var PUBLICATIONS = [
   {
     year: 2026,
-    order: 100,
-    published: "2026-10-21",
-    type: "conference",
-    speaker: true,
-    title: "Mangrove species and leaf condition through hyperspectral imaging",
-    authors: "<b>Nazeer, M.</b>",
-    venue: "Invited talk, CGIS Talk Series: Hyperspectral Earth Observation (international webinar), Centre for Geographical Information System, University of the Punjab, Lahore, Pakistan"
-  },
-  {
-    year: 2026,
     order: 101,
     published: "2026-08-25",
     type: "journal",
@@ -1210,6 +1200,16 @@ var SERVICE_HIGHLIGHTS = [
       "Collaborating on strategic networking initiatives and outreach programs to expand the global young scientist community."
     ]
   },
+  {
+    years: "2027",
+    title: "Session Co-convener",
+    role: "Session BG10.2: Urban Trees for Climate Change Mitigation and Adaptation: Carbon Dynamics and Microclimate Cooling",
+    note: "EGU General Assembly 2027, Vienna, Austria & Online",
+    url: "https://meetingorganizer.copernicus.org/EGU27/session/61882",
+    linkText: "Session BG10.2: Urban Trees for Climate Change Mitigation and Adaptation: Carbon Dynamics and Microclimate Cooling",
+    key: "leadership",
+    tag: "Leadership"
+  },
   { years: "2025-present", title: "Section Editor", note: "Earth and Environmental Science Section, Kuwait Journal of Science" },
   {
     years: "2026-present",
@@ -1401,9 +1401,10 @@ var GRANTS_TEACHING = [
 
 
 var TALKS = [
-  { years: "Oct 2025", type: "organised", title: "Blue Health Watch: Remote Sensing for Monitoring Water Quality and Climate-Sensitive Disease Risks", venue: "LSGS Research Seminar (organiser & moderator), PolyU, Hong Kong SAR, China", note: "Guest speaker: Prof. Kalum Udagepola, Brisbane, Australia" },
+  { years: "Oct 2026", type: "invited", title: "Mangrove species and leaf condition through hyperspectral imaging", venue: "Invited talk, CGIS Talk Series: Hyperspectral Earth Observation (international webinar), Centre for Geographical Information System, University of the Punjab, Lahore, Pakistan" },
   { years: "Jul 2026", type: "conference", title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH4) and Carbon Dioxide (CO2) Dynamics in the Greater Bay Area", venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto, Canada" },
   { years: "May 2026", type: "invited", title: "Rethinking Blue Carbon in Human-Dominated Coastal Landscapes", venue: "Invited research seminar, School of Earth and Planetary Sciences, Curtin University, Perth, Australia" },
+  { years: "Oct 2025", type: "organised", title: "Blue Health Watch: Remote Sensing for Monitoring Water Quality and Climate-Sensitive Disease Risks", venue: "LSGS Research Seminar (organiser & moderator), PolyU, Hong Kong SAR, China", note: "Guest speaker: Prof. Kalum Udagepola, Brisbane, Australia" },
   { years: "Dec 2025", type: "keynote", title: "From a Simple Disc to the Digital Cosmos: A Journey in Environmental Sensing", venue: "Invited keynote, IEEE FIT 2025, Islamabad, Pakistan" },
   { years: "Dec 2025", type: "conference", title: "Linking Coastal Water Quality to Blue Carbon Ecosystems Health: A Case Study from Hong Kong", venue: "IEEE FIT 2025, Islamabad, Pakistan" },
   { years: "Aug 2025", type: "conference", title: "Assessing the Impact of Climate Change on Land Use Patterns in the Greater Bay Area of China: A Scenario-Based Approach for 2035", venue: "IGARSS 2025, Brisbane, Australia" },

@@ -1006,16 +1006,16 @@
 
       if (typeof SERVICE_HIGHLIGHTS !== "undefined") {
         SERVICE_HIGHLIGHTS.forEach(function (s) {
-          if (s.points && s.points.length) {
+          if (s.key === "leadership" || (s.points && s.points.length) || (s.role && !s.issue)) {
             items.push({
               key: s.key || "leadership",
               tag: s.tag || "Leadership",
               title: s.title,
               years: s.years,
-              venues: [],
+              venues: s.note ? [s.note] : [],
               role: s.role || "",
               summary: "",
-              points: s.points,
+              points: s.points || [],
               url: s.url || "",
               linkText: s.linkText || "",
               pin: !!s.pin,
