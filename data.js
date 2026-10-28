@@ -1208,7 +1208,8 @@ var SERVICE_HIGHLIGHTS = [
     url: "https://meetingorganizer.copernicus.org/EGU27/session/61882",
     linkText: "Session BG10.2: Urban Trees for Climate Change Mitigation and Adaptation: Carbon Dynamics and Microclimate Cooling",
     key: "leadership",
-    tag: "Leadership"
+    tag: "Leadership",
+    pin: true
   },
   { years: "2025-present", title: "Section Editor", note: "Earth and Environmental Science Section, Kuwait Journal of Science" },
   {
