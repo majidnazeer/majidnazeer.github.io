@@ -1205,8 +1205,6 @@ var SERVICE_HIGHLIGHTS = [
     title: "Session Co-convener",
     role: "Session BG10.2: Urban Trees for Climate Change Mitigation and Adaptation: Carbon Dynamics and Microclimate Cooling",
     note: "EGU General Assembly 2027, Vienna, Austria & Online",
-    url: "https://meetingorganizer.copernicus.org/EGU27/session/61882",
-    linkText: "Session BG10.2: Urban Trees for Climate Change Mitigation and Adaptation: Carbon Dynamics and Microclimate Cooling",
     key: "leadership",
     tag: "Leadership",
     pin: true
