@@ -306,7 +306,7 @@ a:hover { opacity: .75; }
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center center;
 }
 
 .profile-sidebar__eyebrow {
