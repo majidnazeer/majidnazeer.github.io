@@ -1402,7 +1402,14 @@ var GRANTS_TEACHING = [
 
 
 var TALKS = [
-  { years: "Oct 2026", type: "invited", title: "Mangrove species and leaf condition through hyperspectral imaging", venue: "Invited talk, CGIS Talk Series: Hyperspectral Earth Observation (international webinar), Centre for Geographical Information System, University of the Punjab, Lahore, Pakistan" },
+  {
+    years: "Oct 2026",
+    type: "invited",
+    title: "Mangrove species and leaf condition through hyperspectral imaging",
+    venue: "Invited talk, CGIS Talk Series: Hyperspectral Earth Observation (international webinar), Centre for Geographical Information System, University of the Punjab, Lahore, Pakistan",
+    url: "https://pu.edu.pk/home/section/allpress/17525",
+    linkText: "CGIS Talk Series: Hyperspectral Earth Observation (international webinar)"
+  },
   { years: "Jul 2026", type: "conference", title: "Integrating Satellite Observations to Assess Seasonal Wetland Methane (CH4) and Carbon Dioxide (CO2) Dynamics in the Greater Bay Area", venue: "XXV ISPRS Congress and 47th Canadian Symposium on Remote Sensing (CSRS 2026), Toronto, Canada" },
   { years: "May 2026", type: "invited", title: "Rethinking Blue Carbon in Human-Dominated Coastal Landscapes", venue: "Invited research seminar, School of Earth and Planetary Sciences, Curtin University, Perth, Australia" },
   { years: "Oct 2025", type: "organised", title: "Blue Health Watch: Remote Sensing for Monitoring Water Quality and Climate-Sensitive Disease Risks", venue: "LSGS Research Seminar (organiser & moderator), PolyU, Hong Kong SAR, China", note: "Guest speaker: Prof. Kalum Udagepola, Brisbane, Australia" },

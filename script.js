@@ -835,14 +835,22 @@
         return t.type === filter;
       });
       list.innerHTML = items.map(function (t) {
+        var venueHtml = esc(t.venue || "");
+        if (t.url && t.linkText && String(t.venue || "").indexOf(t.linkText) !== -1) {
+          var safeUrl = String(t.url).replace(/"/g, "");
+          var linked = '<a class="fund-card__title-link" href="' + safeUrl +
+            '" target="_blank" rel="noopener noreferrer">' + esc(t.linkText) + "</a>";
+          venueHtml = esc(t.venue).split(esc(t.linkText)).join(linked);
+        }
         return '<li class="record">' +
           '<span class="record__when">' + esc(t.years) + '</span>' +
           '<p class="role-tag">' + esc(talkTypeLabel[t.type] || t.type) + '</p>' +
           '<p class="record__title">' + esc(t.title) + '</p>' +
-          '<p class="record__org">' + esc(t.venue) + '</p>' +
+          '<p class="record__org">' + venueHtml + '</p>' +
           (t.note ? '<p class="record__note">' + esc(t.note) + '</p>' : '') +
         '</li>';
       }).join("");
+      enhanceExternalLinks(list);
     }
 
     renderTalks("all");
